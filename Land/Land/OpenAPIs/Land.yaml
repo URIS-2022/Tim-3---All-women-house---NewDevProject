@@ -1,0 +1,333 @@
+openapi: 3.0.3
+info:
+  title: IT69/2019 Marija Petrovic - Land
+  version: 1.0.11
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+tags:
+  - name: land
+  - name: list
+paths:
+  /land:
+    put:
+      tags:
+        - land
+      summary: Update an existing land
+      description: Update an existing land by Id
+      operationId: updateland
+      requestBody:
+        description: Update an existent land
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/land'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/land'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/land'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/land'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/land'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: land not found
+        '405':
+          description: Validation exception
+    post:
+      tags:
+        - land
+      summary: Add a new land 
+      description: Add a new land 
+      operationId: addland
+      requestBody:
+        description: Create a new land
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/land'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/land'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/land'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/land'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/land'
+        '405':
+          description: Invalid input
+    get:
+      tags:
+        - land
+      summary: Find land
+      description: Returns a land
+      operationId: getland
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/land'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/land'
+        '400':
+          description: Invalid 
+        '404':
+          description: land not found
+  /land/{landId}:
+    get:
+      tags:
+        - land
+      summary: Find land by ID
+      description: Returns a land
+      operationId: getlandById
+      parameters:
+        - name: landId
+          in: path
+          description: ID of land to return
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/land'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/land'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: land not found
+    delete:
+      tags:
+        - land
+      summary: Deletes a land
+      description: delete a land
+      operationId: deleteland
+      parameters:
+        - name: api_key
+          in: header
+          description: ''
+          required: false
+          schema:
+            type: string
+        - name: landId
+          in: path
+          description: land id to delete
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '400':
+          description: Invalid land value
+  /list:
+    put:
+      tags:
+        - list
+      summary: Update an existing list
+      description: Update an existing list by Id
+      operationId: updatelist
+      requestBody:
+        description: Update an existent list
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/list'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/list'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/list'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/list'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/list'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: land not found
+        '405':
+          description: Validation exception
+    post:
+      tags:
+        - list
+      summary: Add a new list 
+      description: Add a new list 
+      operationId: addlist
+      requestBody:
+        description: Create a new list
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/list'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/list'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/list'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/list'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/list'
+        '405':
+          description: Invalid input
+    get:
+      tags:
+        - list
+      summary: Find list
+      description: Returns a list
+      operationId: getlist
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/list'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/list'
+        '400':
+          description: Invalid 
+        '404':
+          description: list not found
+  /list/{listId}:
+    get:
+      tags:
+        - list
+      summary: Find list by ID
+      description: Returns a list
+      operationId: getlistById
+      parameters:
+        - name: listId
+          in: path
+          description: ID of list to return
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/list'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/list'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: list not found
+    delete:
+      tags:
+        - list
+      summary: Deletes a list
+      description: delete a list
+      operationId: deletelist
+      parameters:
+        - name: api_key
+          in: header
+          description: ''
+          required: false
+          schema:
+            type: string
+        - name: listId
+          in: path
+          description: list id to delete
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '400':
+          description: Invalid list value
+components:
+  schemas:
+    land:
+      type: object
+      properties:
+        labelLand:
+          type: string
+          format: uuid
+          example: "6a411c13-a195-48f7-8dbd-67596c3974c0"
+        surface:
+          type: string
+          example: 500m2
+        soilCulture:
+          type: string
+          example: field
+        class:
+          type: string
+          example: first
+        workability:
+          type: string
+          example: arable
+        formOfProperty:
+          type: string
+          example: personal
+        drainage:
+          type: string
+          example: possible
+      xml:
+        name: land
+    list:
+      type: object
+      properties:
+        idList:
+          type: string
+          format: uuid
+          example: "6a411c13-a195-48f7-8dbd-67596c3974c0"
+        sumSurface:
+          type: string
+          example: 500m2
+        labelLand: 
+           type: string
+           format: uuid
+           example: "6a411c13-a195-48f7-8dbd-67596c3974c0"
+      xml:
+        name: list

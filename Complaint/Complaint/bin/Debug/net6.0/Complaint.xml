@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Complaint</name>
+    </assembly>
+    <members>
+        <member name="M:Complaint.Controllers.ComplaintController.Addcomplaint(Complaint.Models.ComplaintDto)">
+            <summary>
+            Add a new complaint
+            </summary>
+            <remarks>Add a new complaint</remarks>
+            <param name="body">Create a new complaint</param>
+            <response code="200">Successful operation</response>
+            <response code="405">Invalid input</response>
+        </member>
+        <member name="M:Complaint.Controllers.ComplaintController.Deletecomplaint(System.Guid,System.String)">
+            <summary>
+            Deletes a complaint
+            </summary>
+            <remarks>delete a complaint</remarks>
+            <param name="complaintId">complaint id to delete</param>
+            <param name="apiKey"></param>
+            <response code="400">Invalid complaint value</response>
+        </member>
+        <member name="M:Complaint.Controllers.ComplaintController.Getcomplaint">
+            <summary>
+            Find complaint
+            </summary>
+            <remarks>Returns a complaint</remarks>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid</response>
+        </member>
+        <member name="M:Complaint.Controllers.ComplaintController.GetcomplaintById(System.Guid)">
+            <summary>
+            Find complaint by ID
+            </summary>
+            <remarks>Returns a complaint</remarks>
+            <param name="complaintId">ID of complaint to return</param>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="M:Complaint.Controllers.ComplaintController.Updatecomplaint(Complaint.Models.ComplaintDto)">
+            <summary>
+            Update an existing complaint
+            </summary>
+            <remarks>Update an existing complaint by Id</remarks>
+            <param name="body">Update an existent complaint</param>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="M:Complaint.Controllers.DecisionController.Adddecision(Complaint.Models.DecisionDto)">
+            <summary>
+            Add a new decision
+            </summary>
+            <remarks>Add a new decision</remarks>
+            <param name="body">Create a new decision</param>
+            <response code="200">Successful operation</response>
+            <response code="405">Invalid input</response>
+        </member>
+        <member name="M:Complaint.Controllers.DecisionController.Deletedecision(System.Guid,System.String)">
+            <summary>
+            Deletes a decision
+            </summary>
+            <remarks>delete a decision</remarks>
+            <param name="decisionId">decision id to delete</param>
+            <param name="apiKey"></param>
+            <response code="400">Invalid decision value</response>
+        </member>
+        <member name="M:Complaint.Controllers.DecisionController.Getdecision">
+            <summary>
+            Find decision
+            </summary>
+            <remarks>Returns a decision</remarks>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid</response>
+        </member>
+        <member name="M:Complaint.Controllers.DecisionController.GetdecisionById(System.Guid)">
+            <summary>
+            Find decision by ID
+            </summary>
+            <remarks>Returns a decision</remarks>
+            <param name="decisionId">ID of decision to return</param>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+            <response code="404">decision not found</response>
+        </member>
+        <member name="M:Complaint.Controllers.DecisionController.Updatedecision(Complaint.Models.DecisionDto)">
+            <summary>
+            Update an existing decision
+            </summary>
+            <remarks>Update an existing decision by Id</remarks>
+            <param name="body">Update an existent decision</param>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+            <response code="404">decision not found</response>
+            <response code="405">Validation exception</response>
+        </member>
+        <member name="T:Complaint.Migrations.MyFirstMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:Complaint.Migrations.MyFirstMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Complaint.Migrations.MyFirstMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Complaint.Migrations.MyFirstMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Complaint.Migrations.Decision.MyFirstMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:Complaint.Migrations.Decision.MyFirstMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Complaint.Migrations.Decision.MyFirstMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Complaint.Migrations.Decision.MyFirstMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:Complaint.Models.ComplaintDto.IdComplaint">
+            <summary>
+            Gets or Sets IdComplaint
+            </summary>
+        </member>
+        <member name="P:Complaint.Models.ComplaintDto.SubmissionDate">
+            <summary>
+            Gets or Sets SubmissionDate
+            </summary>
+        </member>
+        <member name="P:Complaint.Models.ComplaintDto.TypeOfComplaint">
+            <summary>
+            Gets or Sets TypeOfComplaint
+            </summary>
+        </member>
+        <member name="P:Complaint.Models.ComplaintDto.StatusOfComplaint">
+            <summary>
+            Gets or Sets StatusOfComplaint
+            </summary>
+        </member>
+        <member name="P:Complaint.Models.DecisionDto.IdDecision">
+            <summary>
+            Gets or Sets IdDecision
+            </summary>
+        </member>
+        <member name="P:Complaint.Models.DecisionDto.DecisionDate">
+            <summary>
+            Gets or Sets DecisionDate
+            </summary>
+        </member>
+        <member name="P:Complaint.Models.DecisionDto.MinistryOpinion">
+            <summary>
+            Gets or Sets MinistryOpinion
+            </summary>
+        </member>
+        <member name="M:Complaint.ComplaintClient.UpdatecomplaintAsync(Complaint.Complaint)">
+            <summary>
+            Update an existing complaint
+            </summary>
+            <remarks>
+            Update an existing complaint by Id
+            </remarks>
+            <param name="body">Update an existent complaint</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.UpdatecomplaintAsync(Complaint.Complaint,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Update an existing complaint
+            </summary>
+            <remarks>
+            Update an existing complaint by Id
+            </remarks>
+            <param name="body">Update an existent complaint</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.AddcomplaintAsync(Complaint.Complaint)">
+            <summary>
+            Add a new complaint
+            </summary>
+            <remarks>
+            Add a new complaint
+            </remarks>
+            <param name="body">Create a new complaint</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.AddcomplaintAsync(Complaint.Complaint,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Add a new complaint
+            </summary>
+            <remarks>
+            Add a new complaint
+            </remarks>
+            <param name="body">Create a new complaint</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetcomplaintAsync">
+            <summary>
+            Find complaint
+            </summary>
+            <remarks>
+            Returns a complaint
+            </remarks>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetcomplaintAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Find complaint
+            </summary>
+            <remarks>
+            Returns a complaint
+            </remarks>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetcomplaintByIdAsync(System.Guid)">
+            <summary>
+            Find complaint by ID
+            </summary>
+            <remarks>
+            Returns a complaint
+            </remarks>
+            <param name="complaintId">ID of complaint to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetcomplaintByIdAsync(System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Find complaint by ID
+            </summary>
+            <remarks>
+            Returns a complaint
+            </remarks>
+            <param name="complaintId">ID of complaint to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.DeletecomplaintAsync(System.String,System.Guid)">
+            <summary>
+            Deletes a complaint
+            </summary>
+            <remarks>
+            delete a complaint
+            </remarks>
+            <param name="complaintId">complaint id to delete</param>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.DeletecomplaintAsync(System.String,System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Deletes a complaint
+            </summary>
+            <remarks>
+            delete a complaint
+            </remarks>
+            <param name="complaintId">complaint id to delete</param>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.UpdatedecisionAsync(Complaint.Decision)">
+            <summary>
+            Update an existing decision
+            </summary>
+            <remarks>
+            Update an existing decision by Id
+            </remarks>
+            <param name="body">Update an existent decision</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.UpdatedecisionAsync(Complaint.Decision,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Update an existing decision
+            </summary>
+            <remarks>
+            Update an existing decision by Id
+            </remarks>
+            <param name="body">Update an existent decision</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.AdddecisionAsync(Complaint.Decision)">
+            <summary>
+            Add a new decision
+            </summary>
+            <remarks>
+            Add a new decision
+            </remarks>
+            <param name="body">Create a new decision</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.AdddecisionAsync(Complaint.Decision,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Add a new decision
+            </summary>
+            <remarks>
+            Add a new decision
+            </remarks>
+            <param name="body">Create a new decision</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetdecisionAsync">
+            <summary>
+            Find decision
+            </summary>
+            <remarks>
+            Returns a decision
+            </remarks>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetdecisionAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Find decision
+            </summary>
+            <remarks>
+            Returns a decision
+            </remarks>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetdecisionByIdAsync(System.Guid)">
+            <summary>
+            Find decision by ID
+            </summary>
+            <remarks>
+            Returns a decision
+            </remarks>
+            <param name="decisionId">ID of decision to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.GetdecisionByIdAsync(System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Find decision by ID
+            </summary>
+            <remarks>
+            Returns a decision
+            </remarks>
+            <param name="decisionId">ID of decision to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.DeletedecisionAsync(System.String,System.Guid)">
+            <summary>
+            Deletes a decision
+            </summary>
+            <remarks>
+            delete a decision
+            </remarks>
+            <param name="decisionId">decision id to delete</param>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Complaint.ComplaintClient.DeletedecisionAsync(System.String,System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>
+            Deletes a decision
+            </summary>
+            <remarks>
+            delete a decision
+            </remarks>
+            <param name="decisionId">decision id to delete</param>
+            <exception cref="T:Complaint.ApiException">A server side error occurred.</exception>
+        </member>
+    </members>
+</doc>

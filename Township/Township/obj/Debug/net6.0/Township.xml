@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Township</name>
+    </assembly>
+    <members>
+        <member name="M:Township.Controllers.TownshipController.Addtownship(Township.Models.TownshipDto)">
+            <summary>
+            Add a new township
+            </summary>
+            <remarks>Add a new township</remarks>
+            <param name="body">Create a new township</param>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid input</response>
+        </member>
+        <member name="M:Township.Controllers.TownshipController.Deletetownship(System.Guid,System.String)">
+            <summary>
+            Deletes a township
+            </summary>
+            <remarks>delete a township</remarks>
+            <param name="townshipId">township id to delete</param>
+            <param name="apiKey"></param>
+            <response code="400">Invalid township value</response>
+        </member>
+        <member name="M:Township.Controllers.TownshipController.Gettownship">
+            <summary>
+            Find township
+            </summary>
+            <remarks>Returns a township</remarks>
+            <response code="200">successful operation</response>
+            <response code="404">township not found</response>
+        </member>
+        <member name="M:Township.Controllers.TownshipController.GettownshipById(System.Guid)">
+            <summary>
+            Find township by ID
+            </summary>
+            <remarks>Returns a township</remarks>
+            <param name="townshipId">ID of township to return</param>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="M:Township.Controllers.TownshipController.Updatetownship(Township.Models.TownshipDto)">
+            <summary>
+            Update an existing township
+            </summary>
+            <remarks>Update an existing township by Id</remarks>
+            <param name="body">Update an existent township</param>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="T:Township.Migrations.MyFirstMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:Township.Migrations.MyFirstMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Township.Migrations.MyFirstMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Township.Migrations.MyFirstMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:Township.Models.TownshipDto.IdTownship">
+            <summary>
+            Gets or Sets IdTownship
+            </summary>
+        </member>
+        <member name="P:Township.Models.TownshipDto.NameOfTownship">
+            <summary>
+            Gets or Sets NameOfTownship
+            </summary>
+        </member>
+        <member name="M:Township.TownshipClient.UpdatetownshipAsync(Township.Township)">
+            <summary>Update an existing township</summary>
+            <param name="body">Update an existent township</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.UpdatetownshipAsync(Township.Township,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Update an existing township</summary>
+            <param name="body">Update an existent township</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.AddtownshipAsync(Township.Township)">
+            <summary>Add a new township</summary>
+            <param name="body">Create a new township</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.AddtownshipAsync(Township.Township,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Add a new township</summary>
+            <param name="body">Create a new township</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.GettownshipAsync">
+            <summary>Find township</summary>
+            <returns>successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.GettownshipAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Find township</summary>
+            <returns>successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.GettownshipByIdAsync(System.Guid)">
+            <summary>Find township by ID</summary>
+            <param name="townshipId">ID of township to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.GettownshipByIdAsync(System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Find township by ID</summary>
+            <param name="townshipId">ID of township to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.DeletetownshipAsync(System.String,System.Guid)">
+            <summary>Deletes a township</summary>
+            <param name="townshipId">township id to delete</param>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Township.TownshipClient.DeletetownshipAsync(System.String,System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Deletes a township</summary>
+            <param name="townshipId">township id to delete</param>
+            <exception cref="T:Township.ApiException">A server side error occurred.</exception>
+        </member>
+    </members>
+</doc>

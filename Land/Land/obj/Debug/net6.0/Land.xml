@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Land</name>
+    </assembly>
+    <members>
+        <member name="M:Land.Controllers.LandController.Addland(Land.Models.LandDto)">
+            <summary>
+            Add a new land
+            </summary>
+            <remarks>Add a new land</remarks>
+            <param name="body">Create a new land</param>
+            <response code="200">Successful operation</response>
+            <response code="405">Invalid input</response>
+        </member>
+        <member name="M:Land.Controllers.LandController.Deleteland(System.Guid,System.String)">
+            <summary>
+            Deletes a land
+            </summary>
+            <remarks>delete a land</remarks>
+            <param name="labelLand">labelLand to delete</param>
+            <param name="apiKey"></param>
+            <response code="400">Invalid land value</response>
+        </member>
+        <member name="M:Land.Controllers.LandController.Getland">
+            <summary>
+            Find land
+            </summary>
+            <remarks>Returns a land</remarks>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid</response>
+        </member>
+        <member name="M:Land.Controllers.LandController.GetlandById(System.Guid)">
+            <summary>
+            Find land by ID
+            </summary>
+            <remarks>Returns a land</remarks>
+            <param name="labelLand">labelLand to return</param>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="M:Land.Controllers.LandController.Updateland(Land.Models.LandDto)">
+            <summary>
+            Update an existing land
+            </summary>
+            <remarks>Update an existing land by Id</remarks>
+            <param name="body">Update an existent land</param>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="M:Land.Controllers.ListController.Addlist(Land.Models.ListDto)">
+            <summary>
+            Add a new list
+            </summary>
+            <remarks>Add a new list</remarks>
+            <param name="body">Create a new list</param>
+            <response code="200">Successful operation</response>
+            <response code="405">Invalid input</response>
+        </member>
+        <member name="M:Land.Controllers.ListController.Deletelist(System.Guid,System.String)">
+            <summary>
+            Deletes a list
+            </summary>
+            <remarks>delete a list</remarks>
+            <param name="listId">list id to delete</param>
+            <param name="apiKey"></param>
+            <response code="400">Invalid list value</response>
+        </member>
+        <member name="M:Land.Controllers.ListController.Getlist">
+            <summary>
+            Find list
+            </summary>
+            <remarks>Returns a list</remarks>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid</response>
+        </member>
+        <member name="M:Land.Controllers.ListController.GetlistById(System.Guid)">
+            <summary>
+            Find list by ID
+            </summary>
+            <remarks>Returns a list</remarks>
+            <param name="listId">ID of list to return</param>
+            <response code="200">successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="M:Land.Controllers.ListController.Updatelist(Land.Models.ListDto)">
+            <summary>
+            Update an existing list
+            </summary>
+            <remarks>Update an existing list by Id</remarks>
+            <param name="body">Update an existent list</param>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid ID supplied</response>
+        </member>
+        <member name="M:Land.Controllers.ListController.Delete(System.Guid,System.String)">
+            <summary>
+            Deletes a list
+            </summary>
+            <remarks>delete a list</remarks>
+            <param name="idLandPart">list id to delete</param>
+            <param name="apiKey"></param>
+            <response code="400">Invalid list value</response>
+        </member>
+        <member name="T:Land.Migrations.MyFirstMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:Land.Migrations.MyFirstMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Land.Migrations.MyFirstMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Land.Migrations.MyFirstMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Land.Migrations.List.MyFirstMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:Land.Migrations.List.MyFirstMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Land.Migrations.List.MyFirstMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Land.Migrations.List.MyFirstMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:Land.Models.LandDto.LabelLand">
+            <summary>
+            Gets or Sets LabelLand
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandDto.Surface">
+            <summary>
+            Gets or Sets Surface
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandDto.SoilCulture">
+            <summary>
+            Gets or Sets SoilCulture
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandDto._Class">
+            <summary>
+            Gets or Sets _Class
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandDto.Workability">
+            <summary>
+            Gets or Sets Workability
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandDto.FormOfProperty">
+            <summary>
+            Gets or Sets FormOfProperty
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandDto.Drainage">
+            <summary>
+            Gets or Sets Drainage
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandPartDto.idLandPart">
+            <summary>
+            Gets or Sets LabelLand
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandPartDto.landQuality">
+            <summary>
+            Gets or Sets Surface
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandPartDto.surface">
+            <summary>
+            Gets or Sets SoilCulture
+            </summary>
+        </member>
+        <member name="P:Land.Models.LandPartDto.landId">
+            <summary>
+            Gets or Sets _Class
+            </summary>
+        </member>
+        <member name="P:Land.Models.ListDto.IdList">
+            <summary>
+            Gets or Sets IdList
+            </summary>
+        </member>
+        <member name="P:Land.Models.ListDto.SumSurface">
+            <summary>
+            Gets or Sets SumSurface
+            </summary>
+        </member>
+        <member name="P:Land.Models.ListDto.LabelLand">
+            <summary>
+            Gets or Sets LabelLand
+            </summary>
+        </member>
+        <member name="M:Land.LandClient.UpdatelandAsync(Land.Land)">
+            <summary>Update an existing land</summary>
+            <param name="body">Update an existent land</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.UpdatelandAsync(Land.Land,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Update an existing land</summary>
+            <param name="body">Update an existent land</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.AddlandAsync(Land.Land)">
+            <summary>Add a new land</summary>
+            <param name="body">Create a new land</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.AddlandAsync(Land.Land,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Add a new land</summary>
+            <param name="body">Create a new land</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlandAsync">
+            <summary>Find land</summary>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlandAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Find land</summary>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlandByIdAsync(System.Guid)">
+            <summary>Find land by ID</summary>
+            <param name="landId">ID of land to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlandByIdAsync(System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Find land by ID</summary>
+            <param name="landId">ID of land to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.DeletelandAsync(System.String,System.Guid)">
+            <summary>Deletes a land</summary>
+            <param name="landId">land id to delete</param>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.DeletelandAsync(System.String,System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Deletes a land</summary>
+            <param name="landId">land id to delete</param>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.UpdatelistAsync(Land.List)">
+            <summary>Update an existing list</summary>
+            <param name="body">Update an existent list</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.UpdatelistAsync(Land.List,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Update an existing list</summary>
+            <param name="body">Update an existent list</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.AddlistAsync(Land.List)">
+            <summary>Add a new list</summary>
+            <param name="body">Create a new list</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.AddlistAsync(Land.List,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Add a new list</summary>
+            <param name="body">Create a new list</param>
+            <returns>Successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlistAsync">
+            <summary>Find list</summary>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlistAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Find list</summary>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlistByIdAsync(System.Guid)">
+            <summary>Find list by ID</summary>
+            <param name="listId">ID of list to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.GetlistByIdAsync(System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Find list by ID</summary>
+            <param name="listId">ID of list to return</param>
+            <returns>successful operation</returns>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.DeletelistAsync(System.String,System.Guid)">
+            <summary>Deletes a list</summary>
+            <param name="listId">list id to delete</param>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Land.LandClient.DeletelistAsync(System.String,System.Guid,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Deletes a list</summary>
+            <param name="listId">list id to delete</param>
+            <exception cref="T:Land.ApiException">A server side error occurred.</exception>
+        </member>
+    </members>
+</doc>
