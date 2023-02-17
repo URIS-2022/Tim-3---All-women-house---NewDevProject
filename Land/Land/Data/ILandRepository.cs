@@ -8,7 +8,7 @@ namespace Land.Data
 
         LandDto CreateLand(LandDto land);
 
-        LandDto? GetLandById(Guid landId);
+        LandDto? GetLandById(Guid labelLand);
 
         void DeleteLand(Guid labelLand);
 

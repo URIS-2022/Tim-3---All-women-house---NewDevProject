@@ -172,7 +172,7 @@ namespace Land.Controllers
                             return Ok("Not all parts are sold.");
                         }
                     }
-                    ListDto list = listRepository.GetListByLandId((Guid)landId);
+                    ListDto list = listRepository.GetListByLandId((Guid)landId) ?? throw new Exception("List not found");
                     if (list == null)
                     {
                         return NotFound("List not found");
