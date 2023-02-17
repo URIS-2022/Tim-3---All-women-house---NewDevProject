@@ -173,10 +173,6 @@ namespace Land.Controllers
                         }
                     }
                     ListDto list = listRepository.GetListByLandId((Guid)landId) ?? throw new Exception("List not found");
-                    if (list == null)
-                    {
-                        return NotFound("List not found");
-                    }
                     listRepository.DeleteList(list.IdList);
                     return Ok("All parts of land are sold");
 
