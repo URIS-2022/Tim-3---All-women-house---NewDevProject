@@ -11,7 +11,7 @@ namespace Township.Data
 
         TownshipDto CreateTownship(TownshipDto township);
 
-        TownshipDto GetTownshipById(Guid townshipId);
+        TownshipDto? GetTownshipById(Guid townshipId);
 
         void DeleteTownship(Guid townshipId);
 

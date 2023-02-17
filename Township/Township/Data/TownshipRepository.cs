@@ -25,7 +25,7 @@ namespace Township.Data
             return createdEntity.Entity;
         }
 
-        public TownshipDto GetTownshipById(Guid townshipId)
+        public TownshipDto? GetTownshipById(Guid townshipId)
         {
             return context.Township.FirstOrDefault(e => e.IdTownship == townshipId);
         }
@@ -33,8 +33,12 @@ namespace Township.Data
         public void DeleteTownship(Guid townshipId)
         {
             var township = GetTownshipById(townshipId);
-            context.Remove(township);
-            context.SaveChanges();
+
+            if (township != null)
+            {
+                context.Remove(township);
+                context.SaveChanges();
+            }
         }
 
         public TownshipDto UpdateTownship(TownshipDto township, TownshipDto newTownship)

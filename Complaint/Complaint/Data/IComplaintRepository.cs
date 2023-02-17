@@ -8,7 +8,7 @@ namespace Complaint.Data
 
         ComplaintDto CreateComplaint(ComplaintDto complaint);
 
-        ComplaintDto GetComplaintById(Guid complaintId);
+        ComplaintDto? GetComplaintById(Guid complaintId);
 
         void DeleteComplaint(Guid complaintId);
 

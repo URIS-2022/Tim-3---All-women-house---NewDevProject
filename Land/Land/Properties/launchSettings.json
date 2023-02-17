@@ -1,23 +1,16 @@
-﻿{
-  "$schema": "https://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:8641",
-      "sslPort": 44309
-    }
-  },
+{
   "profiles": {
     "Land": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7152;http://localhost:5013",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PART_OF_LAND": "https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io/",
+        "LICITACION": "https://f54a174a-6bca-43fa-9f9b-6f780e3827ef.mock.pstmn.io/"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7152;http://localhost:5013"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -26,6 +19,15 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:8641",
+      "sslPort": 44309
     }
   }
 }

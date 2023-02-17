@@ -25,7 +25,7 @@ namespace Complaint.Data
             return createdEntity.Entity;
         }
 
-        public DecisionDto GetDecisionById(Guid decisionId)
+        public DecisionDto? GetDecisionById(Guid decisionId)
         {
             return context.Decision.FirstOrDefault(e => e.IdDecision == decisionId);
         }
@@ -33,8 +33,12 @@ namespace Complaint.Data
         public void DeleteDecision(Guid decisionId)
         {
             var decision = GetDecisionById(decisionId);
-            context.Remove(decision);
-            context.SaveChanges();
+
+            if (decision != null)
+            {
+                context.Remove(decision);
+                context.SaveChanges();
+            }
         }
 
         public DecisionDto UpdateComplaint(DecisionDto decision, DecisionDto newDecision)

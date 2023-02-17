@@ -21,9 +21,9 @@ namespace Land.Entities
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("Land"));
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.Entity<LandDto>()
+            modelBuilder.Entity<LandDto>()
                 .HasData(new
                 {
                     LabelLand = Guid.Parse("6a411c13-a195-48f7-8dbd-67596c3974c0"),
@@ -35,7 +35,7 @@ namespace Land.Entities
                     Drainage = "possible"
                 });
 
-            builder.Entity<LandDto>()
+            modelBuilder.Entity<LandDto>()
                 .HasData(new
                 {
                     LabelLand = Guid.Parse("1c7ea607-8ddb-493a-87fa-4bf5893e965b"),

@@ -17,14 +17,16 @@ namespace Land.Models
         /// <summary>
         /// Gets or Sets SumSurface
         /// </summary>
-
+        /// 
+        [Required]
         [DataMember(Name = "sumSurface")]
-        public string SumSurface { get; set; }
+        public string? SumSurface { get; set; }
 
         /// <summary>
         /// Gets or Sets LabelLand
         /// </summary>
 
+        [Required]
         [DataMember(Name = "labelLand")]
         public Guid LabelLand { get; set; }
     }
