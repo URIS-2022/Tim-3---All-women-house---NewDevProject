@@ -1,0 +1,3 @@
+Mock server for licitacion: https://documenter.getpostman.com/view/9009566/2s93CGSbdB
+
+Mock server for PartOfLand: https://documenter.getpostman.com/view/9009566/2s93CGSbYj

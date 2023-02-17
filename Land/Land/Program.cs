@@ -2,6 +2,7 @@ using Land.Data;
 using Land.Entities;
 using System.Reflection;
 using System.Text.Json.Serialization;
+using Google.Cloud.Diagnostics.AspNetCore3;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,8 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 builder.Services.AddDbContext<LandContext>();
 builder.Services.AddDbContext<ListContext>();
+
+builder.Services.AddGoogleDiagnosticsForAspNetCore("clear-column-338022", "Land", "1.0.0");
 
 var app = builder.Build();
 

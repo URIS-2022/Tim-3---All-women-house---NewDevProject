@@ -2,6 +2,7 @@ using System.Reflection;
 using System.Text.Json.Serialization;
 using Township.Data;
 using Township.Entities;
+using Google.Cloud.Diagnostics.AspNetCore3;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,8 @@ builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddDbContext<TownshipContext>();
+
+builder.Services.AddGoogleDiagnosticsForAspNetCore("clear-column-338022", "Township", "1.0.0");
 
 var app = builder.Build();
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rasar\\source\\repos\\URIS\\Township\\Township\\Township.csproj": {}
+    "C:\\Users\\rasar\\source\\repos\\Tim-3---All-women-house---NewDevProject\\Township\\Township\\Township.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rasar\\source\\repos\\URIS\\Township\\Township\\Township.csproj": {
+    "C:\\Users\\rasar\\source\\repos\\Tim-3---All-women-house---NewDevProject\\Township\\Township\\Township.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rasar\\source\\repos\\URIS\\Township\\Township\\Township.csproj",
+        "projectUniqueName": "C:\\Users\\rasar\\source\\repos\\Tim-3---All-women-house---NewDevProject\\Township\\Township\\Township.csproj",
         "projectName": "Township",
-        "projectPath": "C:\\Users\\rasar\\source\\repos\\URIS\\Township\\Township\\Township.csproj",
+        "projectPath": "C:\\Users\\rasar\\source\\repos\\Tim-3---All-women-house---NewDevProject\\Township\\Township\\Township.csproj",
         "packagesPath": "C:\\Users\\rasar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rasar\\source\\repos\\URIS\\Township\\Township\\obj\\",
+        "outputPath": "C:\\Users\\rasar\\source\\repos\\Tim-3---All-women-house---NewDevProject\\Township\\Township\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rasar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Google.Cloud.Diagnostics.AspNetCore3": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.3, )"
@@ -68,7 +72,7 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[13.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

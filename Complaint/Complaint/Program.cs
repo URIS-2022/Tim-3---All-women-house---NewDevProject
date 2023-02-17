@@ -1,5 +1,6 @@
 using Complaint.Data;
 using Complaint.Entities;
+using Google.Cloud.Diagnostics.AspNetCore3;
 using System.Reflection;
 using System.Text.Json.Serialization;
 
@@ -22,6 +23,8 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 builder.Services.AddDbContext<ComplaintContext>();
 builder.Services.AddDbContext<DecisionContext>();
+
+builder.Services.AddGoogleDiagnosticsForAspNetCore("clear-column-338022", "Complaint", "1.0.0");
 
 var app = builder.Build();
 

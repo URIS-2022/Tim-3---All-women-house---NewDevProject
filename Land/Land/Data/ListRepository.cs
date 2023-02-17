@@ -55,7 +55,7 @@ namespace Land.Data
         public Guid? GetLandId(Guid idLandPart)
         {
             Guid landId;
-            HttpResponseMessage response = client.GetAsync("https://0277b28e-2929-41ab-8c2e-b6fcfe4d51e9.mock.pstmn.io/partofland/" + idLandPart).Result;
+            HttpResponseMessage response = client.GetAsync("https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io/partofland/" + idLandPart).Result;
             if (response.IsSuccessStatusCode)
             {
                 string responseData = response.Content.ReadAsStringAsync().Result;
@@ -68,7 +68,7 @@ namespace Land.Data
 
         public string GetLandParts(Guid idLand)
         {
-            HttpResponseMessage response = client.GetAsync("https://0277b28e-2929-41ab-8c2e-b6fcfe4d51e9.mock.pstmn.io/partofland/byLand/" + idLand).Result;
+            HttpResponseMessage response = client.GetAsync("https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io/partofland/byLand/" + idLand).Result;
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsStringAsync().Result;
@@ -79,7 +79,7 @@ namespace Land.Data
         public bool? GetStatus(Guid idLandPart)
         {
             bool? status;
-            HttpResponseMessage response = client.GetAsync("https://bd5d0877-868a-48de-89e0-0eb7c3b5cd47.mock.pstmn.io/licitacion/" + idLandPart).Result;
+            HttpResponseMessage response = client.GetAsync("https://f54a174a-6bca-43fa-9f9b-6f780e3827ef.mock.pstmn.io/licitacion/" + idLandPart).Result;
             if (response.IsSuccessStatusCode)
             {
                 string responseData = response.Content.ReadAsStringAsync().Result;
