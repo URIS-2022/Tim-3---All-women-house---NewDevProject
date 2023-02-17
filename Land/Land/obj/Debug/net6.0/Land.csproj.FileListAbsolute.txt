@@ -286,3 +286,6 @@ C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Land\Land\bi
 C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Land\Land\bin\Debug\net6.0\Grpc.Core.Api.dll
 C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Land\Land\bin\Debug\net6.0\Grpc.Net.Client.dll
 C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Land\Land\bin\Debug\net6.0\Grpc.Net.Common.dll
+C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Land\Land\bin\Debug\net6.0\Postman\Land.postman_collection.json
+C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Land\Land\bin\Debug\net6.0\Postman\Licitacion.postman_collection.json
+C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Land\Land\bin\Debug\net6.0\Postman\PartOfLand.postman_collection.json

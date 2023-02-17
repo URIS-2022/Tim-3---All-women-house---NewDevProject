@@ -32,7 +32,7 @@ namespace Land.Data
             return createdEntity.Entity;
         }
 
-        public ListDto GetListById(Guid idList)
+        public ListDto? GetListById(Guid idList)
         {
             return context.List.FirstOrDefault(e => e.IdList == idList);
         }
@@ -40,8 +40,12 @@ namespace Land.Data
         public void DeleteList(Guid idList)
         {
             var list = GetListById(idList);
-            context.Remove(list);
-            context.SaveChanges();
+            
+            if (list != null)
+            {
+                context.Remove(list);
+                context.SaveChanges();
+            }
         }
 
         public ListDto UpdateList(ListDto list, ListDto newList)
@@ -55,7 +59,7 @@ namespace Land.Data
         public Guid? GetLandId(Guid idLandPart)
         {
             Guid landId;
-            HttpResponseMessage response = client.GetAsync("https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io/partofland/" + idLandPart).Result;
+            HttpResponseMessage response = client.GetAsync(Environment.GetEnvironmentVariable("PART_OF_LAND") + "partofland/" + idLandPart).Result;
             if (response.IsSuccessStatusCode)
             {
                 string responseData = response.Content.ReadAsStringAsync().Result;
@@ -68,7 +72,7 @@ namespace Land.Data
 
         public string GetLandParts(Guid idLand)
         {
-            HttpResponseMessage response = client.GetAsync("https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io/partofland/byLand/" + idLand).Result;
+            HttpResponseMessage response = client.GetAsync(Environment.GetEnvironmentVariable("PART_OF_LAND") + "partofland/byLand/" + idLand).Result;
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsStringAsync().Result;
@@ -79,7 +83,7 @@ namespace Land.Data
         public bool? GetStatus(Guid idLandPart)
         {
             bool? status;
-            HttpResponseMessage response = client.GetAsync("https://f54a174a-6bca-43fa-9f9b-6f780e3827ef.mock.pstmn.io/licitacion/" + idLandPart).Result;
+            HttpResponseMessage response = client.GetAsync(Environment.GetEnvironmentVariable("LICITACION") + "licitacion/" + idLandPart).Result;
             if (response.IsSuccessStatusCode)
             {
                 string responseData = response.Content.ReadAsStringAsync().Result;
@@ -90,7 +94,7 @@ namespace Land.Data
             return null;
         }
 
-        public ListDto GetListByLandId(Guid idLand)
+        public ListDto? GetListByLandId(Guid idLand)
         {
             return context.List.FirstOrDefault(e => e.LabelLand == idLand);
         }

@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Xml.Linq;
 
 namespace Complaint.Models
 {
@@ -25,14 +24,16 @@ namespace Complaint.Models
         /// Gets or Sets TypeOfComplaint
         /// </summary>
 
+        [Required]
         [DataMember(Name = "typeOfComplaint")]
-        public string TypeOfComplaint { get; set; }
+        public string? TypeOfComplaint { get; set; }
 
         /// <summary>
         /// Gets or Sets StatusOfComplaint
         /// </summary>
 
+        [Required]
         [DataMember(Name = "statusOfComplaint")]
-        public string StatusOfComplaint { get; set; }
+        public string? StatusOfComplaint { get; set; }
     }
 }

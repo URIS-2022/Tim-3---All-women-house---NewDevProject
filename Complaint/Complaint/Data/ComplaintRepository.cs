@@ -25,7 +25,7 @@ namespace Complaint.Data
             return createdEntity.Entity;
         }
 
-        public ComplaintDto GetComplaintById(Guid complaintId)
+        public ComplaintDto? GetComplaintById(Guid complaintId)
         {
             return context.Complaint.FirstOrDefault(e => e.IdComplaint == complaintId);
         }
@@ -33,8 +33,12 @@ namespace Complaint.Data
         public void DeleteComplaint(Guid complaintId)
         {
             var complaint = GetComplaintById(complaintId);
-            context.Remove(complaint);
-            context.SaveChanges();
+
+            if (complaint != null)
+            {
+                context.Remove(complaint);
+                context.SaveChanges();
+            }
         }
 
         public ComplaintDto UpdateComplaint(ComplaintDto complaint, ComplaintDto newComplaint)

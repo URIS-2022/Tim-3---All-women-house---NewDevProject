@@ -18,8 +18,9 @@ namespace Township.Models
         /// Gets or Sets NameOfTownship
         /// </summary>
 
+        [Required]
         [DataMember(Name = "nameOfTownship")]
-        public string NameOfTownship { get; set; }
+        public string? NameOfTownship { get; set; }
 
     }
 }

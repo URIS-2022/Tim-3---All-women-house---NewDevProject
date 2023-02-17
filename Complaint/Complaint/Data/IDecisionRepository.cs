@@ -8,7 +8,7 @@ namespace Complaint.Data
 
         DecisionDto CreateDecision(DecisionDto decision);
 
-        DecisionDto GetDecisionById(Guid decisionId);
+        DecisionDto? GetDecisionById(Guid decisionId);
 
         void DeleteDecision(Guid decisionId);
 

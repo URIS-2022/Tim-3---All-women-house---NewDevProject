@@ -150,14 +150,14 @@ namespace Land.Controllers
                 }
 
                 var landParts = listRepository.GetLandParts((Guid)landId);
-                if (landParts == "")
+                if (landParts == "" || landParts == null)
                 {
                     return NotFound("Land parts not found");
                 }
 
                 try
                 {
-                    dynamic data = JsonConvert.DeserializeObject<List<LandPartDto>>(landParts);
+                    dynamic data = JsonConvert.DeserializeObject<List<LandPartDto>>(landParts) ?? throw new ArgumentException("Land parts not found");
                     foreach (var landPart in data)
                     {
                         bool? status = listRepository.GetStatus(landPart.idLandPart);

@@ -25,7 +25,7 @@ namespace Land.Data
             return createdEntity.Entity;
         }
 
-        public LandDto GetLandById(Guid labelLand)
+        public LandDto? GetLandById(Guid labelLand)
         {
             return context.Land.FirstOrDefault(e => e.LabelLand == labelLand);
         }
@@ -33,8 +33,12 @@ namespace Land.Data
         public void DeleteLand(Guid labelLand)
         {
             var land = GetLandById(labelLand);
-            context.Remove(land);
-            context.SaveChanges();
+
+            if (land != null) 
+            {
+                context.Remove(land);
+                context.SaveChanges();
+            }
         }
 
         public LandDto UpdateLand(LandDto land, LandDto newLand)

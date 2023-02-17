@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "b927c1b8-0d8b-433d-9277-68b5bfb0d3c4",
+		"name": "PartOfLand",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9009566"
+	},
+	"item": [
+		{
+			"name": "partofland/7b811c13-a225-48f7-8aaa-67596c3974c0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/partofland/7b811c13-a225-48f7-8aaa-67596c3974c0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"partofland",
+						"7b811c13-a225-48f7-8aaa-67596c3974c0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io/partofland/7b811c13-a225-48f7-8aaa-67596c3974c0",
+							"protocol": "https",
+							"host": [
+								"020e5f89-50d5-472e-8bf6-590a46a04831",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"partofland",
+								"7b811c13-a225-48f7-8aaa-67596c3974c0"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"idLandPart\": \"7b811c13-a225-48f7-8aaa-67596c3974c0\",\n  \"landQuality\": \"first quality\",\n  \"surface\": \"150m2\",\n  \"landId\": \"6a411c13-a195-48f7-8dbd-67596c3974c0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "partofland/byLand/6a411c13-a195-48f7-8dbd-67596c3974c0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/partofland/byLand/6a411c13-a195-48f7-8dbd-67596c3974c0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"partofland",
+						"byLand",
+						"6a411c13-a195-48f7-8dbd-67596c3974c0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io/partofland/byLand/6a411c13-a195-48f7-8dbd-67596c3974c0",
+							"protocol": "https",
+							"host": [
+								"020e5f89-50d5-472e-8bf6-590a46a04831",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"partofland",
+								"byLand",
+								"6a411c13-a195-48f7-8dbd-67596c3974c0"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n  {\n    \"idLandPart\": \"7b811c13-a225-48f7-8aaa-67596c3974c0\",\n    \"landQuality\": \"first quality\",\n    \"surface\": \"150m2\",\n    \"landId\": \"6a411c13-a195-48f7-8dbd-67596c3974c0\"\n  },\n  {\n    \"idLandPart\": \"9a822c13-a775-77f7-8bca-69986c3977a8\",\n    \"landQuality\": \"first quality\",\n    \"surface\": \"150m2\",\n    \"landId\": \"6a411c13-a195-48f7-8dbd-67596c3974c0\"\n  }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://020e5f89-50d5-472e-8bf6-590a46a04831.mock.pstmn.io"
+		}
+	]
+}

@@ -8,9 +8,9 @@ namespace Land.Data
 
         ListDto CreateList(ListDto list);
 
-        ListDto GetListById(Guid idList);
+        ListDto? GetListById(Guid idList);
 
-        void DeleteList(Guid labelList);
+        void DeleteList(Guid idList);
 
         ListDto UpdateList(ListDto list, ListDto newList);
 
@@ -20,6 +20,6 @@ namespace Land.Data
 
         bool? GetStatus(Guid idLandPart);
 
-        ListDto GetListByLandId(Guid idLand);
+        ListDto? GetListByLandId(Guid idLand);
     }
 }

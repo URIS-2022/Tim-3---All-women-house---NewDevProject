@@ -19,9 +19,9 @@ namespace Complaint.Entities
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("Complaint"));
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.Entity<ComplaintDto>()
+            modelBuilder.Entity<ComplaintDto>()
                 .HasData(new
                 {
                     IdComplaint = Guid.Parse("6a411c13-a195-48f7-8dbd-67596c3974c0"),
@@ -30,7 +30,7 @@ namespace Complaint.Entities
                     StatusOfComplaint = "Not approved"
                 });
 
-            builder.Entity<ComplaintDto>()
+            modelBuilder.Entity<ComplaintDto>()
                 .HasData(new
                 {
                     IdComplaint = Guid.Parse("6a411c13-a195-48f7-8dbd-67596c3975c0"),
