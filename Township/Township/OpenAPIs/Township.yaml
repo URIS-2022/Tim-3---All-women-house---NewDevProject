@@ -1,0 +1,162 @@
+openapi: 3.0.3
+info:
+  title: IT69/2019 Marija Petrovic - Township
+  version: 1.0.11
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+tags:
+  - name: township
+paths:
+  /township:
+    put:
+      tags:
+        - township
+      summary: Update an existing township
+      description: Update an existing township by Id
+      operationId: updatetownship
+      requestBody:
+        description: Update an existent township
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/township'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/township'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/township'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/township'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/township'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: township not found
+        '405':
+          description: Validation exception
+    post:
+      tags:
+        - township
+      summary: Add a new township 
+      description: Add a new township 
+      operationId: addtownship
+      requestBody:
+        description: Create a new township
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/township'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/township'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/township'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/township'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/township'
+        '405':
+          description: Invalid input
+    get:
+      tags:
+        - township
+      summary: Find township
+      description: Returns a township
+      operationId: gettownship
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/township'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/township'
+        '400':
+          description: Invalid 
+        '404':
+          description: township not found
+  /township/{townshipId}:
+    get:
+      tags:
+        - township
+      summary: Find township by ID
+      description: Returns a township
+      operationId: gettownshipById
+      parameters:
+        - name: townshipId
+          in: path
+          description: ID of township to return
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/township'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/township'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: township not found
+    delete:
+      tags:
+        - township
+      summary: Deletes a township
+      description: delete a township
+      operationId: deletetownship
+      parameters:
+        - name: api_key
+          in: header
+          description: ''
+          required: false
+          schema:
+            type: string
+        - name: townshipId
+          in: path
+          description: township id to delete
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '400':
+          description: Invalid township value
+components:
+  schemas:
+    township:
+      type: object
+      properties:
+        idTownship:
+          type: string
+          format: uuid
+          example: 6a411c13-a195-48f7-8dbd-67596c3975c0
+        nameOfTownship:
+          type: string
+          example: Old city
+      xml:
+        name: township

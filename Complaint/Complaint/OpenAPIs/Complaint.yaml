@@ -1,0 +1,325 @@
+openapi: 3.0.3
+info:
+  title: IT69/2019 Marija Petrovic - Complaint
+  version: 1.0.11
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+tags:
+  - name: complaint
+  - name: decision
+paths:
+  /complaint:
+    put:
+      tags:
+        - complaint
+      summary: Update an existing complaint
+      description: Update an existing complaint by Id
+      operationId: updatecomplaint
+      requestBody:
+        description: Update an existent complaint
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/complaint'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/complaint'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/complaint'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/complaint'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/complaint'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: complaint not found
+        '405':
+          description: Validation exception
+    post:
+      tags:
+        - complaint
+      summary: Add a new complaint 
+      description: Add a new complaint 
+      operationId: addcomplaint
+      requestBody:
+        description: Create a new complaint
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/complaint'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/complaint'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/complaint'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/complaint'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/complaint'
+        '405':
+          description: Invalid input
+    get:
+      tags:
+        - complaint
+      summary: Find complaint
+      description: Returns a complaint
+      operationId: getcomplaint
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/complaint'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/complaint'
+        '400':
+          description: Invalid 
+        '404':
+          description: complaint not found
+  /complaint/{complaintId}:
+    get:
+      tags:
+        - complaint
+      summary: Find complaint by ID
+      description: Returns a complaint
+      operationId: getcomplaintById
+      parameters:
+        - name: complaintId
+          in: path
+          description: ID of complaint to return
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/complaint'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/complaint'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: complaint not found
+    delete:
+      tags:
+        - complaint
+      summary: Deletes a complaint
+      description: delete a complaint
+      operationId: deletecomplaint
+      parameters:
+        - name: api_key
+          in: header
+          description: ''
+          required: false
+          schema:
+            type: string
+        - name: complaintId
+          in: path
+          description: complaint id to delete
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '400':
+          description: Invalid complaint value
+  /decision:
+    put:
+      tags:
+        - decision
+      summary: Update an existing decision
+      description: Update an existing decision by Id
+      operationId: updatedecision
+      requestBody:
+        description: Update an existent decision
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/decision'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/decision'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/decision'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/decision'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/decision'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: decision not found
+        '405':
+          description: Validation exception
+    post:
+      tags:
+        - decision
+      summary: Add a new decision 
+      description: Add a new decision 
+      operationId: adddecision
+      requestBody:
+        description: Create a new decision
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/decision'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/decision'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/decision'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/decision'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/decision'
+        '405':
+          description: Invalid input
+    get:
+      tags:
+        - decision
+      summary: Find decision
+      description: Returns a decision
+      operationId: getdecision
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/decision'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/decision'
+        '400':
+          description: Invalid 
+        '404':
+          description: decision not found
+  /decision/{decisionId}:
+    get:
+      tags:
+        - decision
+      summary: Find decision by ID
+      description: Returns a decision
+      operationId: getdecisionById
+      parameters:
+        - name: decisionId
+          in: path
+          description: ID of decision to return
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/decision'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/decision'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: decision not found
+    delete:
+      tags:
+        - decision
+      summary: Deletes a decision
+      description: delete a decision
+      operationId: deletedecision
+      parameters:
+        - name: api_key
+          in: header
+          description: ''
+          required: false
+          schema:
+            type: string
+        - name: decisionId
+          in: path
+          description: decision id to delete
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '400':
+          description: Invalid decision value
+components:
+  schemas:
+    complaint:
+      type: object
+      properties:
+        idComplaint:
+          type: string
+          format: uuid
+          example: 6a411c13-a195-48f7-8dbd-67596c3975c0
+        submissionDate:
+          type: string
+          format: date
+          example: 2017-07-21
+        typeOfComplaint:
+          type: string
+          example: Complaint against the Decision on Leasing
+        statusOfComplaint:
+          type: string
+          example: Not approved
+      xml:
+        name: complaint
+    decision:
+      type: object
+      properties:
+        idDecision:
+          type: string
+          format: uuid
+          example: 6a411c13-a195-48f7-8dbd-67596c3975c0
+        decisionDate:
+          type: string
+          format: date
+          example: 2017-07-21
+        ministryOpinion:
+          type: boolean
+          example: true
+      xml:
+        name: decision

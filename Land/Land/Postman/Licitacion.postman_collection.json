@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "fe606e40-1e18-4849-ae24-66f5aec7ab78",
+		"name": "Licitacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9009566"
+	},
+	"item": [
+		{
+			"name": "licitacion/7b811c13-a225-48f7-8aaa-67596c3974c0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/licitacion/7b811c13-a225-48f7-8aaa-67596c3974c0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"licitacion",
+						"7b811c13-a225-48f7-8aaa-67596c3974c0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://f54a174a-6bca-43fa-9f9b-6f780e3827ef.mock.pstmn.io/licitacion/7b811c13-a225-48f7-8aaa-67596c3974c0",
+							"protocol": "https",
+							"host": [
+								"f54a174a-6bca-43fa-9f9b-6f780e3827ef",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"licitacion",
+								"7b811c13-a225-48f7-8aaa-67596c3974c0"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"licitacionId\": \"1c7ea607-8ddb-493a-87fa-4bf5893e965b\",\n  \"status\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "licitacion/9a822c13-a775-77f7-8bca-69986c3977a8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/licitacion/9a822c13-a775-77f7-8bca-69986c3977a8",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"licitacion",
+						"9a822c13-a775-77f7-8bca-69986c3977a8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://f54a174a-6bca-43fa-9f9b-6f780e3827ef.mock.pstmn.io/licitacion/9a822c13-a775-77f7-8bca-69986c3977a8",
+							"protocol": "https",
+							"host": [
+								"f54a174a-6bca-43fa-9f9b-6f780e3827ef",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"licitacion",
+								"9a822c13-a775-77f7-8bca-69986c3977a8"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"licitacionId\": \"6a411c13-a195-48f7-8dbd-67596c3974c0\",\n  \"status\": true\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://f54a174a-6bca-43fa-9f9b-6f780e3827ef.mock.pstmn.io"
+		}
+	]
+}
