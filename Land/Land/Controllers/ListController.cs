@@ -1,10 +1,12 @@
 ﻿using Land.Data;
 using Land.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 namespace Land.Controllers
 {
@@ -26,6 +28,7 @@ namespace Land.Controllers
         /// <response code="405">Invalid input</response>
         [HttpPost]
         [Route("/api/v3/list")]
+        [Authorize(Roles = "superuser")]
         public virtual IActionResult Addlist([FromBody] ListDto body)
         {
             try

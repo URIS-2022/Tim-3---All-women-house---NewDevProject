@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OrLL66lywLcT9bYB85vEeyV8COUJB8Uaxg0GIjKlPiCExMO5t/exoP879EoTdJ1ECQ8EBG0h5lU+XXGh3NHptg==",
+  "dgSpecHash": "wdga9q0Ta+C/plht/KN8JQNU1lPvxFU2ZzDCBObwCg6O1eLxc+Rs1vS0AXHmHPD4gMWbkyr2XVvpk4EALZTELA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rasar\\source\\repos\\Tim-3---All-women-house---NewDevProject\\Township\\Township\\Township.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\rasar\\.nuget\\packages\\grpc.net.client\\2.51.0\\grpc.net.client.2.51.0.nupkg.sha512",
     "C:\\Users\\rasar\\.nuget\\packages\\grpc.net.common\\2.51.0\\grpc.net.common.2.51.0.nupkg.sha512",
     "C:\\Users\\rasar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\rasar\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.3\\microsoft.aspnetcore.authentication.jwtbearer.6.0.3.nupkg.sha512",
     "C:\\Users\\rasar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\rasar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\rasar\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
