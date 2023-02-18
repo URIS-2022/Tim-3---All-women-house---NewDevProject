@@ -1,8 +1,10 @@
 ﻿using Complaint.Data;
 using Complaint.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 namespace Complaint.Controllers
 {
@@ -74,6 +76,7 @@ namespace Complaint.Controllers
         /// <response code="400">Invalid</response>
         [HttpGet]
         [Route("/api/v3/complaint")]
+        [Authorize(Roles = "superuser")]
         public virtual IActionResult Getcomplaint()
         {
             var complaints = complaintRepository.GetComplaints();

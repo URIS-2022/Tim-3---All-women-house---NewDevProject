@@ -1,8 +1,10 @@
 ﻿using Land.Data;
 using Land.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 namespace Land.Controllers
 {
@@ -73,6 +75,7 @@ namespace Land.Controllers
         /// <response code="200">successful operation</response>
         /// <response code="400">Invalid</response>
         [HttpGet]
+        [Authorize(Roles = "superuser")]
         [Route("/api/v3/land")]
         public virtual IActionResult Getland()
         {

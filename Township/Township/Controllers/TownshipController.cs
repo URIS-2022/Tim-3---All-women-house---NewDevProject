@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using Township.Data;
 using Township.Entities;
 using Township.Models;
@@ -74,6 +76,7 @@ namespace Township.Controllers
         /// <response code="404">township not found</response>
         [HttpGet]
         [Route("/api/v3/township")]
+        [Authorize(Roles = "superuser")]
         public virtual IActionResult Gettownship()
         {
             var townships = townshipRepository.GetTownships();

@@ -287,3 +287,4 @@ C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Township\Tow
 C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Township\Township\bin\Debug\net6.0\Grpc.Core.Api.dll
 C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Township\Township\bin\Debug\net6.0\Grpc.Net.Client.dll
 C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Township\Township\bin\Debug\net6.0\Grpc.Net.Common.dll
+C:\Users\rasar\source\repos\Tim-3---All-women-house---NewDevProject\Township\Township\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
