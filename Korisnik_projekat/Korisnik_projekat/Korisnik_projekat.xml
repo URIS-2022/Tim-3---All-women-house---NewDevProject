@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Korisnik_projekat</name>
+    </assembly>
+    <members>
+        <member name="M:Korisnik_projekat.Controllers.UsersController.GetAllUsersAsync">
+            <summary>
+            Kreira listu svih korisnika
+            </summary>
+            <returns>Lista svih korisnika</returns>
+        </member>
+        <member name="M:Korisnik_projekat.Controllers.UsersController.GetUserAsync(System.Guid)">
+            <summary>
+            Vraca jednog korisnika na osnovu ID-ja
+            </summary>
+            <param name="UserId">ID korisnika</param>
+            <returns></returns>
+            <response code="200">Vraca trazenog korisnika</response>
+        </member>
+        <member name="M:Korisnik_projekat.Controllers.UsersController.AddUserAsync(Korisnik_projekat.Models.DTO.AddUserRequest)">
+             <summary>
+             Kreira korisnika
+             </summary>
+             <remarks>
+             Sample request:
+             
+                     POST api/User
+                     {
+                        "Name":"Milana",
+                        "Surname":"Milic",
+                        "Email":"milanamilic@gmail.com",
+                        "UserName":"milanamilic10",
+                        "Password":"milana12345"
+                     }
+            </remarks>
+        </member>
+        <member name="M:Korisnik_projekat.Controllers.UsersController.DeleteUserAsync(System.Guid)">
+            <summary>
+            Vrsi brisanje jednog korisnika na osnovu njegovog ID-ja.
+            </summary>
+            <param name="RegistrationFormId"> ID formulara prijave</param>
+        </member>
+        <member name="M:Korisnik_projekat.Controllers.UsersController.UpdateUserAsync(System.Guid,Korisnik_projekat.Models.DTO.UpdateUserRequest)">
+            <summary>
+            Azurira jednog korisnika.
+            </summary>
+            <param name="updateUserRequest">Model korisnika koji se azurira</param>
+            <returns>Potvrda o modifikovanom korisniku.</returns>
+        </member>
+        <member name="T:Korisnik_projekat.Models.DTO.AddUserRequest">
+            <summary>
+            Zahtev za dodavanje korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.AddUserRequest.Name">
+            <summary>
+            Ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.AddUserRequest.Surname">
+            <summary>
+            Prezime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.AddUserRequest.Email">
+            <summary>
+            Email korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.AddUserRequest.UserName">
+            <summary>
+            UserName korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.AddUserRequest.Password">
+            <summary>
+            Lozinka korisnika
+            </summary>
+        </member>
+        <member name="T:Korisnik_projekat.Models.DTO.UpdateUserRequest">
+            <summary>
+            Zahtev za modifikovanje korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.UpdateUserRequest.Name">
+            <summary>
+            Ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.UpdateUserRequest.Surname">
+            <summary>
+            Prezime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.UpdateUserRequest.Email">
+            <summary>
+            Email korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.UpdateUserRequest.UserName">
+            <summary>
+            UserName korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.UpdateUserRequest.Password">
+            <summary>
+            Lozinka korisnika
+            </summary>
+        </member>
+        <member name="T:Korisnik_projekat.Models.DTO.User">
+            <summary>
+            Predstavlja korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.User.UserId">
+            <summary>
+            ID korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.User.Name">
+            <summary>
+            Ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.User.Surname">
+            <summary>
+            Prezime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.User.Email">
+            <summary>
+            Email korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.User.UserName">
+            <summary>
+            UserName korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.DTO.User.Password">
+            <summary>
+            Lozinka korisnika
+            </summary>
+        </member>
+        <member name="T:Korisnik_projekat.Models.User.User">
+            <summary>
+            Predstavlja korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.User.User.UserId">
+            <summary>
+            ID korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.User.User.Name">
+            <summary>
+            Ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.User.User.Surname">
+            <summary>
+            Prezime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.User.User.Email">
+            <summary>
+            Email korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.User.User.UserName">
+            <summary>
+            UserName korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnik_projekat.Models.User.User.Password">
+            <summary>
+            Lozinka korisnika
+            </summary>
+        </member>
+    </members>
+</doc>

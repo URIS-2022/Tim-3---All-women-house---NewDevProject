@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Registration_projekat</name>
+    </assembly>
+    <members>
+        <member name="M:Registration_projekat.Controllers.RegistrationFormsController.GetAllRegistrationFormsAsync">
+            <summary>
+            Kreira listu svih formulara prijave
+            </summary>
+            <returns>Lista svih formulara prijave</returns>
+            <response code="200">Vraca listu formulara prijave</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationFormsController.GetRegistrationFormAsync(System.Guid)">
+            <summary>
+            Vraca jedan formular za prijavu na osnovu ID-ja
+            </summary>
+            <param name="RegistrationFormId">ID formulara prijave</param>
+            <returns></returns>
+            <response code="200">Vraca trazeni formular prijave</response>
+            <resonse code="404">Nije pronadjen formular prijave</resonse>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationFormsController.AddRegistrationFormAsync(Registration_projekat.Models.DTO.AddRegistrationFormRequest)">
+             <summary>
+             Kreira formular prijave
+             </summary>
+             <remarks>
+             Sample request:
+             
+                     POST api/RegistrationForm
+                     {
+                         "Name": "Marija",
+                         "Surname": "Jovanovic",
+                         "Address": "Svetog Save 25 Novi Sad",
+                         "JMBG": "1211198145623",
+                         "Email": "marijajovanovic@gmail.com",
+                         "Username": "marijajovanovic12",
+                         "Password": "marija1211",
+                         "Country": "Serbia"
+                     }
+            </remarks>
+            <response code="201">Vraca kreirani formular prijave</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationFormsController.UpdateRegistrationFormAsync(System.Guid,Registration_projekat.Models.DTO.UpdateRegistrationFormRequest)">
+            <summary>
+            Azurira jedan formular prijave.
+            </summary>
+            <param name="updateRegistrationFormRequest">Model formulara prijave koji se azurira</param>
+            <returns>Potvrda o modifikovanom formularu prijave.</returns>
+            <response code="200">Vraca azurirani formular prijave</response>
+            <response code="404">Nije pronadjen formular prijave</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationFormsController.DeleteRegistrationFormAsync(System.Guid)">
+            <summary>
+            Vrsi brisanje jednog formulara prijave na osnovu njegovog ID-ja.
+            </summary>
+            <param name="RegistrationFormId"> ID formulara prijave</param>
+            <response code="404">Nije pronadjen formular prijave</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationsController.GetAllRegistrationsAsync">
+            <summary>
+            Kreira listu svih prijava
+            </summary>
+            <returns>Lista svih prijava</returns>
+            <response code="200">Vraca listu prijava</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationsController.GetRegistrationAsync(System.Guid)">
+            <summary>
+            Vraca jednu prijavu na osnovu ID-ja
+            </summary>
+            <param name="RegistrationId">ID prijave</param>
+            <returns></returns>
+            <response code="200">Vraca trazenu prijavu</response>
+            <response code="404">Nije pronadjena prijava</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationsController.AddRegistrationAsync(Registration_projekat.Models.DTO.AddRegistrationRequest)">
+             <summary>
+             Kreira prijavu
+             </summary>
+             <remarks>
+             Sample request:
+             
+                     POST api/Registration
+                     {
+                         "DateOfRegistration":"2023-02-08 00:00:00",
+                         "Location":"Subotica",
+                         "RegistrationFormId":"205c7611-853d-4394-8c2f-7a730a3d0f5d"
+                     }
+            </remarks>
+            <response code="201">Vraca kreiranu prijavu</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationsController.UpdateRegistrationAsync(System.Guid,Registration_projekat.Models.DTO.UpdateRegistrationRequest)">
+            <summary>
+            Azurira jednu prijavu.
+            </summary>
+            <param name="updateRegistrationRequest">Model prijave koji se azurira</param>
+            <returns>Potvrda o modifikovanoj prijavi.</returns>
+            <response code="200">Vraca azuriranu prijavu</response>
+            <response code="404">Nije pronadjena prijava</response>
+        </member>
+        <member name="M:Registration_projekat.Controllers.RegistrationsController.DeleteRegistrationAsync(System.Guid)">
+            <summary>
+            Vrsi brisanje jedne prijave na osnovu njegovog ID-ja.
+            </summary>
+            <param name="RegistrationId"> ID prijave</param>
+            <response code="200">Uspesno obrisana prijava</response>
+            <response code="404">Nije pronadjena prijava</response>
+        </member>
+        <member name="T:Registration_projekat.Models.DTO.AddRegistrationFormRequest">
+            <summary>
+            Zahtev za dodavanje formulara prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.Name">
+            <summary>
+            Naziv lica(kupca)
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.Surname">
+            <summary>
+            Prezime lica(kupca)
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.Address">
+            <summary>
+            Adresa lica(kupca)
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.JMBG">
+            <summary>
+            JMBG lica(kupca)
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.Email">
+            <summary>
+            Email lica(kupca)
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.Username">
+            <summary>
+            Username lica(kupca)
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.Password">
+            <summary>
+            Lozinka lica(kupca)
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationFormRequest.Country">
+            <summary>
+            Zemlja u kojoj zivi lice(kupac)
+            </summary>
+        </member>
+        <member name="T:Registration_projekat.Models.DTO.AddRegistrationRequest">
+            <summary>
+            Zahtev za dodavanje prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationRequest.DateOfRegistration">
+            <summary>
+            Datum i vreme prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationRequest.Location">
+            <summary>
+            Lokacija prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.AddRegistrationRequest.RegistrationFormId">
+            <summary>
+            Strani kljuc, odnosno primarni kljuc u formularu prijave
+            </summary>
+        </member>
+        <member name="T:Registration_projekat.Models.DTO.Registration">
+            <summary>
+            Predstavlja prijavu
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.Registration.RegistrationId">
+            <summary>
+            ID prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.Registration.DateOfRegistration">
+            <summary>
+            Datum i vreme prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.Registration.Location">
+            <summary>
+            Lokacija prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.Registration.RegistrationFormId">
+            <summary>
+            Strani kljuc, odnosno primarni kljuc u RegistrationForm
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.Registration.RegistrationForm">
+            <summary>
+            Lista formulara prijave
+            </summary>
+        </member>
+        <member name="T:Registration_projekat.Models.DTO.RegistrationForm">
+            <summary>
+            Predstavlja formular prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.RegistrationFormId">
+            <summary>
+            ID formulara prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.Name">
+            <summary>
+            Ime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.Surname">
+            <summary>
+            Prezime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.Address">
+            <summary>
+            Adresa lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.JMBG">
+            <summary>
+            JMBG lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.Email">
+            <summary>
+            Email lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.Username">
+            <summary>
+            Username lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.Password">
+            <summary>
+            Lozinka lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.RegistrationForm.Country">
+            <summary>
+            Drzava u kojoj zivi lice(kupac) 
+            </summary>
+        </member>
+        <member name="T:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest">
+            <summary>
+            Zahtev za modifikacijy formulara prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.Name">
+            <summary>
+            Ime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.Surname">
+            <summary>
+            Prezime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.Address">
+            <summary>
+            Adresa lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.JMBG">
+            <summary>
+            JMBG lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.Email">
+            <summary>
+            Email lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.Username">
+            <summary>
+            Username lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.Password">
+            <summary>
+            Lozinka lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationFormRequest.Country">
+            <summary>
+            Drzava u kojoj zivi lice(kupac) 
+            </summary>
+        </member>
+        <member name="T:Registration_projekat.Models.DTO.UpdateRegistrationRequest">
+            <summary>
+            Zahtev za modifikaciju prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationRequest.DateOfRegistration">
+            <summary>
+            Datum i vreme prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationRequest.Location">
+            <summary>
+            Lokacija prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.DTO.UpdateRegistrationRequest.RegistrationFormId">
+            <summary>
+            Strani kljuc, odnosno primarni kljuc u RegistrationForm
+            </summary>
+        </member>
+        <member name="T:Registration_projekat.Models.Registration">
+            <summary>
+            Predstavlja prijavu
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.Registration.RegistrationId">
+            <summary>
+            ID prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.Registration.DateOfRegistration">
+            <summary>
+            Datum i vreme prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.Registration.Location">
+            <summary>
+            Lokacija prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.Registration.RegistrationFormId">
+            <summary>
+            Strani kljuc, odnosno primarni kljuc u RegistrationForm
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.Registration.RegistrationForm">
+            <summary>
+            Lista formulara prijave
+            </summary>
+        </member>
+        <member name="T:Registration_projekat.Models.RegistrationForm">
+            <summary>
+            Predstavlja formular prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.RegistrationFormId">
+            <summary>
+            ID formulara prijave
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Name">
+            <summary>
+            Ime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Surname">
+            <summary>
+            Prezime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Address">
+            <summary>
+            Adresa lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.JMBG">
+            <summary>
+            JMBG lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Email">
+            <summary>
+            Email lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Username">
+            <summary>
+            Username lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Password">
+            <summary>
+            Lozinka lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Country">
+            <summary>
+            Drzava u kojoj zivi lice(kupac) 
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.RegistrationForm.Registrations">
+            <summary>
+            Navigaciono svojsto
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.User.UserId">
+            <summary>
+            ID korisnika
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.User.Name">
+            <summary>
+            Ime korisnika
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.User.Surname">
+            <summary>
+            Prezime korisnika
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.User.Email">
+            <summary>
+            Email korisnika
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.User.Username">
+            <summary>
+            UserName korisnika
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.User.Password">
+            <summary>
+            Lozinka korisnika
+            </summary>
+        </member>
+        <member name="P:Registration_projekat.Models.User.UserRoles">
+            <summary>
+            Navigation property
+            </summary>
+        </member>
+    </members>
+</doc>
