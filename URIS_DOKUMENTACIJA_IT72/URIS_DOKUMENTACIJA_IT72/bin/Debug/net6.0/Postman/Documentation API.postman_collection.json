@@ -1,0 +1,1623 @@
+{
+	"info": {
+		"_postman_id": "f9dda371-dd79-4310-822f-247777994619",
+		"name": "Documentation API",
+		"description": "An API to preform documentation operation\n\nContact Support:\n Name: Anja Janjusevic\n Email: anjajanjusevic44@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21487510"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "BiddingProgram",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrives specific Bidding Program from the database based on given Bidding ProgramId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/BiddingProgram/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"BiddingProgram",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) The id of Bidding Program to retrive"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns Bidding ProgramDTO with the given id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/BiddingProgram/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"BiddingProgram",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) The id of Bidding Program to retrive"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deletes a specific set of the Bidding Program from the database",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/BiddingProgram/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"BiddingProgram",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Bidding Program to delete"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns deleted BiddingProgram ad BiddingProgramDTO",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/BiddingProgram/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"BiddingProgram",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Bidding Program to delete"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Updates a set of Bidding Program in the database, changing all the attributes except of the primary key",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"roundNumber\": 11696571,\n  \"documentId\": \"urn:uuid:db0e14ef-76d6-80de-9a62-a79476b44667\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7047/api/BiddingProgram/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"BiddingProgram",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Bidding Program to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns updated Bidding Program ad BiddingProgramDTO",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"roundNumber\": 11696571,\n  \"documentId\": \"urn:uuid:db0e14ef-76d6-80de-9a62-a79476b44667\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/BiddingProgram/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"BiddingProgram",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Bidding Program to update"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Retrives all Bidding Programs from the database",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7047/api/BiddingProgram",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"api",
+										"BiddingProgram"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns a list of Bidding Programs",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/BiddingProgram",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"BiddingProgram"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Adds a new Bidding Program to the database",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"roundNumber\": 98394915,\n  \"documentId\": \"6a1f9893-139c-39c7-7030-65e19199b5c5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7047/api/BiddingProgram",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"api",
+										"BiddingProgram"
+									]
+								},
+								"description": "Sample request:\r\n\\\r\nPOST api/BiddingProgram\r\n{\r\n\r\n\"RoundNumber\":1,\r\n\"DocumentId\":\"7ab11d6f-c08c-4df0-b7ac-6518b356e206\"\r\n}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"roundNumber\": 98394915,\n  \"documentId\": \"6a1f9893-139c-39c7-7030-65e19199b5c5\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/BiddingProgram",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"BiddingProgram"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns newly created Bidding Program",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"roundNumber\": 98394915,\n  \"documentId\": \"6a1f9893-139c-39c7-7030-65e19199b5c5\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/BiddingProgram",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"BiddingProgram"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Decisions",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrives specific Decisions from the database based on given DecisionId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/Decisions/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"Decisions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) The id of Decision to retrive"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns DecisionDTO with the given id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Decisions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Decisions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) The id of Decision to retrive"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deletes a specific set of Decision from the database",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/Decisions/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"Decisions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Decision to delete"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns deleted Decision ad DecisionDTO",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Decisions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Decisions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Decision to delete"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Updates a set of Decision in the database, changing all the attributes except of the primary key",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"numberOfDecision\": 22888263,\n  \"parliamentaryDecision\": \"exercitation cillum ea Ut\",\n  \"documentId\": \"d5f76953-bf80-5e84-255d-2f77db87096e\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7047/api/Decisions/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"Decisions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Decision to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns update Decision ad DecisionDTO",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"numberOfDecision\": 22888263,\n  \"parliamentaryDecision\": \"exercitation cillum ea Ut\",\n  \"documentId\": \"d5f76953-bf80-5e84-255d-2f77db87096e\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Decisions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Decisions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Decision to update"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Retrives all Decisions from the database",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7047//api/Decisions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"",
+										"api",
+										"Decisions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns a list of Decisions",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Decisions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Decisions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Adds a new Decision to the database",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"numberOfDecision\": -27756458,\n  \"parliamentaryDecision\": \"ad nulla\",\n  \"documentId\": \"7b736ff3-1115-1d70-53ac-e0ce1f49352a\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7047//api/Decisions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"",
+										"api",
+										"Decisions"
+									]
+								},
+								"description": "Sample request:\r\n\\\r\nPOST api/Decision\r\n{\r\n\r\n\"NumberOfDecision\":1,\r\n\"ParliamentaryDecision\":\"Yes\",\r\n\"DocumentId\":\"7ab11d6f-c08c-4df0-b7ac-6518b356e206\"\r\n}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"numberOfDecision\": -27756458,\n  \"parliamentaryDecision\": \"ad nulla\",\n  \"documentId\": \"7b736ff3-1115-1d70-53ac-e0ce1f49352a\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Decisions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Decisions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns newly created Decision",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"numberOfDecision\": -27756458,\n  \"parliamentaryDecision\": \"ad nulla\",\n  \"documentId\": \"7b736ff3-1115-1d70-53ac-e0ce1f49352a\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Decisions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Decisions"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DocumentationList",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrives specific Documentation List from the database based on given DocumentationListId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/DocumentationList/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"DocumentationList",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) The id of Documentation List to retrive"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns DocumentationListDTO with the given id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/DocumentationList/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"DocumentationList",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) The id of Documentation List to retrive"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deletes a specific set of Documentation List from the database",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/DocumentationList/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"DocumentationList",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Documentation List to delete"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns deleted Documentation List and DocumentationListDTO",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/DocumentationList/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"DocumentationList",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Documentation List to delete"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Updates a set of Documentation Lists in the database, changing all the attributes except of the primary key",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"listId\": -11737603,\n  \"listName\": \"Excepteur velit ullamco nostrud\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7047/api/DocumentationList/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"DocumentationList",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Documentation List to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns updated Documentation List ad DocumentationListDTO",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"listId\": -11737603,\n  \"listName\": \"Excepteur velit ullamco nostrud\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/DocumentationList/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"DocumentationList",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Documentation List to update"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Retrives all Documentation Lists from the database",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7047/api/DocumentationList",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"api",
+										"DocumentationList"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns a list of Documentation List",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/DocumentationList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"DocumentationList"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Adds a new Documentation List to the database",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"listId\": -43596635,\n  \"listName\": \"occaecat\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7047/api/DocumentationList",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"api",
+										"DocumentationList"
+									]
+								},
+								"description": "Sample request:\r\n\\\r\nPOST api/DocumentationList\r\n{\r\n\r\n\"ListId\":1,\r\n\"ListName\":\"Prva\",\r\n }"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"listId\": -43596635,\n  \"listName\": \"occaecat\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/DocumentationList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"DocumentationList"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns newly created Documentation List",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"listId\": -43596635,\n  \"listName\": \"occaecat\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/DocumentationList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"DocumentationList"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Documents",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrives specific Document from the database based on given DocumentId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/Documents/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"Documents",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) The id of Document to retrive"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns DocumentDTO with the given id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Documents/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Documents",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) The id of Document to retrive"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deletes a specific set of Document from the database",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7047/api/Documents/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"Documents",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Document to delete"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns deleted Document ad DocumentDTO",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Documents/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Documents",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Document to delete"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Updates a set of Document in the database, changing all the attributes except of the primary key",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"referenceNumber\": -81355760,\n  \"date\": \"2001-06-22T15:20:42.611Z\",\n  \"creatingDate\": \"1944-02-08T23:29:11.477Z\",\n  \"documentationListId\": \"urn:uuid:7989b43d-1a7a-e89d-af93-50538b36a651\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7047/api/Documents/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7047",
+											"path": [
+												"api",
+												"Documents",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+													"description": "(Required) Id of the Document to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns updated Document ad DocumentDTO",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"referenceNumber\": -81355760,\n  \"date\": \"2001-06-22T15:20:42.611Z\",\n  \"creatingDate\": \"1944-02-08T23:29:11.477Z\",\n  \"documentationListId\": \"urn:uuid:7989b43d-1a7a-e89d-af93-50538b36a651\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Documents/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Documents",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:5371bf80-01ed-3048-6e7f-87677e913d9e",
+															"description": "(Required) Id of the Document to update"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Retrives all Documents from the database",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7047/api/Documents",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"api",
+										"Documents"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns a list of Document",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Documents",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Documents"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Adds a new Document to the database",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"referenceNumber\": 3316200,\n  \"date\": \"1999-03-18T15:47:06.243Z\",\n  \"creatingDate\": \"1965-06-01T21:51:57.177Z\",\n  \"documentationListId\": \"urn:uuid:16e74aab-7d8d-21e7-93a3-247ca7d7a1c8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7047/api/Documents",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7047",
+									"path": [
+										"api",
+										"Documents"
+									]
+								},
+								"description": "Sample request:\r\n\\\r\nPOST api/Document\r\n{\r\n\"ReferenceNumber\": 0,\r\n\"Date\": \"2022-02-17T10:37:07.023\",\r\n\"CreatingDate\": \"2023-02-17T10:37:07.023\",\r\n\"DocumentationListId\": \"329dce4d-0f3c-4242-8e3d-083622fa298b\"\r\n}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"referenceNumber\": 3316200,\n  \"date\": \"1999-03-18T15:47:06.243Z\",\n  \"creatingDate\": \"1965-06-01T21:51:57.177Z\",\n  \"documentationListId\": \"urn:uuid:16e74aab-7d8d-21e7-93a3-247ca7d7a1c8\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Documents",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Documents"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns newly created Document",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"referenceNumber\": 3316200,\n  \"date\": \"1999-03-18T15:47:06.243Z\",\n  \"creatingDate\": \"1965-06-01T21:51:57.177Z\",\n  \"documentationListId\": \"urn:uuid:16e74aab-7d8d-21e7-93a3-247ca7d7a1c8\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Documents",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Documents"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Weather Forecast",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/WeatherForecast",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/WeatherForecast",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"date\": \"2003-09-22T12:19:41.109Z\",\n    \"temperatureC\": 52270075,\n    \"temperatureF\": -44874704,\n    \"summary\": \"dolor\"\n  },\n  {\n    \"date\": \"2009-07-24T13:24:28.674Z\",\n    \"temperatureC\": 19115249,\n    \"temperatureF\": 74696339,\n    \"summary\": \"incididunt aliquip in dolor\"\n  }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

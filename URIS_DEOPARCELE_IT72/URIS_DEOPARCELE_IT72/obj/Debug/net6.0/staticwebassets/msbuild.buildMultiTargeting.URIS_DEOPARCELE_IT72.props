@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\URIS_DEOPARCELE_IT72.props" />
+</Project>

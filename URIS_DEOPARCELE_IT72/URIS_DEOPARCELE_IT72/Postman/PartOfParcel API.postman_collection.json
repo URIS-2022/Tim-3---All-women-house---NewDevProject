@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "97e40699-fb92-42c2-9db6-9dd280df6290",
+		"name": "PartOfParcel API",
+		"description": "An API to preform part of parcel operation\n\nContact Support:\n Name: Anja Janjusevic\n Email: anjajanjusevic44@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21487510"
+	},
+	"item": [
+		{
+			"name": "api/PartOfParcel",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrives specific Part of parcel from the database based on given Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7164/api/PartOfParcel/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7164",
+									"path": [
+										"api",
+										"PartOfParcel",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "urn:uuid:0e8f7deb-316f-800e-4b18-fad67d634c5d",
+											"description": "(Required) The id of Part of parcel to retrive"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "returns PartOfParcelDTO with the given id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/PartOfParcel/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"PartOfParcel",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:0e8f7deb-316f-800e-4b18-fad67d634c5d",
+													"description": "(Required) The id of Part of parcel to retrive"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Deletes a specific set of Part of parcel from the database",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7164/api/PartOfParcel/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7164",
+									"path": [
+										"api",
+										"PartOfParcel",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "urn:uuid:0e8f7deb-316f-800e-4b18-fad67d634c5d",
+											"description": "(Required) Id of the Part of parcel to delete"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "returns deleted Part of parcel and PartOfParcelDTO",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/PartOfParcel/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"PartOfParcel",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:0e8f7deb-316f-800e-4b18-fad67d634c5d",
+													"description": "(Required) Id of the Part of parcel to delete"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates a set of Part of parcel in the database, changing all the attributes except of the primary key",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"kvalitetZemljiste\": \"sit culpa exercitation incididunt\",\n  \"povrsinaDelaParcele\": \"elit tempor dolore\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7164/api/PartOfParcel/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7164",
+									"path": [
+										"api",
+										"PartOfParcel",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "urn:uuid:0e8f7deb-316f-800e-4b18-fad67d634c5d",
+											"description": "(Required) Id of the Part of parcel to update"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "returns updated Part of parcel ad PartOfParcelDTO",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"kvalitetZemljiste\": \"sit culpa exercitation incididunt\",\n  \"povrsinaDelaParcele\": \"elit tempor dolore\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/PartOfParcel/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"PartOfParcel",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:0e8f7deb-316f-800e-4b18-fad67d634c5d",
+													"description": "(Required) Id of the Part of parcel to update"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrives all Part of parcel from the database",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7164/api/PartOfParcel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7164",
+							"path": [
+								"api",
+								"PartOfParcel"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns a list of Part of parcel",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/PartOfParcel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"PartOfParcel"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Adds a new Part of parcel to the database",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"kvalitetZemljiste\": \"nulla\",\n  \"povrsinaDelaParcele\": \"elit nisi labore nostrud\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7164/api/PartOfParcel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7164",
+							"path": [
+								"api",
+								"PartOfParcel"
+							]
+						},
+						"description": "Sample request:\r\n\\\r\nPOST api/PartOfParcel\r\n{\r\n\"KvalitetZemljiste\": \"prva klasa\",\r\n\"PovrsinaDelaParcele\": \"20\"\r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"kvalitetZemljiste\": \"nulla\",\n  \"povrsinaDelaParcele\": \"elit nisi labore nostrud\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/PartOfParcel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"PartOfParcel"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Returns newly created Part of parcel",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"kvalitetZemljiste\": \"nulla\",\n  \"povrsinaDelaParcele\": \"elit nisi labore nostrud\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/PartOfParcel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"PartOfParcel"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Weather Forecast",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/WeatherForecast",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/WeatherForecast",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"date\": \"2001-09-04T10:10:25.447Z\",\n    \"temperatureC\": 15355531,\n    \"temperatureF\": 89452510,\n    \"summary\": \"in ut\"\n  },\n  {\n    \"date\": \"1995-12-30T03:47:43.970Z\",\n    \"temperatureC\": -24649768,\n    \"temperatureF\": -62180049,\n    \"summary\": \"enim mollit minim\"\n  }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

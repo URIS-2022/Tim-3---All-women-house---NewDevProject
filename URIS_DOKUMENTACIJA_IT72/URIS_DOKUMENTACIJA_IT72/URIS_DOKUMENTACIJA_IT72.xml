@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_DOKUMENTACIJA_IT72</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.BiddingProgramController.GetBiddingProgramsAsync">
+            <summary>
+            Retrives all Bidding Programs from the database
+            </summary>>
+            <returns> A list of Bidding Program DTOs.</returns>
+            <response code="200">Returns a list of Bidding Programs</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.BiddingProgramController.GetBiddingProgramAsync(System.Guid)">
+            <summary>
+            Retrives specific Bidding Program from the database based on given Bidding ProgramId
+            </summary>
+            
+            <param name="id"> The id of Bidding Program to retrive</param>
+            <returns>The Bidding Program DTO withthe given id</returns>
+            <response code="200">returns Bidding ProgramDTO with the given id</response>
+            <responce code="404">there is no Bidding Program with given id</responce>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.BiddingProgramController.AddBiddingProgramAsync(URIS_DOKUMENTACIJA_IT72.Models.DTO.AddBiddingProgram)">
+            <summary>
+            Adds a new Bidding Program to the database
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/BiddingProgram
+            {
+            
+            "RoundNumber":1,
+            "DocumentId":"7ab11d6f-c08c-4df0-b7ac-6518b356e206"
+            }
+            </remarks>
+            <param name="addBiddingProgram"> The DTO containing the information for the new Bidding Program</param>
+            <returns>The newly created Bidding Program DTO</returns>
+            <response code="201">Returns newly created Bidding Program</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.BiddingProgramController.DeleteBiddingProgramAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of the Bidding Program from the database
+            </summary>
+            <param name="id">Id of the Bidding Program to delete</param>
+            <returns>An IActionResult containing the deleted Bidding Program as BiddingProgramDTO if successful,or a NotFound error if no Bidding Program with the given Id are found</returns>
+            /// <response code="200">returns deleted BiddingProgram ad BiddingProgramDTO</response>
+            <responce code="404">Returns NotFund error if no Bidding Program with with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.BiddingProgramController.UpdateBiddingProgramAsync(System.Guid,URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateBiddingProgram)">
+            <summary>
+            Updates a set of Bidding Program in the database, changing all the attributes except of the primary key
+            </summary>
+            <param name="id"> Id of the Bidding Program to update</param>
+            <param name="updateBiddingProgram">The updated attributes for Bidding Program, as a DTO</param>
+            <returns>An IActionResult containing the updated Bidding Program as BiddingProgramDTO if successful,or a NotFound error if no Bidding Program with the given Id are found</returns>
+            <response code="200">returns updated Bidding Program ad BiddingProgramDTO</response>
+            <responce code="404">Returns error if no Bidding Program with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DecisionsController.GetDecisionsAsync">
+            <summary>
+            Retrives all Decisions from the database
+            </summary>>
+            <returns> A list of Decisions DTOs.</returns>
+            <response code="200">Returns a list of Decisions</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DecisionsController.GetDecisionAsync(System.Guid)">
+            <summary>
+            Retrives specific Decisions from the database based on given DecisionId
+            </summary>
+            
+            <param name="id"> The id of Decision to retrive</param>
+            <returns>The Decision DTO withthe given id</returns>
+            <response code="200">returns DecisionDTO with the given id</response>
+            <responce code="404">there is no Decision with given id</responce>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DecisionsController.AddDecisionAsync(URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDecisionRequest)">
+            <summary>
+            Adds a new Decision to the database
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/Decision
+            {
+            
+            "NumberOfDecision":1,
+            "ParliamentaryDecision":"Yes",
+            "DocumentId":"7ab11d6f-c08c-4df0-b7ac-6518b356e206"
+            }
+            </remarks>
+            <param name="addDecisionRequest"> The DTO containing the information for the new Decision</param>
+            <returns>The newly created Decision DTO</returns>
+            <response code="201">Returns newly created Decision</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DecisionsController.DeleteDecisionAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of Decision from the database
+            </summary>
+            <param name="id">Id of the Decision to delete</param>
+            <returns>An IActionResult containing the deleted Decision as DecisionDTO if successful,or a NotFound error if no Decision with the given Id are found</returns>
+            /// <response code="200">returns deleted Decision ad DecisionDTO</response>
+            <responce code="404">Returns NotFund error if no Decisionwith with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DecisionsController.UpdateDecisionAsync(System.Guid,URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDecisionRequest)">
+            <summary>
+            Updates a set of Decision in the database, changing all the attributes except of the primary key
+            </summary>
+            <param name="id"> Id of the Decision to update</param>
+            <param name="updateDecisionRequest">The updated attributes for Decision, as a DTO</param>
+            <returns>An IActionResult containing the updated Decision as DecisionDTO if successful,or a NotFound error if no Decision with the given Id are found</returns>
+            <response code="200">returns update Decision ad DecisionDTO</response>
+            <responce code="404">Returns error if no Decisionwith the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentationListController.GetDocumentationListAsync">
+            <summary>
+            Retrives all Documentation Lists from the database
+            </summary>>
+            <returns> A list of Documentation List DTOs.</returns>
+            <response code="200">Returns a list of Documentation List</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentationListController.GetDocumentationListAsync(System.Guid)">
+            <summary>
+            Retrives specific Documentation List from the database based on given DocumentationListId
+            </summary>
+            
+            <param name="id"> The id of Documentation List to retrive</param>
+            <returns>The Documentation List DTO with the given id</returns>
+            <response code="200">returns DocumentationListDTO with the given id</response>
+            <responce code="404">there is no Documentation List with given id</responce>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentationListController.AddDocumentationListAsync(URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentationListRequest)">
+            <summary>
+            Adds a new Documentation List to the database
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/DocumentationList
+            {
+            
+            "ListId":1,
+            "ListName":"Prva",
+             }
+            </remarks>
+            <param name="addDocumentationListRequest"> The DTO containing the information for the new Documentation List</param>
+            <returns>The newly created Documentation List DTO</returns>
+            <response code="201">Returns newly created Documentation List</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentationListController.DeleteDocumentationListAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of Documentation List from the database
+            </summary>
+            <param name="id">Id of the Documentation List to delete</param>
+            <returns>An IActionResult containing the deleted Documentation List as DocumentationListDTO if successful,or a NotFound error if no Documentation List with the given Id are found</returns>
+            /// <response code="200">returns deleted Documentation List and DocumentationListDTO</response>
+            <responce code="404">Returns NotFund error if no Documentation List with with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentationListController.UpdateDocumentationListAsync(System.Guid,URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentationListRequest)">
+            <summary>
+            Updates a set of Documentation Lists in the database, changing all the attributes except of the primary key
+            </summary>
+            <param name="id"> Id of the Documentation List to update</param>
+            <param name="updateDocumentationListRequest">The updated attributes for Documentation List, as a DTO</param>
+            <returns>An IActionResult containing the updated Documentation List as DocumentationListDTO if successful,or a NotFound error if no Documentation List with the given Id are found</returns>
+            <response code="200">returns updated Documentation List ad DocumentationListDTO</response>
+            <responce code="404">Returns error if no Documentation List with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentsController.GetDocumentsAsync">
+            <summary>
+            Retrives all Documents from the database
+            </summary>>
+            <returns> A list of Document DTOs.</returns>
+            <response code="200">Returns a list of Document</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentsController.GetDocumentAsync(System.Guid)">
+            <summary>
+            Retrives specific Document from the database based on given DocumentId
+            </summary>
+            
+            <param name="id"> The id of Document to retrive</param>
+            <returns>The Document DTO with the given id</returns>
+            <response code="200">returns DocumentDTO with the given id</response>
+            <responce code="404">there is no Document with given id</responce>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentsController.AddDocumentAsync(URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentRequest)">
+            <summary>
+            Adds a new Document to the database
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/Document
+            {
+            "ReferenceNumber": 0,
+            "Date": "2022-02-17T10:37:07.023",
+            "CreatingDate": "2023-02-17T10:37:07.023",
+            "DocumentationListId": "329dce4d-0f3c-4242-8e3d-083622fa298b"
+            }
+            </remarks>
+            <param name="addDocumentRequest"> The DTO containing the information for the new Document</param>
+            <returns>The newly created Document DTO</returns>
+            <response code="201">Returns newly created Document</response>
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentsController.DeleteDocumentAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of Document from the database
+            </summary>
+            <param name="id">Id of the Document to delete</param>
+            <returns>An IActionResult containing the deleted Document as DocumentDTO if successful,or a NotFound error if no Document with the given Id are found</returns>
+            /// <response code="200">returns deleted Document ad DocumentDTO</response>
+            <responce code="404">Returns NotFund error if no Document with with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DOKUMENTACIJA_IT72.Controllers.DocumentsController.UpdateDocumentAsync(System.Guid,URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentRequest)">
+            <summary>
+            Updates a set of Document in the database, changing all the attributes except of the primary key
+            </summary>
+            <param name="id"> Id of the Document to update</param>
+            <param name="updateDocumentRequest">The updated attributes for Document, as a DTO</param>
+            <returns>An IActionResult containing the updated Document as DocumentDTO if successful,or a NotFound error if no Document with the given Id are found</returns>
+            <response code="200">returns updated Document ad DocumentDTO</response>
+            <responce code="404">Returns error if no Document with the given Id are found</responce> 
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.Domain.BiddingProgram">
+            <summary>
+            predstavlja program licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.BiddingProgram.BiddingProgramId">
+            <summary>
+            ID programa
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.BiddingProgram.RoundNumber">
+            <summary>
+            Broj kruga
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.BiddingProgram.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.BiddingProgram.Document">
+            <summary>
+            Lista dokumenata
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.Domain.Decision">
+            <summary>
+            predstavlja Resenje
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Decision.DecisionId">
+            <summary>
+            ID resenje
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Decision.NumberOfDecision">
+            <summary>
+            Broj resenja
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Decision.ParliamentaryDecision">
+            <summary>
+            da li je odluka odobrena
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Decision.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Decision.Document">
+            <summary>
+            Lista dokumenata
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document">
+            <summary>
+            predstavlja Dokument
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.DocumentId">
+            <summary>
+            ID dokumenta
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.ReferenceNumber">
+             <summary>
+            broj dokumenta
+             </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.Date">
+            <summary>
+            trenutno vreme
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.CreatingDate">
+            <summary>
+            vreme kreiranja dokumenta
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.DocumentationListId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokumentation list
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.Decisions">
+            <summary>
+            navigaciono svojstvo 
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.BiddingPrograms">
+            <summary>
+            Navigaciono svojstvo
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.Document.DocumentationLists">
+            <summary>
+            Lista liste dokumenata
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.Domain.DocumentationList">
+            <summary>
+            predstavlja listu dokumenata
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.DocumentationList.DocumentationListId">
+            <summary>
+            ID liste dokumenata
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.DocumentationList.ListId">
+            <summary>
+            ID liste dokumenata rayumljiv od strane korisnika
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.DocumentationList.ListName">
+            <summary>
+            ime liste
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.Domain.DocumentationList.Documents">
+            <summary>
+            Navigaciono svojstvo
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddBiddingProgram">
+            <summary>
+            Zahtev za odavanje programa licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddBiddingProgram.RoundNumber">
+            <summary>
+            Broj kruga
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddBiddingProgram.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDecisionRequest">
+            <summary>
+            predstavlja yahtev za dodavanje Resenje
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDecisionRequest.NumberOfDecision">
+            <summary>
+            Broj resenja
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDecisionRequest.ParliamentaryDecision">
+            <summary>
+            da li je odluka odobrena
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDecisionRequest.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentationListRequest">
+            <summary>
+            predstavlja zahtev za dodavanje liste dokumenata
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentationListRequest.ListId">
+            <summary>
+            ID liste dokumenata rayumljiv od strane korisnika
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentationListRequest.ListName">
+            <summary>
+            ime liste
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentRequest">
+            <summary>
+            yahtev ya dodavanje Dokument
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentRequest.ReferenceNumber">
+             <summary>
+            broj dokumenta
+             </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentRequest.Date">
+            <summary>
+            trenutno vreme
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentRequest.CreatingDate">
+            <summary>
+            vreme kreiranja dokumenta
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.AddDocumentRequest.DocumentationListId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokumentation list
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.BiddingProgram">
+            <summary>
+            predstavlja program licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.BiddingProgram.BiddingProgramId">
+            <summary>
+            ID programa
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.BiddingProgram.RoundNumber">
+            <summary>
+            Broj kruga
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.BiddingProgram.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.Decision">
+            <summary>
+            predstavlja Resenje
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Decision.DecisionId">
+            <summary>
+            ID resenje
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Decision.NumberOfDecision">
+            <summary>
+            Broj resenja
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Decision.ParliamentaryDecision">
+            <summary>
+            da li je odluka odobrena
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Decision.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.Document">
+            <summary>
+            predstavlja Dokument
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Document.DocumentId">
+            <summary>
+            ID dokumenta
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Document.ReferenceNumber">
+             <summary>
+            broj dokumenta
+             </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Document.Date">
+            <summary>
+            trenutno vreme
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Document.CreatingDate">
+            <summary>
+            vreme kreiranja dokumenta
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.Document.DocumentationListId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokumentation list
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:URIS_DOKUMENTACIJA_IT72.Models.DTO.DocumentationList" -->
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.DocumentationList.DocumentationListId">
+            <summary>
+            ID liste dokumenata
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.DocumentationList.ListId">
+            <summary>
+            ID liste dokumenata rayumljiv od strane korisnika
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.DocumentationList.ListName">
+            <summary>
+            ime liste
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateBiddingProgram">
+            <summary>
+            Zahtev za iymenu programa licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateBiddingProgram.RoundNumber">
+            <summary>
+            Broj kruga
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateBiddingProgram.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDecisionRequest">
+            <summary>
+            predstavlja zahtev ya izmenu Resenje
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDecisionRequest.NumberOfDecision">
+            <summary>
+            Broj resenja
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDecisionRequest.ParliamentaryDecision">
+            <summary>
+            da li je odluka odobrena
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDecisionRequest.DocumentId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokument
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentationListRequest">
+            <summary>
+            predstavlja zahtev ya izmenu liste dokumenata
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentationListRequest.ListId">
+            <summary>
+            ID liste dokumenata rayumljiv od strane korisnika
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentationListRequest.ListName">
+            <summary>
+            ime liste
+            </summary>
+        </member>
+        <member name="T:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentRequest">
+            <summary>
+            zahtev ya iymenu Dokumenta
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentRequest.ReferenceNumber">
+             <summary>
+            broj dokumenta
+             </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentRequest.Date">
+            <summary>
+            trenutno vreme
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentRequest.CreatingDate">
+            <summary>
+            vreme kreiranja dokumenta
+            </summary>
+        </member>
+        <member name="P:URIS_DOKUMENTACIJA_IT72.Models.DTO.UpdateDocumentRequest.DocumentationListId">
+            <summary>
+            Strani kljuc, odnosno primarni u klasi Dokumentation list
+            </summary>
+        </member>
+    </members>
+</doc>

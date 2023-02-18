@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\URIS_OGLAS_IT72.props" />
+</Project>

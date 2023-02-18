@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\URIS_DOKUMENTACIJA_IT72.props" />
+</Project>

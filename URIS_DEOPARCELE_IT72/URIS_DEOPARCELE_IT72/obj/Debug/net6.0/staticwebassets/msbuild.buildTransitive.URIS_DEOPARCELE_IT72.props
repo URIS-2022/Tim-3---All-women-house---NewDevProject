@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\URIS_DEOPARCELE_IT72.props" />
+</Project>

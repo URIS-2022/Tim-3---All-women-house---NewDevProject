@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_DEOPARCELE_IT72</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_DEOPARCELE_IT72.Controllers.PartOfParcelController.GetPartOfParcelAsync">
+            <summary>
+            Retrives all Part of parcel from the database
+            </summary>>
+            <returns> A list of Part of parcel DTOs.</returns>
+            <response code="200">Returns a list of Part of parcel</response>
+        </member>
+        <member name="M:URIS_DEOPARCELE_IT72.Controllers.PartOfParcelController.GetPartOfParcelAsync(System.Guid)">
+            <summary>
+            Retrives specific Part of parcel from the database based on given Id
+            </summary>
+            
+            <param name="id"> The id of Part of parcel to retrive</param>
+            <returns>The Part of parcel DTO with the given id</returns>
+            <response code="200">returns PartOfParcelDTO with the given id</response>
+            <responce code="404">there is no Part of parcel with given id</responce>
+        </member>
+        <member name="M:URIS_DEOPARCELE_IT72.Controllers.PartOfParcelController.AddPartOfParcelAsync(URIS_DEOPARCELE_IT72.Models.DTO.AddPartOfParcelRequest)">
+            <summary>
+            Adds a new Part of parcel to the database
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/PartOfParcel
+            {
+            "KvalitetZemljiste": "prva klasa",
+            "PovrsinaDelaParcele": "20"
+            }
+            </remarks>
+            <param name="addPartOfParcelRequest"> The DTO containing the information for the new Part of parcel</param>
+            <returns>The newly created Part of parcel DTO</returns>
+            <response code="201">Returns newly created Part of parcel</response>
+        </member>
+        <member name="M:URIS_DEOPARCELE_IT72.Controllers.PartOfParcelController.DeletePartOfParcelAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of Part of parcel from the database
+            </summary>
+            <param name="id">Id of the Part of parcel to delete</param>
+            <returns>An IActionResult containing the deleted Part of parcel as PartOfParcelDTO if successful,or a NotFound error if no Part of parcel with the given Id are found</returns>
+            /// <response code="200">returns deleted Part of parcel and PartOfParcelDTO</response>
+            <responce code="404">Returns NotFund error if no Part of parcel with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_DEOPARCELE_IT72.Controllers.PartOfParcelController.UpdatePartOfParcelAsync(System.Guid,URIS_DEOPARCELE_IT72.Models.DTO.UpdatePartOfParcelRequest)">
+            <summary>
+            Updates a set of Part of parcel in the database, changing all the attributes except of the primary key
+            </summary>
+            <param name="id"> Id of the Part of parcel to update</param>
+            <param name="updatePartOfParcelRequest">The updated attributes for Part of parcel, as a DTO</param>
+            <returns>An IActionResult containing the updated Part of parcel as PartOfParcelDTO if successful,or a NotFound error if no Part of parcel with the given Id are found</returns>
+            <response code="200">returns updated Part of parcel ad PartOfParcelDTO</response>
+            <responce code="404">Returns error if no Part of parcel with the given Id are found</responce> 
+        </member>
+        <member name="T:URIS_DEOPARCELE_IT72.Models.Domain.PartOfParcel">
+            <summary>
+            predstavlja Deo parcele
+            </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.Domain.PartOfParcel.PartOfParcelID">
+            <summary>
+            ID dela parcele
+            </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.Domain.PartOfParcel.KvalitetZemljiste">
+            <summary>
+            kvalitet zemljista
+             </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.Domain.PartOfParcel.PovrsinaDelaParcele">
+            <summary>
+            povrsina dela parcele
+             </summary>
+        </member>
+        <member name="T:URIS_DEOPARCELE_IT72.Models.DTO.AddPartOfParcelRequest">
+            <summary>
+            zahtev za dodavanje
+            </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.DTO.AddPartOfParcelRequest.KvalitetZemljiste">
+            <summary>
+            kvalitet zemljista
+             </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.DTO.AddPartOfParcelRequest.PovrsinaDelaParcele">
+            <summary>
+            povrsina dela parcele
+             </summary>
+        </member>
+        <member name="T:URIS_DEOPARCELE_IT72.Models.DTO.PartOfParcel">
+            <summary>
+            predstavlja Deo parcele
+            </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.DTO.PartOfParcel.PartOfParcelID">
+            <summary>
+            ID dela parcele
+            </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.DTO.PartOfParcel.KvalitetZemljiste">
+            <summary>
+            kvalitet zemljista
+             </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.DTO.PartOfParcel.PovrsinaDelaParcele">
+            <summary>
+            povrsina dela parcele
+             </summary>
+        </member>
+        <member name="T:URIS_DEOPARCELE_IT72.Models.DTO.UpdatePartOfParcelRequest">
+            <summary>
+            zahtev za izmenu
+            </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.DTO.UpdatePartOfParcelRequest.KvalitetZemljiste">
+            <summary>
+            kvalitet zemljista
+             </summary>
+        </member>
+        <member name="P:URIS_DEOPARCELE_IT72.Models.DTO.UpdatePartOfParcelRequest.PovrsinaDelaParcele">
+            <summary>
+            povrsina dela parcele
+             </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_OGLAS_IT72</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_OGLAS_IT72.Controllers.AdvertismentController.GetAdvertismentsAsync">
+            <summary>
+            Retrives all Advertisments from the database
+            </summary>>
+            <returns> A list of Advertisments DTOs.</returns>
+            <response code="200">Returns a list of Advertisments</response>
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.AdvertismentController.GetAdvertismentAsync(System.Guid)">
+            <summary>
+            Retrives specific advertisment from the database based on given Id
+            </summary>
+            
+            <param name="id"> The id of advertisment to retrive</param>
+            <returns>The advertisment DTO with the given id</returns>
+            <response code="200">returns AdvertismentDTO with the given id</response>
+            <responce code="404">there is no Advertisment with given id</responce>
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.AdvertismentController.AddAdvertismentAsync(URIS_OGLAS_IT72.Models.DTO.AddAdvertismentRequest)">
+            <summary>
+            Adds a new Advertisment to the database
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/Advertisment
+            {
+            "TipGaranta": 0,
+            "DecisionOfAdvertismentId": "329dce4d-0f3c-4242-8e3d-083622fa298b"
+            }
+            </remarks>
+            <param name="addAdvertismentRequest"> The DTO containing the information for the new Advertisment</param>
+            <returns>The newly created Advertisment DTO</returns>
+            <response code="201">Returns newly created Advertisment</response>
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.AdvertismentController.DeleteAdvertismentAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of Advertisment from the database
+            </summary>
+            <param name="id">Id of the Advertisment to delete</param>
+            <returns>An IActionResult containing the deleted Advertisment as AdvertismentDTO if successful,or a NotFound error if no Advertisment with the given Id are found</returns>
+            /// <response code="200">returns deleted Advertisment and AdvertismentDTO</response>
+            <responce code="404">Returns NotFund error if no Advertisment with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.AdvertismentController.UpdateAdvertismentAsync(System.Guid,URIS_OGLAS_IT72.Models.DTO.UpdateAdvertismentRequest)">
+            <summary>
+            Updates a set of Advertisment in the database, changing all the attributes except of the primary key
+            </summary>
+            <param name="id"> Id of the Advertisment to update</param>
+            <param name="updateAdvertismentRequest">The updated attributes for Advertisment, as a DTO</param>
+            <returns>An IActionResult containing the updated Advertisment as AdvertismentDTO if successful,or a NotFound error if no Advertisment with the given Id are found</returns>
+            <response code="200">returns updated Advertisment ad DocumentDTO</response>
+            <responce code="404">Returns error if no Advertisment with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.DecisionOfAdvertismentController.GetDecisionOfAdvertismentsAsync">
+            <summary>
+            Retrives all Decision Of Advertisment from the database
+            </summary>>
+            <returns> A list of Decision Of Advertisment DTOs.</returns>
+            <response code="200">Returns a list of Decision Of Advertisment</response>
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.DecisionOfAdvertismentController.GetDecisionOfAdvertismentAsync(System.Guid)">
+            <summary>
+            Retrives specific Decision Of Advertisment from the database based on given Id
+            </summary>
+            
+            <param name="id"> The id of Decision Of Advertisment to retrive</param>
+            <returns>The Decision Of Advertisment DTO with the given id</returns>
+            <response code="200">returns DecisionOfAdvertismentDTO with the given id</response>
+            <responce code="404">there is no Decision Of Advertisment with given id</responce>
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.DecisionOfAdvertismentController.AddDecisionOfAdvertismentAsync(URIS_OGLAS_IT72.Models.DTO.AddDecisionOfAdvertismentRequest)">
+            <summary>
+            Adds a new Decision Of Advertisment to the database
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/DecisionOfAdvertisment
+            {
+            
+            "VremeDonosenja":"02-02-2022",
+            "NazivOdluke":"Prva",
+             }
+            </remarks>
+            <param name="addDecisionOfAdvertismentRequest"> The DTO containing the information for the new Decision Of Advertisment</param>
+            <returns>The newly created Decision Of Advertisment DTO</returns>
+            <response code="201">Returns newly created Decision Of Advertisment</response>
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.DecisionOfAdvertismentController.DeleteDecisionOfAdvertismentAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of Decision Of Advertisment from the database
+            </summary>
+            <param name="id">Id of the Decision Of Advertisment to delete</param>
+            <returns>An IActionResult containing the deleted Decision Of Advertisment as DecisionOfAdvertismentDTO if successful,or a NotFound error if no Decision Of Advertisment with the given Id are found</returns>
+            /// <response code="200">returns deleted Decision Of Advertisment and DecisionOfAdvertismentDTO</response>
+            <responce code="404">Returns NotFund error if no DecisionOfAdvertisment with with the given Id are found</responce> 
+        </member>
+        <member name="M:URIS_OGLAS_IT72.Controllers.DecisionOfAdvertismentController.UpdateDecisionOfAdvertismentAsync(System.Guid,URIS_OGLAS_IT72.Models.DTO.UpdateDecisionOfAdvertismentRequest)">
+            <summary>
+            Updates a set of Decision Of Advertisment in the database, changing all the attributes except of the primary key
+            </summary>
+            <param name="id"> Id of the Decision Of Advertisment to update</param>
+            <param name="updateDecisionOfAdvertismentRequest">The updated attributes for Decision Of Advertisment, as a DTO</param>
+            <returns>An IActionResult containing the updated Decision Of Advertisment as DecisionOfAdvertismentDTO if successful,or a NotFound error if no Decision Of Advertisment with the given Id are found</returns>
+            <response code="200">returns updated Decision Of Advertisment  ad DecisionOfAdvertismentDTO</response>
+            <responce code="404">Returns error if no Decision Of Advertisment  with the given Id are found</responce> 
+        </member>
+        <member name="T:URIS_OGLAS_IT72.Models.Domain.Advertisment">
+            <summary>
+            predstavlja Oglas
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.Advertisment.AdvertismentId">
+            <summary>
+            ID oglasa
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.Advertisment.TipGaranta">
+            <summary>
+            pretstavlja tip garanta
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.Advertisment.DecisionOfAdvertismentId">
+            <summary>
+            strani kljuc, primarni kljuc u tabeli odluke o oglasu
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.Advertisment.DecisionOfAdvertisments">
+            <summary>
+            Lista odluke o donosenju oglasa
+            </summary>
+        </member>
+        <member name="T:URIS_OGLAS_IT72.Models.Domain.DecisionOfAdvertisment">
+            <summary>
+            predstavlja listu odluka o dokumentu
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.DecisionOfAdvertisment.DecisionOfAdvertismentId">
+            <summary>
+            Id odluke o raspisivanju oglasa
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.DecisionOfAdvertisment.VremeDonosenja">
+            <summary>
+            vreme donosenja odluke
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.DecisionOfAdvertisment.NazivOdluke">
+            <summary>
+            naziv odluke
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.Domain.DecisionOfAdvertisment.Advertisments">
+            <summary>
+            Navigaciono svojstvo
+            </summary>
+        </member>
+        <member name="T:URIS_OGLAS_IT72.Models.DTO.AddAdvertismentRequest">
+            <summary>
+            zahtev za dodavanje oglasa
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.AddAdvertismentRequest.TipGaranta">
+            <summary>
+            pretstavlja tip garanta
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.AddAdvertismentRequest.DecisionOfAdvertismentId">
+            <summary>
+            strani kljuc, primarni kljuc u tabeli odluke o oglasu
+            </summary>
+        </member>
+        <member name="T:URIS_OGLAS_IT72.Models.DTO.AddDecisionOfAdvertismentRequest">
+            <summary>
+            zahtev za dodavanje
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.AddDecisionOfAdvertismentRequest.VremeDonosenja">
+            <summary>
+            vreme donosenja odluke
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.AddDecisionOfAdvertismentRequest.NazivOdluke">
+            <summary>
+            naziv odluke
+            </summary>
+        </member>
+        <member name="T:URIS_OGLAS_IT72.Models.DTO.Advertisment">
+            <summary>
+            predstavlja oglas
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.Advertisment.AdvertismentId">
+            <summary>
+            ID oglasa
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.Advertisment.TipGaranta">
+            <summary>
+            pretstavlja tip garanta
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.Advertisment.DecisionOfAdvertismentId">
+            <summary>
+            strani kljuc, primarni kljuc u tabeli odluke o oglasu
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.DecisionOfAdvertisment.DecisionOfAdvertismentId">
+            <summary>
+            Id odluke o raspisivanju oglasa
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.DecisionOfAdvertisment.VremeDonosenja">
+            <summary>
+            vreme donosenja odluke
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.DecisionOfAdvertisment.NazivOdluke">
+            <summary>
+            naziv odluke
+            </summary>
+        </member>
+        <member name="T:URIS_OGLAS_IT72.Models.DTO.UpdateAdvertismentRequest">
+            <summary>
+            zahtev za izmenu
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.UpdateAdvertismentRequest.TipGaranta">
+            <summary>
+            pretstavlja tip garanta
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.UpdateAdvertismentRequest.DecisionOfAdvertismentId">
+            <summary>
+            strani kljuc, primarni kljuc u tabeli odluke o oglasu
+            </summary>
+        </member>
+        <member name="T:URIS_OGLAS_IT72.Models.DTO.UpdateDecisionOfAdvertismentRequest">
+            <summary>
+            zahtev za izmenu
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.UpdateDecisionOfAdvertismentRequest.VremeDonosenja">
+            <summary>
+            vreme donosenja odluke
+            </summary>
+        </member>
+        <member name="P:URIS_OGLAS_IT72.Models.DTO.UpdateDecisionOfAdvertismentRequest.NazivOdluke">
+            <summary>
+            naziv odluke
+            </summary>
+        </member>
+    </members>
+</doc>

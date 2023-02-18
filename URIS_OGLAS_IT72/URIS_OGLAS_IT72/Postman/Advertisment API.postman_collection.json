@@ -1,0 +1,847 @@
+{
+	"info": {
+		"_postman_id": "100a9015-359e-4251-b914-8caa6ad37f68",
+		"name": "Advertisment API",
+		"description": "An API to preform advertisment operation\n\nContact Support:\n Name: Anja Janjusevic\n Email: anjajanjusevic44@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21487510"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Advertisment",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrives specific advertisment from the database based on given Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7296/api/Advertisment/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7296",
+											"path": [
+												"api",
+												"Advertisment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+													"description": "(Required) The id of advertisment to retrive"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns AdvertismentDTO with the given id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Advertisment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Advertisment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+															"description": "(Required) The id of advertisment to retrive"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deletes a specific set of Advertisment from the database",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7296/api/Advertisment/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7296",
+											"path": [
+												"api",
+												"Advertisment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+													"description": "(Required) Id of the Advertisment to delete"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns deleted Advertisment and AdvertismentDTO",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Advertisment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Advertisment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+															"description": "(Required) Id of the Advertisment to delete"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Updates a set of Advertisment in the database, changing all the attributes except of the primary key",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tipGaranta\": \"ut\",\n  \"decisionOfAdvertismentId\": \"urn:uuid:2b010652-e3c8-6e65-1990-f31912d08072\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7296/api/Advertisment/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7296",
+											"path": [
+												"api",
+												"Advertisment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+													"description": "(Required) Id of the Advertisment to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns updated Advertisment ad DocumentDTO",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"tipGaranta\": \"ut\",\n  \"decisionOfAdvertismentId\": \"urn:uuid:2b010652-e3c8-6e65-1990-f31912d08072\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Advertisment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Advertisment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+															"description": "(Required) Id of the Advertisment to update"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Retrives all Advertisments from the database",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7296/api/Advertisment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7296",
+									"path": [
+										"api",
+										"Advertisment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns a list of Advertisments",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Advertisment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Advertisment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Adds a new Advertisment to the database",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"tipGaranta\": \"velit ut in\",\n  \"decisionOfAdvertismentId\": \"2bc54682-2e0c-4dd1-aec1-19d3ab610a58\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7296/api/Advertisment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7296",
+									"path": [
+										"api",
+										"Advertisment"
+									]
+								},
+								"description": "Sample request:\r\n\\\r\nPOST api/Advertisment\r\n{\r\n\"TipGaranta\": 0,\r\n\"DecisionOfAdvertismentId\": \"329dce4d-0f3c-4242-8e3d-083622fa298b\"\r\n}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tipGaranta\": \"velit ut in\",\n  \"decisionOfAdvertismentId\": \"2bc54682-2e0c-4dd1-aec1-19d3ab610a58\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Advertisment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Advertisment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns newly created Advertisment",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tipGaranta\": \"velit ut in\",\n  \"decisionOfAdvertismentId\": \"2bc54682-2e0c-4dd1-aec1-19d3ab610a58\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Advertisment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Advertisment"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DecisionOfAdvertisment",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrives specific Decision Of Advertisment from the database based on given Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7296/api/DecisionOfAdvertisment/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7296",
+											"path": [
+												"api",
+												"DecisionOfAdvertisment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+													"description": "(Required) The id of Decision Of Advertisment to retrive"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns DecisionOfAdvertismentDTO with the given id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/DecisionOfAdvertisment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"DecisionOfAdvertisment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+															"description": "(Required) The id of Decision Of Advertisment to retrive"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deletes a specific set of Decision Of Advertisment from the database",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7296/api/DecisionOfAdvertisment/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7296",
+											"path": [
+												"api",
+												"DecisionOfAdvertisment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+													"description": "(Required) Id of the Decision Of Advertisment to delete"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns deleted Decision Of Advertisment and DecisionOfAdvertismentDTO",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/DecisionOfAdvertisment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"DecisionOfAdvertisment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+															"description": "(Required) Id of the Decision Of Advertisment to delete"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Updates a set of Decision Of Advertisment in the database, changing all the attributes except of the primary key",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"vremeDonosenja\": \"1953-01-11T19:49:57.417Z\",\n  \"nazivOdluke\": \"aliquip enim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7296/api/DecisionOfAdvertisment/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7296",
+											"path": [
+												"api",
+												"DecisionOfAdvertisment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+													"description": "(Required) Id of the Decision Of Advertisment to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "returns updated Decision Of Advertisment  ad DecisionOfAdvertismentDTO",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"vremeDonosenja\": \"1953-01-11T19:49:57.417Z\",\n  \"nazivOdluke\": \"aliquip enim\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/DecisionOfAdvertisment/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"DecisionOfAdvertisment",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "945f0bb3-5a93-9cab-affc-fb5225d8389d",
+															"description": "(Required) Id of the Decision Of Advertisment to update"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Retrives all Decision Of Advertisment from the database",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7296/api/DecisionOfAdvertisment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7296",
+									"path": [
+										"api",
+										"DecisionOfAdvertisment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns a list of Decision Of Advertisment",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/DecisionOfAdvertisment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"DecisionOfAdvertisment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Adds a new Decision Of Advertisment to the database",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"vremeDonosenja\": \"1959-04-27T00:57:47.060Z\",\n  \"nazivOdluke\": \"irure Ut ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7296/api/DecisionOfAdvertisment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7296",
+									"path": [
+										"api",
+										"DecisionOfAdvertisment"
+									]
+								},
+								"description": "Sample request:\r\n\\\r\nPOST api/DecisionOfAdvertisment\r\n{\r\n\r\n\"VremeDonosenja\":\"02-02-2022\",\r\n\"NazivOdluke\":\"Prva\",\r\n }"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"vremeDonosenja\": \"1959-04-27T00:57:47.060Z\",\n  \"nazivOdluke\": \"irure Ut ut\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/DecisionOfAdvertisment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"DecisionOfAdvertisment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns newly created Decision Of Advertisment",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"vremeDonosenja\": \"1959-04-27T00:57:47.060Z\",\n  \"nazivOdluke\": \"irure Ut ut\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/DecisionOfAdvertisment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"DecisionOfAdvertisment"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Weather Forecast",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/WeatherForecast",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/WeatherForecast",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"date\": \"1972-03-27T04:44:38.137Z\",\n    \"temperatureC\": 84778756,\n    \"temperatureF\": -24822262,\n    \"summary\": \"velit mollit Lorem ut aliqua\"\n  },\n  {\n    \"date\": \"1983-03-02T19:04:18.821Z\",\n    \"temperatureC\": -42814272,\n    \"temperatureF\": 77992075,\n    \"summary\": \"laboris cillum\"\n  }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
