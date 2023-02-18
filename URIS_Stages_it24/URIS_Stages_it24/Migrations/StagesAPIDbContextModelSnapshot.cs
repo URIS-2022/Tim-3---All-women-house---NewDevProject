@@ -10,7 +10,7 @@ using URIS_Stages_it24.Data;
 
 namespace URIS_Stages_it24.Migrations
 {
-    [DbContext(typeof(StagesAPIDbContext))]
+    [DbContext(typeof(StagesApiDbContext))]
     partial class StagesAPIDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

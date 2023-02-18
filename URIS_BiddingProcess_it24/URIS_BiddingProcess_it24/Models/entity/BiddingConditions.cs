@@ -6,7 +6,7 @@ namespace URIS_BiddingProcess_it24.Models.entity
     {
         public Guid BiddingConditionsId { get; set; }
         public int Price { get; set; }
-        public string RentalDuration { get; set; }
+        public string? RentalDuration { get; set; }
         //Navigation Properties
         [ForeignKey("Biddings")]
         public Guid BiddingId { get; set; }

@@ -7,7 +7,7 @@
         /// \
         /// Values should be in format: 001,002, etc
         /// </summary>
-        public string BiddingCode { get; set; }
+        public string? BiddingCode { get; set; }
         /// <summary>
         /// The type of Bidding, such as public bidding.
         /// \
@@ -17,7 +17,7 @@
         /// \
         /// 2."Otvaranje zatvorenih ponuda"
         /// </summary>
-        public string Type { get; set; }
+        public string? Type { get; set; }
         /// <summary>
         /// The current status of the Bidding, such as first round.
         /// \
@@ -29,7 +29,7 @@
         /// \
         /// 3."Drugi krug sa novim uslovima"
         /// </summary>
-        public string Status { get; set; }
+        public string? Status { get; set; }
         /// <summary>
         /// Indicates whether the Bidding is excepted or not.
         /// </summary>

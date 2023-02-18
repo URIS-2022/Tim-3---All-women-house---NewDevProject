@@ -15,7 +15,7 @@ namespace URIS_BiddingProcess_it24.Models.DTO
         /// <summary>
         /// The duration of the rental period.
         /// </summary>
-        public string RentalDuration { get; set; }
+        public string? RentalDuration { get; set; }
         //Foreign Key
         [ForeignKey("Biddings")]
         public Guid BiddingId { get; set; }

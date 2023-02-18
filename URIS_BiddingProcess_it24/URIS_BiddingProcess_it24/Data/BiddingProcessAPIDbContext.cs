@@ -3,9 +3,9 @@ using URIS_BiddingProcess_it24.Models.entity;
 
 namespace URIS_BiddingProcess_it24.Data
 {
-    public class BiddingProcessAPIDbContext:DbContext
+    public class BiddingProcessApiDbContext:DbContext
     {
-        public BiddingProcessAPIDbContext(DbContextOptions<BiddingProcessAPIDbContext> options) : base(options) 
+        public BiddingProcessApiDbContext(DbContextOptions<BiddingProcessApiDbContext> options) : base(options) 
         { 
 
         }

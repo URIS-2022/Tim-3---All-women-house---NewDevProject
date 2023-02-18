@@ -10,7 +10,7 @@ using URIS_BiddingProcess_it24.Data;
 
 namespace URIS_BiddingProcess_it24.Migrations
 {
-    [DbContext(typeof(BiddingProcessAPIDbContext))]
+    [DbContext(typeof(BiddingProcessApiDbContext))]
     partial class BiddingProcessAPIDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

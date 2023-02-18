@@ -41,7 +41,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.AddDbContext<BiddingProcessAPIDbContext>(options =>
+builder.Services.AddDbContext<BiddingProcessApiDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("BiddingProcess"));
 });

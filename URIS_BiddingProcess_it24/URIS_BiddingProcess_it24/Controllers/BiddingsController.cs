@@ -32,22 +32,7 @@ namespace URIS_BiddingProcess_it24.Controllers
             var biddingsEntity = await biddingRepository.GetAllAsync();
 
             //return DTO Bidding
-            //var biddingsDto = new List<Models.DTO.Bidding>();
-            //biddingsEntity.ToList().ForEach(bidding => { 
-            //    var biddingDTO = new Models.DTO.Bidding()
-            //    {
-            //        BiddingId= bidding.BiddingId,
-            //        BiddingCode= bidding.BiddingCode,
-            //        Type= bidding.Type,
-            //        Status= bidding.Status,
-            //        Excepted= bidding.Excepted,
-            //        StartingPrice = bidding.StartingPrice,
-            //        DateOfMaintenance = bidding.DateOfMaintenance,
-            //        StartTime= bidding.StartTime,
-            //        EndTime= bidding.EndTime,
-            //    };
-            //    biddingsDto.Add(biddingDTO);
-            //});
+            
 
             var biddingsDto = mapper.Map<List<Models.DTO.Bidding>>(biddingsEntity);
 

@@ -6,9 +6,9 @@ namespace URIS_BiddingProcess_it24.Repositories
 {
     public class OpeningOfBidsRepository : IOpeningOfBidsRepository
     {
-        private readonly BiddingProcessAPIDbContext biddingProcessAPIDbContext;
+        private readonly BiddingProcessApiDbContext biddingProcessAPIDbContext;
 
-        public OpeningOfBidsRepository(BiddingProcessAPIDbContext biddingProcessAPIDbContext)
+        public OpeningOfBidsRepository(BiddingProcessApiDbContext biddingProcessAPIDbContext)
         {
             this.biddingProcessAPIDbContext = biddingProcessAPIDbContext;
         }

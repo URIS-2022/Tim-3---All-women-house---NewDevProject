@@ -11,7 +11,7 @@ using URIS_Stages_it24.Data;
 
 namespace URIS_Stages_it24.Migrations
 {
-    [DbContext(typeof(StagesAPIDbContext))]
+    [DbContext(typeof(StagesApiDbContext))]
     [Migration("20230213212618_InitialMigration")]
     partial class InitialMigration
     {

@@ -11,7 +11,7 @@ namespace URIS_BiddingProcess_it24.Models.DTO
         /// <summary>
         /// The duration of the rental period.
         /// </summary>
-        public string RentalDuration { get; set; }
+        public string? RentalDuration { get; set; }
         /// <summary>
         /// The foreign key of the Bidding entity that this bidding conditions belongs to.
         /// </summary>

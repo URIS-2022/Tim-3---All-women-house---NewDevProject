@@ -11,7 +11,7 @@ using URIS_BiddingProcess_it24.Data;
 
 namespace URIS_BiddingProcess_it24.Migrations
 {
-    [DbContext(typeof(BiddingProcessAPIDbContext))]
+    [DbContext(typeof(BiddingProcessApiDbContext))]
     [Migration("20230212120429_InitialMigration")]
     partial class InitialMigration
     {

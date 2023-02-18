@@ -3,9 +3,9 @@
     public class Bidding
     {
         public Guid BiddingId { get; set; }
-        public string BiddingCode { get; set; }
-        public string Type { get; set; }
-        public string Status { get; set; }
+        public string? BiddingCode { get; set; }
+        public string? Type { get; set; }
+        public string? Status { get; set; }
         public bool Excepted { get; set; }
         public int StartingPrice { get; set; }
         public DateTime DateOfMaintenance { get; set; }

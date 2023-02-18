@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wQ2a+dSfcIprLCD6vCEeuI9r2v9gpjeD6y4hQkrnglX5B46ehdsIam/OU1E96PT2waVcSm5WSpXcPlF5ES7Mtg==",
+  "dgSpecHash": "6FfSUds5MPVBQW5kXjOZyKvY3hP4vROEoHCrU3+TstCX/Vc4e1WYyX4puu42w5V2uL4GZd4OmbLw2vg96UgxAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jovan\\OneDrive\\Desktop\\URIS\\URIS_Stages_it24\\URIS_Stages_it24\\URIS_Stages_it24.csproj",
+  "projectFilePath": "C:\\Users\\jovan\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_Stages_it24\\URIS_Stages_it24\\URIS_Stages_it24.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jovan\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\jovan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

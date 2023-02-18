@@ -39,7 +39,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.AddDbContext<StagesAPIDbContext>(options =>
+builder.Services.AddDbContext<StagesApiDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Stages"));
 });

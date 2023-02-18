@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tF39VMM2grqMhbBAcN59b4IqrtCn4YCEhpP7sjt0pRO6fos2/Q1cefLB+a9Gp4l0pgqspQg6DdpfTar/ME3WnA==",
+  "dgSpecHash": "uC1NO5ODzIPytdhxnB5I45cnOFsNXzxI0rAxiGq0q/931tDdCZ8+FJXNnrUIYVDBU4Yuvn51Y1PrXLqaNqZXwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jovan\\source\\repos\\Tim-3---All-women-house---NewDevProject\\URIS_BiddingProcess_it24\\URIS_BiddingProcess_it24\\URIS_BiddingProcess_it24.csproj",
+  "projectFilePath": "C:\\Users\\jovan\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_BiddingProcess_it24\\URIS_BiddingProcess_it24\\URIS_BiddingProcess_it24.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jovan\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\jovan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

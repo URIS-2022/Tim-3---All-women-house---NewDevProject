@@ -6,9 +6,9 @@ namespace URIS_Stages_it24.Repositories
 {
     public class StageRepository : IStageRepository
     {
-        private readonly StagesAPIDbContext stagesAPIDbContext;
+        private readonly StagesApiDbContext stagesAPIDbContext;
 
-        public StageRepository(StagesAPIDbContext stagesAPIDbContext)
+        public StageRepository(StagesApiDbContext stagesAPIDbContext)
         {
             this.stagesAPIDbContext = stagesAPIDbContext;
         }

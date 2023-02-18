@@ -5124,11 +5124,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jovan\\OneDrive\\Desktop\\URIS\\URIS_Stages_it24\\URIS_Stages_it24\\URIS_Stages_it24.csproj",
+      "projectUniqueName": "C:\\Users\\jovan\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_Stages_it24\\URIS_Stages_it24\\URIS_Stages_it24.csproj",
       "projectName": "URIS_Stages_it24",
-      "projectPath": "C:\\Users\\jovan\\OneDrive\\Desktop\\URIS\\URIS_Stages_it24\\URIS_Stages_it24\\URIS_Stages_it24.csproj",
+      "projectPath": "C:\\Users\\jovan\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_Stages_it24\\URIS_Stages_it24\\URIS_Stages_it24.csproj",
       "packagesPath": "C:\\Users\\jovan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jovan\\OneDrive\\Desktop\\URIS\\URIS_Stages_it24\\URIS_Stages_it24\\obj\\",
+      "outputPath": "C:\\Users\\jovan\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_Stages_it24\\URIS_Stages_it24\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
