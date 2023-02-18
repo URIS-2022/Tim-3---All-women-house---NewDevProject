@@ -5,7 +5,7 @@ namespace URIS_DOKUMENTACIJA_IT72.ServiceCalls
 { 
     public class ServiceCalls<T>: IServiceCalls<T>
     {
-        public async Task<T> SendGetRequestAsync(string url)
+        public async Task<T?> SendGetRequestAsync(string url)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace URIS_DOKUMENTACIJA_IT72.ServiceCalls
                 }
                 return default;
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 return default;
             }

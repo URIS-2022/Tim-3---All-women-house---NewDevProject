@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ph6HF3DRnBCidvyMdweMWNQnOxjZHg6BrPIch2J98lASiHBLIJoZNlrxSUs2cwk9YOcpt3P/UVD97D4eYc8hTQ==",
+  "dgSpecHash": "KIMIe0pEB+F8BjRR04ee6waameTPUxr/FHkmJwZ8asQPAEDWDs8UEQivZfTSR4ZkiCiOsP4wX/L2spEvJ+Xt/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj",
+  "projectFilePath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

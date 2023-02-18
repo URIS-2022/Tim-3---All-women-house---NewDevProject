@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fMBMIMv5erM44FGVJrkLBeobudJaVGdlfY93wbiHMvWqprp8NGqANFWJ1RHjCPdkxF4Wb/97vHFTeJMJTHTpKw==",
+  "dgSpecHash": "3Z8ipmySoiq6+0gjOESBPa/2Y075B4aO1uMu40wcOkRsb6DJ5xdykKOLUgZDNgLgYkms5Pc0DXFGeZfgTBIjtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_DOKUMENTACIJA_IT72\\URIS_DOKUMENTACIJA_IT72\\URIS_DOKUMENTACIJA_IT72.csproj",
+  "projectFilePath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_DOKUMENTACIJA_IT72\\URIS_DOKUMENTACIJA_IT72\\URIS_DOKUMENTACIJA_IT72.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

@@ -18,7 +18,7 @@
         /// <summary>
         /// da li je odluka odobrena
         /// </summary>
-        public string ParliamentaryDecision { get; set; }
+        public string ?ParliamentaryDecision { get; set; }
         //odobreno, nije odobreno
 
         /// <summary>

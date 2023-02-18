@@ -166,7 +166,7 @@ namespace URIS_DEOPARCELE_IT72.Controllers
                 PovrsinaDelaParcele = updatePartOfParcelRequest.PovrsinaDelaParcele,
             };
 
-            await partOfParcelRepository.UpdateAsync(id, partOfParcel);
+            partOfParcel=await partOfParcelRepository.UpdateAsync(id, partOfParcel);
 
             if (partOfParcel == null)
             {

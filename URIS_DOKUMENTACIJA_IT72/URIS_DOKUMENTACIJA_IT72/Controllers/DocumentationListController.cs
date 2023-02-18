@@ -164,7 +164,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Controllers
                 ListName = updateDocumentationListRequest.ListName,
             };
 
-            await documentationListRepository.UpdateAsync(id, documentList);
+            documentList=await documentationListRepository.UpdateAsync(id, documentList);
 
             if (documentList == null)
             {

@@ -21,7 +21,7 @@ namespace URIS_OGLAS_IT72.Models.Domain
         /// <summary>
         /// naziv odluke
         /// </summary>
-        public string NazivOdluke { get; set; }
+        public string ?NazivOdluke { get; set; }
 
         /// <summary>
         /// Navigaciono svojstvo

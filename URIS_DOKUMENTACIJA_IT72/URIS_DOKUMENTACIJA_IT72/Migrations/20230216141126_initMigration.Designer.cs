@@ -11,7 +11,7 @@ using URIS_DOKUMENTACIJA_IT72.Data;
 
 namespace URIS_DOKUMENTACIJA_IT72.Migrations
 {
-    [DbContext(typeof(DocumentationAPIDbContext))]
+    [DbContext(typeof(DocumentationApiDbContext))]
     [Migration("20230216141126_initMigration")]
     partial class initMigration
     {

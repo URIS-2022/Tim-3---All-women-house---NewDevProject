@@ -163,7 +163,7 @@ namespace URIS_OGLAS_IT72.Controllers
                 NazivOdluke = updateDecisionOfAdvertismentRequest.NazivOdluke,
             };
 
-            await decisionOfAdvertismentRepository.UpdateAsync(id, decisionOfAdvertisment);
+            decisionOfAdvertisment= await decisionOfAdvertismentRepository.UpdateAsync(id, decisionOfAdvertisment);
 
             if (decisionOfAdvertisment == null)
             {

@@ -7,18 +7,18 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
 {
     public class DocumentRepository : IDocumentRepository
     {
-        private readonly DocumentationAPIDbContext documentationAPIDbContext;
+        private readonly DocumentationApiDbContext documentationApiDbContext;
 
-        public DocumentRepository(DocumentationAPIDbContext documentationAPIDbContext)
+        public DocumentRepository(DocumentationApiDbContext documentationApiDbContext)
         {
-            this.documentationAPIDbContext = documentationAPIDbContext;
+            this.documentationApiDbContext = documentationApiDbContext;
         }
 
        
 
         public async Task<IEnumerable<Document>> GetAllAsync()
         {
-           return await documentationAPIDbContext.Documents
+           return await documentationApiDbContext.Documents
                 .Include(x=>x.DocumentationLists)
                 .ToListAsync();
         }
@@ -26,7 +26,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
         public async Task<Document> GetAsync(Guid id)
         {
 
-           return await documentationAPIDbContext.Documents
+           return await documentationApiDbContext.Documents
                 .Include(x => x.DocumentationLists)
                 .FirstOrDefaultAsync(x => x.DocumentationListId == id);
                 
@@ -39,8 +39,8 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
         {
            
             document.DocumentId = Guid.NewGuid();
-            await documentationAPIDbContext.Documents.AddAsync(document);
-            await documentationAPIDbContext.SaveChangesAsync();
+            await documentationApiDbContext.Documents.AddAsync(document);
+            await documentationApiDbContext.SaveChangesAsync();
 
             return document;
         }
@@ -48,7 +48,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
 
         public async Task<Document> DeleteAsync(Guid id)
         {
-            var document = await documentationAPIDbContext.Documents.FirstOrDefaultAsync(x => x.DocumentId == id);
+            var document = await documentationApiDbContext.Documents.FirstOrDefaultAsync(x => x.DocumentId == id);
 
             if (document == null)
             {
@@ -56,8 +56,8 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
                 
             }
 
-            documentationAPIDbContext.Documents.Remove(document);
-            await documentationAPIDbContext.SaveChangesAsync();
+            documentationApiDbContext.Documents.Remove(document);
+            await documentationApiDbContext.SaveChangesAsync();
 
             return document;
         }
@@ -67,7 +67,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
         
         public async Task<Document> UpdateAsync( Guid id, Document document)
         {
-            var existingDocument = await documentationAPIDbContext.Documents.FirstOrDefaultAsync(x => x.DocumentId == id);
+            var existingDocument = await documentationApiDbContext.Documents.FirstOrDefaultAsync(x => x.DocumentId == id);
 
             if (existingDocument == null)
             {
@@ -78,7 +78,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
                 existingDocument.CreatingDate = document.CreatingDate;
                 existingDocument.DocumentationListId= document.DocumentationListId;
 
-                await documentationAPIDbContext.SaveChangesAsync();
+                await documentationApiDbContext.SaveChangesAsync();
 
                 return existingDocument;
             

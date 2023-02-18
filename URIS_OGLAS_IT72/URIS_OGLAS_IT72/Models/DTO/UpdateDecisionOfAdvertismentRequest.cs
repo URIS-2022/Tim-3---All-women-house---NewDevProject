@@ -13,7 +13,7 @@
         /// <summary>
         /// naziv odluke
         /// </summary>
-        public string NazivOdluke { get; set; }
+        public string ?NazivOdluke { get; set; }
 
     }
 }

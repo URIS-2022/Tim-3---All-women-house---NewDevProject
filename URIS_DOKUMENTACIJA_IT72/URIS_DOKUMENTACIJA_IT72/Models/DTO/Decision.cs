@@ -17,7 +17,7 @@
         /// <summary>
         /// da li je odluka odobrena
         /// </summary>
-        public string ParliamentaryDecision { get; set; }
+        public string ?ParliamentaryDecision { get; set; }
         /// <summary>
         /// Strani kljuc, odnosno primarni u klasi Dokument
         /// </summary>

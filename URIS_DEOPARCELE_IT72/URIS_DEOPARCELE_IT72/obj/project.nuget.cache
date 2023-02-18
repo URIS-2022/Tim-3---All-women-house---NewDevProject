@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GvrEH6DF7PKdaxi2mTJTO0Cdb89jOHCANy9HCvCxktZY12dU3WkVXsltWXFtZq9IJpmEOwpJ3HKym7NobbhoVw==",
+  "dgSpecHash": "6dj+N6rZWwDRvYW87OaWCOt4V1rS+tpYZi6+UvemMq4FobwiG6CE+3l3xjvPlpy2zWryB6+iv2ch6H0pqL60Fg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_DEOPARCELE_IT72\\URIS_DEOPARCELE_IT72\\URIS_DEOPARCELE_IT72.csproj",
+  "projectFilePath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_DEOPARCELE_IT72\\URIS_DEOPARCELE_IT72\\URIS_DEOPARCELE_IT72.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

@@ -10,8 +10,8 @@ using URIS_DOKUMENTACIJA_IT72.Data;
 
 namespace URIS_DOKUMENTACIJA_IT72.Migrations
 {
-    [DbContext(typeof(DocumentationAPIDbContext))]
-    partial class DocumentationAPIDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DocumentationApiDbContext))]
+    partial class DocumentationApiDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

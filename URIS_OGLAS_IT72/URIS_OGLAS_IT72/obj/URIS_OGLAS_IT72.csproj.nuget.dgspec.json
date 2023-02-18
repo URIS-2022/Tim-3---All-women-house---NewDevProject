@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj": {}
+    "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj": {
+    "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj",
         "projectName": "URIS_OGLAS_IT72",
-        "projectPath": "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj",
+        "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72.csproj",
         "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Korisnik\\Desktop\\URIS projekat\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\obj\\",
+        "outputPath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_OGLAS_IT72\\URIS_OGLAS_IT72\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -165,7 +165,7 @@ namespace URIS_OGLAS_IT72.Controllers
                 DecisionOfAdvertismentId = updateAdvertismentRequest.DecisionOfAdvertismentId,
             };
 
-            await advertismentRepository.UpdateAsync(id, advertisment);
+            advertisment=await advertismentRepository.UpdateAsync(id, advertisment);
 
             if (advertisment == null)
             {

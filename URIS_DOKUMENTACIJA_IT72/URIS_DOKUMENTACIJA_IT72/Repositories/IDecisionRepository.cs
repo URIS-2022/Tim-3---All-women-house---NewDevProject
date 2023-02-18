@@ -13,6 +13,6 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
 
         Task<Decision> DeleteAsync(Guid id);
 
-        Task<Decision> UpdateAsync(Guid id,  Decision document);
+        Task<Decision> UpdateAsync(Guid id,  Decision decision);
     }
 }

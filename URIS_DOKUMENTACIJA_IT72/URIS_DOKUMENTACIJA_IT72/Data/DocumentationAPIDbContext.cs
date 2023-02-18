@@ -3,9 +3,9 @@ using URIS_DOKUMENTACIJA_IT72.Models.Domain;
 
 namespace URIS_DOKUMENTACIJA_IT72.Data
 {
-    public class DocumentationAPIDbContext: DbContext
+    public class DocumentationApiDbContext: DbContext
     {
-        public DocumentationAPIDbContext(DbContextOptions<DocumentationAPIDbContext> options) : base(options)
+        public DocumentationApiDbContext(DbContextOptions<DocumentationApiDbContext> options) : base(options)
         {
 
         }

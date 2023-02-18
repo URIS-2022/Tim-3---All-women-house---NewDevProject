@@ -42,7 +42,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.AddDbContext<DocumentationAPIDbContext>(options =>
+builder.Services.AddDbContext<DocumentationApiDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("CDocuments"));
 });

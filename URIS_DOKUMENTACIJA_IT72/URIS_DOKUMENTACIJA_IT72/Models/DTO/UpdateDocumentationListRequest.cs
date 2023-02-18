@@ -12,6 +12,6 @@
         /// <summary>
         /// ime liste
         /// </summary>
-        public string ListName { get; set; }
+        public string ?ListName { get; set; }
     }
 }

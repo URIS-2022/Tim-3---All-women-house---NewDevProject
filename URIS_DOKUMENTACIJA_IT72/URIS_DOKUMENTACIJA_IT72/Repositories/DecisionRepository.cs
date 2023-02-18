@@ -6,18 +6,18 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
 {
     public class DecisionRepository : IDecisionRepository
     {
-        private readonly DocumentationAPIDbContext documentationAPIDbContext;
+        private readonly DocumentationApiDbContext documentationApiDbContext;
 
-        public DecisionRepository(DocumentationAPIDbContext documentationAPIDbContext)
+        public DecisionRepository(DocumentationApiDbContext documentationApiDbContext)
         {
-            this.documentationAPIDbContext = documentationAPIDbContext;
+            this.documentationApiDbContext = documentationApiDbContext;
 
 
         }
 
         public async Task<IEnumerable<Decision>> GetAllAsync()
         {
-            return await documentationAPIDbContext.Decisions
+            return await documentationApiDbContext.Decisions
                 .Include(x=>x.Document)
                 .ToListAsync();
         }
@@ -25,7 +25,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
         public async Task<Decision> GetAsync(Guid id)
         {
 
-            return await documentationAPIDbContext.Decisions
+            return await documentationApiDbContext.Decisions
                  .Include(x => x.Document)
                  .FirstOrDefaultAsync(x => x.DocumentId == id);
 
@@ -38,8 +38,8 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
         {
 
             decision.DecisionId = Guid.NewGuid();
-            await documentationAPIDbContext.Decisions.AddAsync(decision);
-            await documentationAPIDbContext.SaveChangesAsync();
+            await documentationApiDbContext.Decisions.AddAsync(decision);
+            await documentationApiDbContext.SaveChangesAsync();
 
             return decision;
         }
@@ -47,7 +47,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
 
         public async Task<Decision> DeleteAsync(Guid id)
         {
-            var decision = await documentationAPIDbContext.Decisions.FirstOrDefaultAsync(x => x.DecisionId == id);
+            var decision = await documentationApiDbContext.Decisions.FirstOrDefaultAsync(x => x.DecisionId == id);
 
             if (decision == null)
             {
@@ -55,8 +55,8 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
 
             }
 
-            documentationAPIDbContext.Decisions.Remove(decision);
-            await documentationAPIDbContext.SaveChangesAsync();
+            documentationApiDbContext.Decisions.Remove(decision);
+            await documentationApiDbContext.SaveChangesAsync();
 
             return decision;
         }
@@ -66,7 +66,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
 
         public async Task<Decision> UpdateAsync(Guid id, Decision decision)
         {
-            var existingDecision = await documentationAPIDbContext.Decisions.FirstOrDefaultAsync(x => x.DecisionId == id);
+            var existingDecision = await documentationApiDbContext.Decisions.FirstOrDefaultAsync(x => x.DecisionId == id);
 
             if (existingDecision == null)
             {
@@ -76,7 +76,7 @@ namespace URIS_DOKUMENTACIJA_IT72.Repositories
             existingDecision.ParliamentaryDecision=decision.ParliamentaryDecision;
             existingDecision.DocumentId=decision.DocumentId;
 
-            await documentationAPIDbContext.SaveChangesAsync();
+            await documentationApiDbContext.SaveChangesAsync();
 
             return existingDecision;
 
