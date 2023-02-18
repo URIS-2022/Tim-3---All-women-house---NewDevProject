@@ -1,1 +1,1 @@
-Marija Petrovic IT69/2019 - https://console.cloud.google.com/logs/query;timeRange=2023-02-18T09:10:06.685Z%2F2023-02-18T16:09:58.093Z;cursorTimestamp=2023-02-18T10:24:09.916234Z?project=clear-column-338022&authuser=2
+Marija Petrovic IT69/2019 - https://cloudlogging.app.goo.gl/qskgKsZ47pFM3nef9
