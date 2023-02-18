@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "dacbd8bf-43c0-4232-aad8-995406abf376",
+		"name": "ProtectedZones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllDocumentProtectedZones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7181/api/DocumentProtectedZone",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"DocumentProtectedZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDocumentProtectedZone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7181/api/DocumentProtectedZone/22ac3f2c-ded3-493e-8c84-c2e57b972bc8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"DocumentProtectedZone",
+						"22ac3f2c-ded3-493e-8c84-c2e57b972bc8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddDocumentProtectedZone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"referenceNumber\": 14,\r\n        \"date\": \"2023-02-15T00:00:00\",\r\n        \"dateOfSubmission\": \"2023-02-20T00:00:00\",\r\n        \"permitedWorks\": \"Rusenje postojeceg objekta\",\r\n        \"protectedZoneId\": \"0d5716fe-6407-42b9-9b18-024d52eda0c2\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7181/api/DocumentProtectedZone",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"DocumentProtectedZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDocumentProtectedZone",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"referenceNumber\": 28,\r\n        \"date\": \"2023-02-15T00:00:00\",\r\n        \"dateOfSubmission\": \"2023-02-20T00:00:00\",\r\n        \"permitedWorks\": \"Rusenje postojeceg objekta\",\r\n        \"protectedZoneId\": \"0d5716fe-6407-42b9-9b18-024d52eda0c2\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7181/api/DocumentProtectedZone/1b18d082-a582-4030-8015-dcb0657901ec",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"DocumentProtectedZone",
+						"1b18d082-a582-4030-8015-dcb0657901ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteDocumentProtectedZone",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7181/api/DocumentProtectedZone/1b18d082-a582-4030-8015-dcb0657901ec",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"DocumentProtectedZone",
+						"1b18d082-a582-4030-8015-dcb0657901ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProtectedZone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7181/api/ProtectedZone",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"ProtectedZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProtectedZone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7181/api/ProtectedZone/85ca2e6b-1cc0-49d2-a7ef-92810b63371e",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"ProtectedZone",
+						"85ca2e6b-1cc0-49d2-a7ef-92810b63371e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProtectedZone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{        \r\n  \"NumberOfZone\": 24,\r\n  \"PermittedWorks\": \"Izgradnja novog objekta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7181/api/ProtectedZone",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"ProtectedZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProtectedZone",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{        \r\n  \"NumberOfZone\": 1,\r\n  \"PermittedWorks\": \"Izgradnja novog objekta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7181/api/ProtectedZone/64da933d-2852-460b-bcee-8da1955bb543",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"ProtectedZone",
+						"64da933d-2852-460b-bcee-8da1955bb543"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProtectedZone",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7181/api/ProtectedZone/64da933d-2852-460b-bcee-8da1955bb543",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7181",
+					"path": [
+						"api",
+						"ProtectedZone",
+						"64da933d-2852-460b-bcee-8da1955bb543"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

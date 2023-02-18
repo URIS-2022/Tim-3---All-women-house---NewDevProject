@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_Licitacion_IT67-2019</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_Licitacion_IT67_2019.Controllers.LicitationController.GetAllLicitacions">
+            <summary>
+            Kreira listu svih Licitacija.
+            </summary>
+            <returns>Lista Licitacija.</returns>
+            <response code="200">Vraća listu licitacija</response>
+        </member>
+        <member name="M:URIS_Licitacion_IT67_2019.Controllers.LicitationController.GetLicitation(System.Guid)">
+            <summary>
+            Vraća jednu licitaciju osnovu ID-ja.
+            </summary>
+            <param name="LicitationId">ID Licitacije</param>
+            <returns></returns>
+            <response code="200">Vraća traženu licitaciju</response>
+            <response code="404">Nije pronadjena licitacija</response>
+        </member>
+        <member name="M:URIS_Licitacion_IT67_2019.Controllers.LicitationController.AddLicitation(URIS_Licitacion_IT67_2019.Models.AddLicitationDto)">
+            <summary>
+            Kreira licitaciju.
+            </summary>
+            <remarks>
+            Primer zahteva:
+            
+                POST api/Licitation
+                {
+                      "numberOfLic": 11,
+                      "year": "2023",
+                      "dateOfAnnouncment": "2023-01-15",
+                      "deadlineForSubmission": "2023-01-15",
+                      "listOfIndividuals": "Skenirana licna",
+                      "listOfLegalEntity": "Izvod",
+                      "rescript": true,
+                      "secondRound": false
+                 }
+            </remarks>
+            <response code="201">Vraća kreiranu licitaciju</response>
+        </member>
+        <member name="M:URIS_Licitacion_IT67_2019.Controllers.LicitationController.DeleteLicitation(System.Guid)">
+            <summary>
+            Vrši brisanje jedne licitacije na osnovu njenog ID-ja.
+            </summary>
+            <param name="LicitationId">ID licitacije</param>
+            <response code="200">Vraća azurirano licitaciju</response>
+            <response code="404">Nije pronadjena licitacija</response>
+        </member>
+        <member name="M:URIS_Licitacion_IT67_2019.Controllers.LicitationController.UpdateLicitacion(System.Guid,URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto)">
+            <summary>
+            Ažurira jednu licitaciju.
+            </summary>
+            <param name="updateLicitationDto">Model licitacije koji se ažurira</param>
+            <response code = "200" > Uspesno obrisana licitacija</response>
+            <response code="404">Nije pronadjena licitacija</response>
+        </member>
+        <member name="T:URIS_Licitacion_IT67_2019.Entities.Licitation">
+            <summary>
+            Predstavlja licitaciju
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.LicitationId">
+            <summary>
+            ID licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.NumberOfLic">
+            <summary>
+            Broj licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.Year">
+            <summary>
+            Godina izvrsavanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.DateOfAnnouncment">
+            <summary>
+            Datum objavljivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.DeadlineForSubmission">
+            <summary>
+            Rok za podnosenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.ListOfIndividuals">
+            <summary>
+            Lista dokumenata fizickih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.ListOfLegalEntity">
+            <summary>
+            Lista dokumenata pravnih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.DecisionId">
+            <summary>
+            Strani kljuc resenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Entities.Licitation.secondRound">
+            <summary>
+            Drugi krug licitacije
+            </summary>
+        </member>
+        <member name="T:URIS_Licitacion_IT67_2019.Models.AddLicitationDto">
+            <summary>
+            Model za dodavanje licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.NumberOfLic">
+            <summary>
+            Broj licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.Year">
+            <summary>
+            Godina izvrsavanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.DateOfAnnouncment">
+            <summary>
+            Datum objavljivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.DeadlineForSubmission">
+            <summary>
+            Rok za podnosenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.ListOfIndividuals">
+            <summary>
+            Lista dokumenata fizickih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.ListOfLegalEntity">
+            <summary>
+            Lista dokumenata pravnih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.DecisionId">
+            <summary>
+            Strani kljuc resenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.AddLicitationDto.secondRound">
+            <summary>
+            Drugi krug licitacije
+            </summary>
+        </member>
+        <member name="T:URIS_Licitacion_IT67_2019.Models.LicitationDto">
+            <summary>
+            DTO licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.LicitationId">
+            <summary>
+            ID licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.NumberOfLic">
+            <summary>
+            Broj licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.Year">
+            <summary>
+            Godina izvrsavanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.DateOfAnnouncment">
+            <summary>
+            Datum objavljivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.DeadlineForSubmission">
+            <summary>
+            Rok za podnosenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.ListOfIndividuals">
+            <summary>
+            Lista dokumenata fizickih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.ListOfLegalEntity">
+            <summary>
+            Lista dokumenata pravnih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.DecisionId">
+            <summary>
+            Strani kljuc resenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.LicitationDto.secondRound">
+            <summary>
+            Drugi krug licitacije
+            </summary>
+        </member>
+        <member name="T:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto">
+            <summary>
+            Model za azuriranje licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.NumberOfLic">
+            <summary>
+            Broj licitacije
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.Year">
+            <summary>
+            Godina izvrsavanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.DateOfAnnouncment">
+            <summary>
+            Datum objavljivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.DeadlineForSubmission">
+            <summary>
+            Rok za podnosenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.ListOfIndividuals">
+            <summary>
+            Lista dokumenata fizickih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.ListOfLegalEntity">
+            <summary>
+            Lista dokumenata pravnih lica
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.DecisionId">
+            <summary>
+            Strani kljuc resenje
+            </summary>
+        </member>
+        <member name="P:URIS_Licitacion_IT67_2019.Models.UpdateLicitacionDto.secondRound">
+            <summary>
+            Drugi krug licitacije
+            </summary>
+        </member>
+    </members>
+</doc>

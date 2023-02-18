@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "5b57eea0-102e-48d1-a390-c855a09a422a",
+		"name": "Licitation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllLicitation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7286/api/Licitation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7286",
+					"path": [
+						"api",
+						"Licitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLicitation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7286/api/Licitation/8e09ff04-2606-47fb-a499-762a9171d059",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7286",
+					"path": [
+						"api",
+						"Licitation",
+						"8e09ff04-2606-47fb-a499-762a9171d059"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddLicitation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberOfLic\": 2,\r\n    \"year\": \"2023\",\r\n    \"dateOfAnnouncment\": \"2020-01-10T12:00:00\",\r\n    \"deadlineForSubmission\": \"2020-02-10T00:00:00\",\r\n    \"listOfIndividuals\": \"Skenirana licna karta, Izvestaj iz banke\",\r\n    \"listOfLegalEntity\": \"Izvod iz privrednog registra, Dokaz o finansijskoj stabilnosti\",\r\n    \"rescript\": true,\r\n    \"secondRound\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7286/api/Licitation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7286",
+					"path": [
+						"api",
+						"Licitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateLicitation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberOfLic\": 3,\r\n    \"year\": \"2023\",\r\n    \"dateOfAnnouncment\": \"2020-01-10T12:00:00\",\r\n    \"deadlineForSubmission\": \"2020-02-10T00:00:00\",\r\n    \"listOfIndividuals\": \"Skenirana licna karta, Izvestaj iz banke\",\r\n    \"listOfLegalEntity\": \"Dokaz o finansijskoj stabilnosti\",\r\n    \"rescript\": true,\r\n    \"secondRound\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7286/api/Licitation/942f634a-0bec-4f26-b92b-e86825fc8aad",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7286",
+					"path": [
+						"api",
+						"Licitation",
+						"942f634a-0bec-4f26-b92b-e86825fc8aad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteLicitation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7286/api/Licitation/942f634a-0bec-4f26-b92b-e86825fc8aad",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7286",
+					"path": [
+						"api",
+						"Licitation",
+						"942f634a-0bec-4f26-b92b-e86825fc8aad"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_ProtectedZone_IT67-2019</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.DocumentProtectedZoneController.GetAllDocumentsProtectedZone">
+            <summary>
+            Kreira listu svih Dokumenata o zasticenim zonama.
+            </summary>
+            <returns>Lista dokumentacije o zasticenim zonama.</returns>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.DocumentProtectedZoneController.GetDocumentProtectedZone(System.Guid)">
+            <summary>
+            Vraća jedan dokument o zasticenim zonama na osnovu ID-ja.
+            </summary>
+            <param name="DocumentProtectedZoneId">ID Dokumenta o zasticenim zonama</param>
+            <returns></returns>
+            <response code="200">Vraća traženi dokument</response>
+            <response code="404">Nije pronadjen dokument</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.DocumentProtectedZoneController.AddDocumentProtectedZone(URIS_ProtectedZone_IT67_2019.Models.AddDocumentProtectedZoneDto)">
+            <summary>
+            Kreira dokument o zasticenim zonama.
+            </summary>
+            <remarks>
+            Primer zahteva:
+            
+                POST api/DocumentProtectedZone
+                {        
+                  "ReferenceNumber": 23,
+                  "Date": "2023-01-02",
+                  "DateOfSubmission": "2023-01-01",
+                  "PermitedWorks": "Izgradnja novog objekta"
+                  "ProtectedZoneId": "85ca2e6b-1cc0-49d2-a7ef-92810b63371e"
+                }
+            </remarks>
+            <response code="201">Vraća kreiran dokument</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.DocumentProtectedZoneController.UpdateDocumentProtectedZone(System.Guid,URIS_ProtectedZone_IT67_2019.Models.UpdateDocumentProtectedZoneDto)">
+            <summary>
+            Ažurira jedan dokument o zasticenim zonama.
+            </summary>
+            <remarks>
+            Primer stranog kljuca:
+              
+                  "ProtectedZoneId": "85ca2e6b-1cc0-49d2-a7ef-92810b63371e"        
+                
+            </remarks>
+            <param name="updateDocumentProtectedZoneDto">Model dokumenta o zasticenim zonama koji se ažurira</param>
+            <response code="200">Vraća azuriran dokument</response>
+            <response code="404">Nije pronadjen dokument</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.DocumentProtectedZoneController.DeleteDocumentProtectedZone(System.Guid)">
+            <summary>
+            Vrši brisanje jednog dokumenta o zasticenim zonama na osnovu njegovog ID-ja.
+            </summary>
+            <param name="DocumentProtectedZoneId">ID dokumenta o zasticenim zonama</param>
+            <response code="200">Uspesno obrisan dokument</response>
+            <response code="404">Nije pronadjen dokument</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.ProtectedZoneController.GetAllProtectedZones">
+            <summary>
+            Kreira listu svih zasticenih zona.
+            </summary>
+            <response code="200">Vraća listu zasticenih zona</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.ProtectedZoneController.GetProtectedZone(System.Guid)">
+            <summary>
+            Vraća jednu zasticenu zonu na osnovu ID-ja.
+            </summary>
+            <param name="ProtectedZoneId">ID Zasticene zone</param>
+            <returns></returns>
+            <response code="200">Vraća traženu zonu</response>
+            <response code="404">Nije pronadjena zona</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.ProtectedZoneController.AddProtectedZone(URIS_ProtectedZone_IT67_2019.Models.AddProtectedZoneDto)">
+            <summary>
+            Kreira zasticenu zonu.
+            </summary>
+            <remarks>
+            Primer zahteva:
+            
+                POST api/ProtectedZone
+                {        
+                  "NumberOfZone": 23,
+                  "PermittedWorks": "Izgradnja novog objekta"
+                }
+            </remarks>
+            <response code="201">Vraća kreiranu zonu</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.ProtectedZoneController.UpdateProtectedZone(System.Guid,URIS_ProtectedZone_IT67_2019.Models.UpdateProtectedZoneDto)">
+            <summary>
+            Ažurira jednu zasticenu zonu.
+            </summary>
+            <param name="updateProtectedZoneDto">Model zasticene zone koji se azurira</param>
+            <response code="200">Vraća azuriranu zonu</response>
+            <response code="404">Nije pronadjena zona</response>
+        </member>
+        <member name="M:URIS_ProtectedZone_IT67_2019.Controllers.ProtectedZoneController.DeleteProtectedZone(System.Guid)">
+            <summary>
+            Vrši brisanje jedne zasticene zone na osnovu njenog ID-ja.
+            </summary>
+            <param name="DocumentProtectedZoneId">ID zasticene zone</param>
+            <response code="200">Uspesno obrisana zona</response>
+            <response code="404">Nije pronadjena zona</response>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone">
+            <summary>
+            Predstavlja dokument o zasticenim zonama
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone.DocumentProtectedZoneId">
+            <summary>
+            ID dokumenta o zasticenim zonama
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone.Date">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone.DateOfSubmission">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone.PermitedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone.ProtectedZoneId">
+            <summary>
+            Strani kljuc zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.DocumentProtectedZone.ProtectedZone">
+            <summary>
+            Lista zasticenih zona
+            </summary>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Entities.ProtectedZone">
+            <summary>
+            Predstavlja zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.ProtectedZone.ProtectedZoneId">
+            <summary>
+            ID zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.ProtectedZone.NumberOfZone">
+            <summary>
+            Broj zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.ProtectedZone.PermittedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Entities.ProtectedZone.DocumentProtectedZones">
+            <summary>
+            Navigacija
+            </summary>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Models.AddDocumentProtectedZoneDto">
+            <summary>
+            Model za kreiranje dokumenta o zasticenim zonama
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.AddDocumentProtectedZoneDto.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.AddDocumentProtectedZoneDto.Date">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.AddDocumentProtectedZoneDto.DateOfSubmission">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.AddDocumentProtectedZoneDto.PermitedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.AddDocumentProtectedZoneDto.ProtectedZoneId">
+            <summary>
+            Strani kljuc zasticene zone
+            </summary>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Models.AddProtectedZoneDto">
+            <summary>
+            Model za kreiranje zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.AddProtectedZoneDto.NumberOfZone">
+            <summary>
+            Broj zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.AddProtectedZoneDto.PermittedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Models.DocumentProtectedZoneDto">
+            <summary>
+            DTO dokumenta o zasticenim zonama
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.DocumentProtectedZoneDto.DocumentProtectedZoneId">
+            <summary>
+            ID dokumenta o zasticenim zonama
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.DocumentProtectedZoneDto.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.DocumentProtectedZoneDto.Date">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.DocumentProtectedZoneDto.DateOfSubmission">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.DocumentProtectedZoneDto.PermitedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.DocumentProtectedZoneDto.ProtectedZoneId">
+            <summary>
+            Strani kljuc zasticene zone
+            </summary>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Models.ProtectedZoneDto">
+            <summary>
+            DTO zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.ProtectedZoneDto.ProtectedZoneId">
+            <summary>
+            ID zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.ProtectedZoneDto.NumberOfZone">
+            <summary>
+            Broj zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.ProtectedZoneDto.PermittedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Models.UpdateDocumentProtectedZoneDto">
+            <summary>
+            Model za azuriranje dokumenta o zasticenim zonama
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.UpdateDocumentProtectedZoneDto.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.UpdateDocumentProtectedZoneDto.Date">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.UpdateDocumentProtectedZoneDto.DateOfSubmission">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.UpdateDocumentProtectedZoneDto.PermitedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.UpdateDocumentProtectedZoneDto.ProtectedZoneId">
+            <summary>
+            Strani kljuc zasticene zone
+            </summary>
+        </member>
+        <member name="T:URIS_ProtectedZone_IT67_2019.Models.UpdateProtectedZoneDto">
+            <summary>
+            Model za azuriranje zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.UpdateProtectedZoneDto.NumberOfZone">
+            <summary>
+            Broj zasticene zone
+            </summary>
+        </member>
+        <member name="P:URIS_ProtectedZone_IT67_2019.Models.UpdateProtectedZoneDto.PermittedWorks">
+            <summary>
+            Dozvoljeni radovi
+            </summary>
+        </member>
+    </members>
+</doc>

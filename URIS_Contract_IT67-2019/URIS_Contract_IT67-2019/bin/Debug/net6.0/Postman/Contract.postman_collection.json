@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "92798d1e-2a33-453f-83c5-9a2f2916e0e6",
+		"name": "Contract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllContracts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7077/api/Contract",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"Contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetContract",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7077/api/Contract/eebc28d7-1725-415c-a325-0baf3053a155",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"Contract",
+						"eebc28d7-1725-415c-a325-0baf3053a155"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddContract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentGuarantor\": \"Garancija nekretninom\",\r\n    \"contractName\": \"Ugovor o zakupu\",\r\n    \"referenceNumber\": 15,\r\n    \"dateOfSeduction\": \"2023-01-02T00:00:00\",\r\n    \"placeOfSigning\": \"Novi Sad\",\r\n    \"dateOfSigning\": \"2023-01-05T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7077/api/Contract",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"Contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContract",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentGuarantor\": \"Garancija nekretninom\",\r\n    \"contractName\": \"Ugovor o zakupu\",\r\n    \"referenceNumber\": 15,\r\n    \"dateOfSeduction\": \"2023-01-02T00:00:00\",\r\n    \"placeOfSigning\": \"Beograd\",\r\n    \"dateOfSigning\": \"2023-01-05T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7077/api/Contract/428bffa0-f3a4-44e7-a35c-5bfd913bf3fa",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"Contract",
+						"428bffa0-f3a4-44e7-a35c-5bfd913bf3fa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteContract",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7077/api/Contract/428bffa0-f3a4-44e7-a35c-5bfd913bf3fa",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"Contract",
+						"428bffa0-f3a4-44e7-a35c-5bfd913bf3fa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

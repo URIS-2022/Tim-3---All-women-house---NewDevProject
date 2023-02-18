@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_Ministry_IT67-2019</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_Ministry_IT67_2019.Controllers.MinistryController.GetAllMinistries">
+            <summary>
+            Kreira listu svih Ministarstava.
+            </summary>
+            <returns>Lista Ministarstava.</returns>
+            <response code="200">Vraća listu ministarstava</response>
+        </member>
+        <member name="M:URIS_Ministry_IT67_2019.Controllers.MinistryController.GetMinistry(System.Guid)">
+            <summary>
+            Vraća jedno ministarstvo osnovu ID-ja.
+            </summary>
+            <param name="MinistryId">ID Ministartsva</param>
+            <returns></returns>
+            <response code="200">Vraća traženo ministarstvo</response>
+            <response code="404">Nije pronadjeno ministarstvo</response>
+        </member>
+        <member name="M:URIS_Ministry_IT67_2019.Controllers.MinistryController.AddMinistry(URIS_Ministry_IT67_2019.Models.AddMinistryDto)">
+            <summary>
+            Kreira ministarstvo.
+            </summary>
+            <remarks>
+            Primer zahteva:
+            
+                POST api/Ministry
+                {        
+                  "ministryName": "Ministarstvo poljoprivrede, zemljista i vocarstva",
+                  "minister": "Marko Markovic",
+                  "consent": "odbijeno"        
+                }
+            </remarks>
+            <response code="201">Vraća kreirano ministarstvo</response>
+        </member>
+        <member name="M:URIS_Ministry_IT67_2019.Controllers.MinistryController.UpdateMinistry(System.Guid,URIS_Ministry_IT67_2019.Models.UpdateMinistryDto)">
+            <summary>
+            Ažurira jedno ministarstvo.
+            </summary>
+            <param name="updateMinistryDto">Model ministarstva koji se ažurira</param>
+            <returns>Potvrdu o modifikovanom ministarstvu.</returns>
+            <response code="200">Vraća azurirano ministarstvo</response>
+            <response code="404">Nije pronadjeno ministarstvo</response>
+        </member>
+        <member name="M:URIS_Ministry_IT67_2019.Controllers.MinistryController.DeleteMinistry(System.Guid)">
+            <summary>
+            Vrši brisanje jednog ministarstva na osnovu njegovog ID-ja.
+            </summary>
+            <param name="MinistryId">ID ministarstva</param>
+            <response code="200">Uspesno obrisano ministarstvo</response>
+            <response code="404">Nije pronadjeno ministarstvo</response>
+        </member>
+        <member name="T:URIS_Ministry_IT67_2019.Entities.Ministry">
+            <summary>
+            Predstavlja ministarstvo
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Entities.Ministry.MinistryId">
+            <summary>
+            ID ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Entities.Ministry.MinistryName">
+            <summary>
+            Naziv ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Entities.Ministry.Minister">
+            <summary>
+            Naziv ministra
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Entities.Ministry.Consent">
+            <summary>
+            Saglasnost
+            </summary>
+        </member>
+        <member name="T:URIS_Ministry_IT67_2019.Models.AddMinistryDto">
+            <summary>
+            Model za kreiranje ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.AddMinistryDto.MinistryName">
+            <summary>
+            Naziv ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.AddMinistryDto.Minister">
+            <summary>
+            Naziv ministra
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.AddMinistryDto.Consent">
+            <summary>
+            Saglasnost
+            </summary>
+        </member>
+        <member name="T:URIS_Ministry_IT67_2019.Models.MinistryDto">
+            <summary>
+            DTO ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.MinistryDto.MinistryId">
+            <summary>
+            ID ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.MinistryDto.MinistryName">
+            <summary>
+            Naziv ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.MinistryDto.Minister">
+            <summary>
+            Naziv ministra
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.MinistryDto.Consent">
+            <summary>
+            Saglasnost
+            </summary>
+        </member>
+        <member name="T:URIS_Ministry_IT67_2019.Models.UpdateMinistryDto">
+            <summary>
+            Model za azuriranje ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.UpdateMinistryDto.MinistryName">
+            <summary>
+            Naziv ministarstva
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.UpdateMinistryDto.Minister">
+            <summary>
+            Naziv ministra
+            </summary>
+        </member>
+        <member name="P:URIS_Ministry_IT67_2019.Models.UpdateMinistryDto.Consent">
+            <summary>
+            Saglasnost
+            </summary>
+        </member>
+    </members>
+</doc>

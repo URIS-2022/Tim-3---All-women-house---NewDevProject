@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_Contract_IT67-2019</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_Contract_IT67_2019.Controllers.ContractController.GetAllContracts">
+            <summary>
+            Kreira listu svih Ugovora.
+            </summary>
+            <returns>Lista Ugovora.</returns>
+            <response code="200">Vraća listu ugovora</response>
+        </member>
+        <member name="M:URIS_Contract_IT67_2019.Controllers.ContractController.GetContract(System.Guid)">
+            <summary>
+            Vraća jednan ugovor osnovu ID-ja.
+            </summary>
+            <param name="ContractId">ID Ugovora</param>
+            <returns></returns>
+            <response code="200">Vraća traženi ugovor</response>
+            <response code="404">Nije pronadjen ugovor</response>
+        </member>
+        <member name="M:URIS_Contract_IT67_2019.Controllers.ContractController.AddContract(URIS_Contract_IT67_2019.Models.AddContractDto)">
+            <summary>
+            Kreira ugovor.
+            </summary>
+            <remarks>
+            Primer ugovora:
+            
+                POST api/Contract
+                {        
+                  "ContractName": "Ugovor o zakupu",
+                  "PaymentGuarantor": "Garancija nekretninom",
+                  "ReferenceNumber": 225, 
+                  "DateOfSeduction": "2023-01-12",
+                  "PlaceOfSigning": "Subotica",
+                  "DateOfSigning": "2023-01-12"
+                }
+            </remarks>
+            <response code="201">Vraća kreiran ugovor</response>
+        </member>
+        <member name="M:URIS_Contract_IT67_2019.Controllers.ContractController.UpdateContract(System.Guid,URIS_Contract_IT67_2019.Models.UpdateContractDto)">
+            <summary>
+            Ažurira jedan ugovor.
+            </summary>
+            <param name="updateContractDto">Model ugovora koji se ažurira</param>
+            <returns>Potvrdu o modifikovanom ugovoru.</returns>
+            <response code="200">Vraća azuriran ugovor</response>
+            <response code="404">Nije pronadjen ugovor</response>
+        </member>
+        <member name="M:URIS_Contract_IT67_2019.Controllers.ContractController.DeleteContract(System.Guid)">
+            <summary>
+            Vrši brisanje jednog ugovora na osnovu njegovog ID-ja.
+            </summary>
+            <param name="ContractId">ID ugovora</param>
+            <response code="200">Uspesno obrisan ugovor</response>
+            <response code="404">Nije pronadjen ugovor</response>
+        </member>
+        <member name="T:URIS_Contract_IT67_2019.Entities.Contract">
+            <summary>
+            Predstavlja ugovor
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Entities.Contract.ContractId">
+            <summary>
+            ID ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Entities.Contract.PaymentGuarantor">
+            <summary>
+            Garant placanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Entities.Contract.ContractName">
+            <summary>
+            Naziv ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Entities.Contract.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Entities.Contract.DateOfSeduction">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Entities.Contract.PlaceOfSigning">
+            <summary>
+            Mesto potpisivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Entities.Contract.DateOfSigning">
+            <summary>
+            Datum potpisivanja
+            </summary>
+        </member>
+        <member name="T:URIS_Contract_IT67_2019.Models.AddContractDto">
+            <summary>
+            Model za dodavanje ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.AddContractDto.PaymentGuarantor">
+            <summary>
+            Garant placanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.AddContractDto.ContractName">
+            <summary>
+            Naziv ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.AddContractDto.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.AddContractDto.DateOfSeduction">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.AddContractDto.PlaceOfSigning">
+            <summary>
+            Mesto potpisivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.AddContractDto.DateOfSigning">
+            <summary>
+            Datum potpisivanja
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:URIS_Contract_IT67_2019.Models.ContractDto" -->
+        <member name="P:URIS_Contract_IT67_2019.Models.ContractDto.ContractId">
+            <summary>
+            ID ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.ContractDto.PaymentGuarantor">
+            <summary>
+            Garant placanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.ContractDto.ContractName">
+            <summary>
+            Naziv ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.ContractDto.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.ContractDto.DateOfSeduction">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.ContractDto.PlaceOfSigning">
+            <summary>
+            Mesto potpisivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.ContractDto.DateOfSigning">
+            <summary>
+            Datum potpisivanja
+            </summary>
+        </member>
+        <member name="T:URIS_Contract_IT67_2019.Models.UpdateContractDto">
+            <summary>
+            Model za azuriranje ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.UpdateContractDto.PaymentGuarantor">
+            <summary>
+            Garant placanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.UpdateContractDto.ContractName">
+            <summary>
+            Naziv ugovora
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.UpdateContractDto.ReferenceNumber">
+            <summary>
+            Zavodni broj
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.UpdateContractDto.DateOfSeduction">
+            <summary>
+            Datum podnosenja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.UpdateContractDto.PlaceOfSigning">
+            <summary>
+            Mesto potpisivanja
+            </summary>
+        </member>
+        <member name="P:URIS_Contract_IT67_2019.Models.UpdateContractDto.DateOfSigning">
+            <summary>
+            Datum potpisivanja
+            </summary>
+        </member>
+    </members>
+</doc>

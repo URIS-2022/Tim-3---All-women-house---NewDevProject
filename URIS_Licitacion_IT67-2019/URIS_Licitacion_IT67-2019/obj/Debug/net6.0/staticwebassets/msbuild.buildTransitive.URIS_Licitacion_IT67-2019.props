@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\URIS_Licitacion_IT67-2019.props" />
+</Project>
