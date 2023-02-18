@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "URIS_Stages_it24", "URIS_Stages_it24\URIS_Stages_it24.csproj", "{F7BF2C4E-6696-4BF8-867D-86D6EECFB434}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7BF2C4E-6696-4BF8-867D-86D6EECFB434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BF2C4E-6696-4BF8-867D-86D6EECFB434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BF2C4E-6696-4BF8-867D-86D6EECFB434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BF2C4E-6696-4BF8-867D-86D6EECFB434}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B58CC0A-8850-4827-B870-9C41826C7DCC}
+	EndGlobalSection
+EndGlobal

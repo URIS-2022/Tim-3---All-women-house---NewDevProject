@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_BiddingProcess_it24</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingConditionsController.GetAllBiddingConditionsAsync">
+            <summary>
+            Retrieves all Bidding conditionss from the database.
+            </summary>
+            <returns>A list of Bidding conditions DTOs.</returns>
+            <response code ="200">Returns list of Bidding conditions</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingConditionsController.GetBiddingConditionsByIdAsync(System.Guid)">
+            <summary>
+            Retrieves a specific Bidding conditions from the database based on the given id.
+            </summary>
+            <param name="id">The id of the Bidding conditions to retrieve.</param>
+            <returns>The Bidding conditions DTO with the given id.</returns>
+            <response code ="200">Returns Bidding conditions DTO with the given id</response>
+            <response code ="404">There is no bidding conditions with this id.</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingConditionsController.AddBiddingConditionsAsync(URIS_BiddingProcess_it24.Models.DTO.AddBiddingConditionsRequest)">
+            <summary>
+            Adds a new Bidding Conditions to the database.
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/BiddingConditions
+            {
+            
+            "Price": 1000,
+            "RentalDuration": "1 godina",
+            "BiddingId": "4fd4a7c9-aed5-4ce5-b2f8-462c09d91bf5"
+            }
+            </remarks>
+            <param name="addBiddingConditionsRequest">The DTO containing the information for the new Bidding Conditions.</param>
+            <returns>The newly created Bidding Conditions DTO.</returns>
+            <response code ="201">Returns newly created Bidding Conditions</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingConditionsController.UpdateBiddingConditionsAsync(System.Guid,URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingConditionsRequest)">
+            <summary>
+            Updates a set of Bidding Conditions in the database, changing all attributes except for the primary key.
+            </summary>
+            <param name="id">The ID of the Bidding Conditions to update.</param>
+            <param name="updateBiddingConditionsRequest">The updated attributes for the Bidding Conditions, as a DTO.</param>
+            <returns>An IActionResult containing the updated Bidding Conditions as a BiddingConditionsDTO if successful, 
+            or a NotFound error if no Bidding Conditions with the given ID are found.</returns>
+            <response code ="200">Returns updated Bidding Conditions as a BiddingConditionsDTO</response>
+            <response code ="404">Returns NotFound error if no Bidding Conditions with the given ID are found</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingConditionsController.DelleteBiddingConditionsAsync(System.Guid)">
+            <summary>
+            Deletes a specific set of Bidding Conditions from the database.
+            </summary>
+            <param name="id">The ID of the Bidding Conditions to delete.</param>
+            <returns>An IActionResult containing the deleted Bidding Conditions as a BiddingConditionsDTO if successful,
+            or a NotFound error if no Bidding Conditions with the given ID are found.</returns>
+            <response code ="200">Returns deleted Bidding Conditions</response>
+            <response code ="404">Returns NotFound error if no Bidding Conditions with the given ID are found</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingsController.GetAllBiddingsAsync">
+            <summary>
+            Retrieves all Biddings from the database.
+            </summary>
+            <returns>A list of Bidding DTOs.</returns>
+            <response code ="200">Returns list of Biddings</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingsController.GetBiddingByIdAsync(System.Guid)">
+            <summary>
+            Retrieves a specific Bidding from the database based on the given id.
+            </summary>
+            <param name="id">The id of the Bidding to retrieve.</param>
+            <returns>The Bidding DTO with the given id.</returns>
+            <response code ="200">Returns Bidding  DTO with the given id</response>
+            <response code ="404">There is no bidding with given id.</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingsController.AddBiddingAsync(URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest)">
+            <summary>
+            Creates a new Bidding entity from the provided DTO and adds it to the repository.
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/Bidding
+            {
+            
+            	"biddingCode": "002",
+            	"type": "Javna licitacija",
+            	"status": "Prvi krug",
+            	"excepted": true,
+            	"startingPrice": 12000,
+            	"dateOfMaintenance": "2023-01-16",
+            	"startTime": "2023-01-16T12:00:00",
+            	"endTime": "2023-01-16T12:00:00"
+            }
+            </remarks>
+            <param name="addBiddingRequest">The DTO containing details for the new Bidding entity.</param>
+            <returns>An IActionResult indicating the success of the operation and the newly created Bidding entity.</returns>
+            <response code ="201">Returns newly created Bidding </response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingsController.DeleteBiddingAsync(System.Guid)">
+            <summary>
+            Deletes the Bidding entity with the specified ID from the repository.
+            </summary>
+            <param name="id">The ID of the Bidding entity to be deleted.</param>
+            <returns>An IActionResult indicating the success of the operation and the deleted Bidding entity.</returns>
+            <response code ="200">Returns deleted Bidding</response>
+            <response code ="404">Returns NotFound error if no Bidding with the given ID are found</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.BiddingsController.UpdateBiddingAsync(System.Guid,URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest)">
+            <summary>
+            Updates the specified Bidding entity in the repository with the provided DTO values.
+            </summary>
+            <param name="id">The ID of the Bidding entity to be updated.</param>
+            <param name="updateBiddingRequest">The DTO containing the updated details for the Bidding entity.</param>
+            <returns>An IActionResult indicating the success of the operation and the updated Bidding entity.</returns>
+            <response code ="200">Returns updated Bidding as a BiddingDTO</response>
+            <response code ="404">Returns NotFound error if no Bidding with the given ID are found</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.OpeningOfBidsController.GetAllOpeningOfBidsAsync">
+            <summary>
+            Gets all OpeningOfBids from the database.
+            </summary>
+            <returns>A list of OpeningOfBids DTOs.</returns>
+             <response code ="200">Returns list of Opening of bids</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.OpeningOfBidsController.GetOpeningOfBidsByIdAsync(System.Guid)">
+            <summary>
+            Gets an OpeningOfBids by ID.
+            </summary>
+            <param name="id">The ID of the OpeningOfBids to get.</param>
+            <returns>The OpeningOfBids DTO with the specified ID.</returns>
+            <response code ="200">Returns Opening of bids DTO with the given id</response>
+            <response code ="404">There is no Opening of bids with this id.</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.OpeningOfBidsController.AddOpeningOfBidsAsync(URIS_BiddingProcess_it24.Models.DTO.AddOpeningOfBidsRequest)">
+            <summary>
+            Adds a new Opening of Bids to the database.
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/OpeningOfBids
+            {
+            
+            "ArrivingDate": "2023-02-16",
+            "ArrivingHour": "14:30",
+            "BiddingId": "4fd4a7c9-aed5-4ce5-b2f8-462c09d91bf5"
+            }
+            </remarks>
+            <param name="addOpeningOfBidsRequest">The DTO containing the information for the new Opening of Bids.</param>
+            <returns>The newly created Opening of Bids DTO.</returns>
+            <returns>The newly created Bidding Conditions DTO.</returns>
+            <response code ="201">Returns newly created Opening of bids</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.OpeningOfBidsController.UpdateOpeningOfBidsAsync(System.Guid,URIS_BiddingProcess_it24.Models.DTO.UpdateOpeningOfBidsRequest)">
+            <summary>
+            Updates an existing OpeningOfBids in the database.
+            </summary>
+            <param name="id">The ID of the OpeningOfBids to update.</param>
+            <param name="updateOpeningOfBidsRequest">The request data for the updated OpeningOfBids.</param>
+            <returns>The updated OpeningOfBids DTO.</returns>
+            <response code ="200">Returns updated opening of bids</response>
+            <response code ="404">Returns NotFound error if no opening of bids with the given ID are found</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.OpeningOfBidsController.DelleteOpeningOfBidsAsync(System.Guid)">
+            <summary>
+            Deletes the  Opening of bids entity with the specified ID from the repository.
+            </summary>
+            <param name="id">The ID of the  Opening of bids entity to be deleted.</param>
+            <returns>An IActionResult indicating the success of the operation and the deleted  Opening of bids entity.</returns>
+            <response code ="200">Returns deleted Opening of bids</response>
+            <response code ="404">Returns NotFound error if no Opening of bids with the given ID are found</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.PublicBiddingController.GetAllPublicBiddingsAsync">
+            <summary>
+            Retrieves all Public Biddings from the database and returns them as a list of PublicBiddingDTOs.
+            </summary>
+            <returns>An IActionResult containing a list of all Public Biddings in the database as PublicBiddingDTOs.</returns>
+            <response code ="200">Returns list of Public Biddings</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.PublicBiddingController.GetPublicBiddingByIdAsync(System.Guid)">
+            <summary>
+            Retrieves a specific Public Bidding from the database based on its ID.
+            </summary>
+            <param name="id">The ID of the Public Bidding to retrieve.</param>
+            <returns>An IActionResult containing the retrieved Public Bidding as a PublicBiddingDTO if successful, or a NotFound error if no Public Bidding with the given ID is found.</returns>
+            <response code ="200">Returns Public Bidding  DTO with the given id</response>
+            <response code ="404">There is no Public Bidding with this id.</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.PublicBiddingController.AddPublicBiddingAsync(URIS_BiddingProcess_it24.Models.DTO.AddPublicBiddingRequest)">
+            <summary>
+            Adds a new Public Bidding to the database.
+            </summary>
+            <remarks>
+            Sample request:
+            \
+            POST api/PublicBidding
+            {
+            
+            "PriceStep": 100,
+            "BiddingId": "4fd4a7c9-aed5-4ce5-b2f8-462c09d91bf5"
+            }
+            </remarks>
+            <param name="addPublicBiddingRequest">The DTO containing the information for the new Public Bidding.</param>
+            <returns>The newly created Public Bidding DTO.</returns>
+            <response code ="201">Returns newly created Public Bidding</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.PublicBiddingController.UpdatePublicBiddingAsync(System.Guid,URIS_BiddingProcess_it24.Models.DTO.UpdatePublicBiddingRequest)">
+            <summary>
+            Updates a Public Bidding in the database, changing all attributes except for the primary key.
+            </summary>
+            <param name="id">The ID of the Public Bidding to update.</param>
+            <param name="updatePublicBiddingRequest">The updated attributes for the Public Bidding, as a DTO.</param>
+            <returns>An IActionResult containing the updated Public Bidding as a PublicBiddingDTO if successful, or a NotFound error if no Public Bidding with the given ID is found.</returns>
+            <response code ="200">Returns updated Public Bidding as a BiddingConditionsDTO</response>
+            <response code ="404">Returns NotFound error if no Public Bidding with the given ID are found</response>
+        </member>
+        <member name="M:URIS_BiddingProcess_it24.Controllers.PublicBiddingController.DelletePublicBiddingAsync(System.Guid)">
+            <summary>
+            Deletes a specific Public Bidding from the database.
+            </summary>
+            <param name="id">The ID of the Public Bidding to delete.</param>
+            <returns>An IActionResult containing the deleted Public Bidding as a PublicBiddingDTO if successful, or a NotFound error if no Public Bidding with the given ID is found.</returns>
+            <response code ="200">Returns deleted Public Bidding</response>
+            <response code ="404">Returns NotFound error if no Public Bidding with the given ID are found</response>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingConditionsRequest.Price">
+            <summary>
+            The minimum price for the sale to be confirmed for the rental property.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingConditionsRequest.RentalDuration">
+            <summary>
+            The duration of the rental period.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingConditionsRequest.BiddingId">
+            <summary>
+            The foreign key of the Bidding entity that this bidding conditions belongs to.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.BiddingCode">
+            <summary>
+            The code that identifies the Bidding entity.
+            \
+            Values should be in format: 001,002, etc
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.Type">
+            <summary>
+            The type of Bidding, such as public bidding.
+            \
+            Allowed values:
+            \
+            1."Javna licitacija"
+            \
+            2."Otvaranje zatvorenih ponuda"
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.Status">
+            <summary>
+            The current status of the Bidding, such as first round.
+            \
+            Allowed values:
+            \
+            1."Prvi krug"
+            \
+            2."Drugi krug sa starim uslovima"
+            \
+            3."Drugi krug sa novim uslovima"
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.Excepted">
+            <summary>
+            Indicates whether the Bidding is excepted or not.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.StartingPrice">
+            <summary>
+            The starting price for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.DateOfMaintenance">
+            <summary>
+            The date when the Bidding will be maintained.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.StartTime">
+            <summary>
+            The start time for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddBiddingRequest.EndTime">
+            <summary>
+            The end time for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddOpeningOfBidsRequest.ArrivingDate">
+            <summary>
+            The date when bids should arrive for the opening of bids.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddOpeningOfBidsRequest.ArrivingHour">
+            <summary>
+            The hour when bids should arrive for the opening of bids.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddOpeningOfBidsRequest.BiddingId">
+            <summary>
+            The foreign key of the Bidding entity that this bidding conditions belongs to.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddPublicBiddingRequest.PriceStep">
+            <summary>
+            The price step for the public bidding, which determines the minimum increment for each bid.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.AddPublicBiddingRequest.BiddingId">
+            <summary>
+            The foreign key of the Bidding entity that this public bidding belongs to.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.BiddingId">
+            <summary>
+            The unique identifier for the Bidding entity.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.BiddingCode">
+            <summary>
+            The code that identifies the Bidding entity.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.Type">
+            <summary>
+            The type of Bidding, such as public bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.Status">
+            <summary>
+            The current status of the Bidding, such as first round.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.Excepted">
+            <summary>
+            Indicates whether the Bidding is excepted or not.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.StartingPrice">
+            <summary>
+            The starting price for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.DateOfMaintenance">
+            <summary>
+            The date when the Bidding will be maintained.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.StartTime">
+            <summary>
+            The start time for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.Bidding.EndTime">
+            <summary>
+            The end time for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.BiddingConditions.BiddingConditionsId">
+            <summary>
+            The unique identifier for the bidding conditions.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.BiddingConditions.Price">
+            <summary>
+            The minimum price for the sale to be confirmed for the rental property.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.BiddingConditions.RentalDuration">
+            <summary>
+            The duration of the rental period.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.BiddingConditions.Bidding">
+            <summary>
+            The associated bidding for these conditions.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.OpeningOfBids.OpeningOfBidsId">
+            <summary>
+            The unique identifier of the opening of bids entity.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.OpeningOfBids.ArrivingDate">
+            <summary>
+            The date when bids should arrive for the opening of bids.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.OpeningOfBids.ArrivingHour">
+            <summary>
+            The hour when bids should arrive for the opening of bids.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.OpeningOfBids.Bidding">
+            <summary>
+            The bidding entity associated with this opening of bids.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.PublicBidding.PublicBiddingId">
+            <summary>
+            The unique identifier of the public bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.PublicBidding.PriceStep">
+            <summary>
+            The price step for the public bidding, which determines the minimum increment for each bid.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.PublicBidding.Bidding">
+            <summary>
+            The Bidding entity that this public bidding belongs to.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingConditionsRequest.Price">
+            <summary>
+            The minimum price for the sale to be confirmed for the rental property.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingConditionsRequest.RentalDuration">
+            <summary>
+            The duration of the rental period.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingConditionsRequest.BiddingId">
+            <summary>
+            The foreign key of the Bidding entity that this bidding conditions belongs to.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.BiddingCode">
+            <summary>
+            The code that identifies the Bidding entity.
+            \
+            Values should be in format: 001,002, etc
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.Type">
+            <summary>
+            The type of Bidding, such as public bidding.
+            \
+            Allowed values:
+            \
+            1."Javna licitacija"
+            \
+            2."Otvaranje zatvorenih ponuda"
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.Status">
+            <summary>
+            The current status of the Bidding, such as first round.
+            \
+            Allowed values:
+            \
+            1."Prvi krug"
+            \
+            2."Drugi krug sa starim uslovima"
+            \
+            3."Drugi krug sa novim uslovima"
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.Excepted">
+            <summary>
+            Indicates whether the Bidding is excepted or not.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.StartingPrice">
+            <summary>
+            The starting price for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.DateOfMaintenance">
+            <summary>
+            The date when the Bidding will be maintained.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.StartTime">
+            <summary>
+            The start time for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateBiddingRequest.EndTime">
+            <summary>
+            The end time for the Bidding.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateOpeningOfBidsRequest.ArrivingDate">
+            <summary>
+            The date when bids should arrive for the opening of bids.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateOpeningOfBidsRequest.ArrivingHour">
+            <summary>
+            The hour when bids should arrive for the opening of bids.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdateOpeningOfBidsRequest.BiddingId">
+            <summary>
+            The foreign key of the Bidding entity that this bidding conditions belongs to.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdatePublicBiddingRequest.PriceStep">
+            <summary>
+            The price step for the public bidding, which determines the minimum increment for each bid.
+            </summary>
+        </member>
+        <member name="P:URIS_BiddingProcess_it24.Models.DTO.UpdatePublicBiddingRequest.BiddingId">
+            <summary>
+            The foreign key of the Bidding entity that this public bidding belongs to.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URIS_Stages_it24</name>
+    </assembly>
+    <members>
+        <member name="M:URIS_Stages_it24.Controllers.StageController.GetAllStagesAsync">
+            <summary>
+            Retrieves all stages from the database and converts them to DTOs.
+            </summary>
+            <returns>A list of Stage DTOs.</returns>
+            <response code="200">Returns a list of stages DTOs.</response>
+        </member>
+        <member name="M:URIS_Stages_it24.Controllers.StageController.GetStageByIdAsync(System.Guid)">
+            <summary>
+            Retrieves a specific stage from the database by ID and converts it to a DTO.
+            </summary>
+            <param name="id">The ID of the stage to retrieve.</param>
+            <returns>A Stage DTO.</returns>
+            <response code="200">Returns the Stage DTO.</response>
+            <response code="404">If no stage is found with the specified ID.</response>
+        </member>
+        <member name="M:URIS_Stages_it24.Controllers.StageController.AddStageAsync(URIS_Stages_it24.Models.DTO.AddStageRequest)">
+             <summary>
+             Adds a new Stage to the database.
+             </summary>
+             <remarks>
+             Sample request:
+            \
+             POST api/Stage
+             {
+             
+             "stageNumber": "1",
+             "stageDay": "2023-01-16"
+             }
+             </remarks>
+             <param name="addStageRequest">The DTO containing the information for the new Stage.</param>
+             <returns>The newly created Stage DTO.</returns>
+             <response code="201">Returns the newly created Stage DTO.</response>
+             <response code="400">If the request is invalid.</response>
+        </member>
+        <member name="M:URIS_Stages_it24.Controllers.StageController.DeleteStageAsync(System.Guid)">
+            <summary>
+            Deletes the Stage entity with the specified ID from the repository.
+            </summary>
+            <param name="id">The ID of the Stage entity to be deleted.</param>
+            <returns>An IActionResult indicating the success of the operation and the deleted Stage entity.</returns>
+            <response code="200">Returns the deleted Stage DTO.</response>
+            <response code="404">Returns NotFound error if no Stage with the given ID is found.</response>
+        </member>
+        <member name="M:URIS_Stages_it24.Controllers.StageController.UpdateStageAsync(System.Guid,URIS_Stages_it24.Models.DTO.UpdateStageRequest)">
+            <summary>
+            Updates an existing Stage in the database.
+            </summary>
+            <param name="id">The ID of the Stage to update.</param>
+            <param name="updateStageRequest">The request data for the updated Stage.</param>
+            <returns>The updated Stage DTO.</returns>
+            <response code="200">Returns the updated Stage DTO.</response>
+            <response code="400">If the request is invalid.</response>
+            <response code="404">Returns NotFound error if no Stage with the given ID is found.</response>
+        </member>
+        <member name="P:URIS_Stages_it24.Models.DTO.AddStageRequest.StageNumber">
+            <summary>
+            Gets or sets the stage number, which can be used to order the stages chronologically.
+            </summary>
+        </member>
+        <member name="P:URIS_Stages_it24.Models.DTO.AddStageRequest.StageDay">
+            <summary>
+            Gets or sets the date on which the stage is scheduled to take place.
+            </summary>
+        </member>
+        <member name="P:URIS_Stages_it24.Models.DTO.Stage.StageId">
+            <summary>
+            Gets or sets the unique identifier of the stage.
+            </summary>
+        </member>
+        <member name="P:URIS_Stages_it24.Models.DTO.Stage.StageNumber">
+            <summary>
+            Gets or sets the stage number, which can be used to order the stages chronologically.
+            </summary>
+        </member>
+        <member name="P:URIS_Stages_it24.Models.DTO.Stage.StageDay">
+            <summary>
+            Gets or sets the date on which the stage is scheduled to take place.
+            </summary>
+        </member>
+        <member name="P:URIS_Stages_it24.Models.DTO.UpdateStageRequest.StageNumber">
+            <summary>
+            Gets or sets the stage number, which can be used to order the stages chronologically.
+            </summary>
+        </member>
+        <member name="P:URIS_Stages_it24.Models.DTO.UpdateStageRequest.StageDay">
+            <summary>
+            Gets or sets the date on which the stage is scheduled to take place.
+            </summary>
+        </member>
+    </members>
+</doc>

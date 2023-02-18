@@ -1,0 +1,2028 @@
+{
+	"info": {
+		"_postman_id": "47f026e6-922a-4c17-8b75-8f19331b5c51",
+		"name": "Bidding process API",
+		"description": "An API to perform Bidding process operations\n\nContact Support:\n Name: Natasa Jovanovic\n Email: nj55078@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21486610"
+	},
+	"item": [
+		{
+			"name": "BiddingConditions",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieves a specific Bidding conditions from the database based on the given id.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/BiddingConditions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"BiddingConditions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The id of the Bidding conditions to retrieve."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns Bidding conditions DTO with the given id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/BiddingConditions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"BiddingConditions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The id of the Bidding conditions to retrieve."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "There is no bidding conditions with this id.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/BiddingConditions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"BiddingConditions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The id of the Bidding conditions to retrieve."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates a set of Bidding Conditions in the database, changing all attributes except for the primary key.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"price\": -55065049,\n  \"rentalDuration\": \"do aute exercitation officia\",\n  \"biddingId\": \"140337de-e7c2-1159-2dfb-c09717ec6da8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7021/BiddingConditions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"BiddingConditions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the Bidding Conditions to update."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns updated Bidding Conditions as a BiddingConditionsDTO",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"price\": -55065049,\n  \"rentalDuration\": \"do aute exercitation officia\",\n  \"biddingId\": \"140337de-e7c2-1159-2dfb-c09717ec6da8\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/BiddingConditions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"BiddingConditions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding Conditions to update."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no Bidding Conditions with the given ID are found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"price\": -55065049,\n  \"rentalDuration\": \"do aute exercitation officia\",\n  \"biddingId\": \"140337de-e7c2-1159-2dfb-c09717ec6da8\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/BiddingConditions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"BiddingConditions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding Conditions to update."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Deletes a specific set of Bidding Conditions from the database.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/BiddingConditions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"BiddingConditions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the Bidding Conditions to delete."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns deleted Bidding Conditions",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/BiddingConditions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"BiddingConditions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding Conditions to delete."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no Bidding Conditions with the given ID are found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/BiddingConditions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"BiddingConditions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding Conditions to delete."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieves all Bidding conditionss from the database.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7021/BiddingConditions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"BiddingConditions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns list of Bidding conditions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/BiddingConditions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"BiddingConditions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Adds a new Bidding Conditions to the database.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"price\": -55065049,\n  \"rentalDuration\": \"do aute exercitation officia\",\n  \"biddingId\": \"140337de-e7c2-1159-2dfb-c09717ec6da8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7021/BiddingConditions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"BiddingConditions"
+							]
+						},
+						"description": "Sample request:\r\n\\\r\nPOST api/BiddingConditions\r\n{\r\n\r\n\"Price\": 1000,\r\n\"RentalDuration\": \"1 godina\",\r\n\"BiddingId\": \"4fd4a7c9-aed5-4ce5-b2f8-462c09d91bf5\"\r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"price\": -55065049,\n  \"rentalDuration\": \"do aute exercitation officia\",\n  \"biddingId\": \"140337de-e7c2-1159-2dfb-c09717ec6da8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/BiddingConditions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"BiddingConditions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Returns newly created Bidding Conditions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"price\": -55065049,\n  \"rentalDuration\": \"do aute exercitation officia\",\n  \"biddingId\": \"140337de-e7c2-1159-2dfb-c09717ec6da8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/BiddingConditions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"BiddingConditions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Biddings",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieves a specific Bidding from the database based on the given id.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/Biddings/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"Biddings",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The id of the Bidding to retrieve."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns Bidding  DTO with the given id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Biddings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Biddings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The id of the Bidding to retrieve."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "There is no bidding with given id.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Biddings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Biddings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The id of the Bidding to retrieve."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Deletes the Bidding entity with the specified ID from the repository.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/Biddings/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"Biddings",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the Bidding entity to be deleted."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns deleted Bidding",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Biddings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Biddings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding entity to be deleted."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no Bidding with the given ID are found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Biddings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Biddings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding entity to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates the specified Bidding entity in the repository with the provided DTO values.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"biddingCode\": \"culpa est deserunt\",\n  \"type\": \"Ut velit aliqua\",\n  \"status\": \"Ut incididunt\",\n  \"excepted\": true,\n  \"startingPrice\": -23462120,\n  \"dateOfMaintenance\": \"1950-12-28T13:38:53.882Z\",\n  \"startTime\": \"1950-05-23T21:04:27.424Z\",\n  \"endTime\": \"1959-02-21T15:41:06.192Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7021/Biddings/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"Biddings",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the Bidding entity to be updated."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns updated Bidding as a BiddingDTO",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"biddingCode\": \"culpa est deserunt\",\n  \"type\": \"Ut velit aliqua\",\n  \"status\": \"Ut incididunt\",\n  \"excepted\": true,\n  \"startingPrice\": -23462120,\n  \"dateOfMaintenance\": \"1950-12-28T13:38:53.882Z\",\n  \"startTime\": \"1950-05-23T21:04:27.424Z\",\n  \"endTime\": \"1959-02-21T15:41:06.192Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Biddings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Biddings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding entity to be updated."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no Bidding with the given ID are found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"biddingCode\": \"culpa est deserunt\",\n  \"type\": \"Ut velit aliqua\",\n  \"status\": \"Ut incididunt\",\n  \"excepted\": true,\n  \"startingPrice\": -23462120,\n  \"dateOfMaintenance\": \"1950-12-28T13:38:53.882Z\",\n  \"startTime\": \"1950-05-23T21:04:27.424Z\",\n  \"endTime\": \"1959-02-21T15:41:06.192Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Biddings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Biddings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Bidding entity to be updated."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieves all Biddings from the database.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7021/Biddings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"Biddings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns list of Biddings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Biddings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Biddings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Creates a new Bidding entity from the provided DTO and adds it to the repository.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"biddingCode\": \"culpa est deserunt\",\n  \"type\": \"Ut velit aliqua\",\n  \"status\": \"Ut incididunt\",\n  \"excepted\": true,\n  \"startingPrice\": -23462120,\n  \"dateOfMaintenance\": \"1950-12-28T13:38:53.882Z\",\n  \"startTime\": \"1950-05-23T21:04:27.424Z\",\n  \"endTime\": \"1959-02-21T15:41:06.192Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7021/Biddings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"Biddings"
+							]
+						},
+						"description": "Sample request:\r\n\\\r\nPOST api/Bidding\r\n{\r\n\r\n\t\"biddingCode\": \"002\",\r\n\t\"type\": \"Javna licitacija\",\r\n\t\"status\": \"Prvi krug\",\r\n\t\"excepted\": true,\r\n\t\"startingPrice\": 12000,\r\n\t\"dateOfMaintenance\": \"2023-01-16\",\r\n\t\"startTime\": \"2023-01-16T12:00:00\",\r\n\t\"endTime\": \"2023-01-16T12:00:00\"\r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"biddingCode\": \"culpa est deserunt\",\n  \"type\": \"Ut velit aliqua\",\n  \"status\": \"Ut incididunt\",\n  \"excepted\": true,\n  \"startingPrice\": -23462120,\n  \"dateOfMaintenance\": \"1950-12-28T13:38:53.882Z\",\n  \"startTime\": \"1950-05-23T21:04:27.424Z\",\n  \"endTime\": \"1959-02-21T15:41:06.192Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Biddings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Biddings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Returns newly created Bidding",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"biddingCode\": \"culpa est deserunt\",\n  \"type\": \"Ut velit aliqua\",\n  \"status\": \"Ut incididunt\",\n  \"excepted\": true,\n  \"startingPrice\": -23462120,\n  \"dateOfMaintenance\": \"1950-12-28T13:38:53.882Z\",\n  \"startTime\": \"1950-05-23T21:04:27.424Z\",\n  \"endTime\": \"1959-02-21T15:41:06.192Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Biddings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Biddings"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OpeningOfBids",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Gets an OpeningOfBids by ID.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/OpeningOfBids/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"OpeningOfBids",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the OpeningOfBids to get."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns Opening of bids DTO with the given id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/OpeningOfBids/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"OpeningOfBids",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the OpeningOfBids to get."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "There is no Opening of bids with this id.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/OpeningOfBids/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"OpeningOfBids",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the OpeningOfBids to get."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates an existing OpeningOfBids in the database.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"arrivingDate\": \"1956-08-11T21:09:29.338Z\",\n  \"arrivingHour\": \"1980-08-13T05:43:02.606Z\",\n  \"biddingId\": \"9dfef73b-dc9f-d845-61e7-eb4ca58f51f3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7021/OpeningOfBids/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"OpeningOfBids",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the OpeningOfBids to update."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns updated opening of bids",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"arrivingDate\": \"1956-08-11T21:09:29.338Z\",\n  \"arrivingHour\": \"1980-08-13T05:43:02.606Z\",\n  \"biddingId\": \"9dfef73b-dc9f-d845-61e7-eb4ca58f51f3\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/OpeningOfBids/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"OpeningOfBids",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the OpeningOfBids to update."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no opening of bids with the given ID are found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"arrivingDate\": \"1956-08-11T21:09:29.338Z\",\n  \"arrivingHour\": \"1980-08-13T05:43:02.606Z\",\n  \"biddingId\": \"9dfef73b-dc9f-d845-61e7-eb4ca58f51f3\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/OpeningOfBids/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"OpeningOfBids",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the OpeningOfBids to update."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Deletes the  Opening of bids entity with the specified ID from the repository.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/OpeningOfBids/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"OpeningOfBids",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the  Opening of bids entity to be deleted."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns deleted Opening of bids",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/OpeningOfBids/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"OpeningOfBids",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the  Opening of bids entity to be deleted."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no Opening of bids with the given ID are found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/OpeningOfBids/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"OpeningOfBids",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the  Opening of bids entity to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gets all OpeningOfBids from the database.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7021/OpeningOfBids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"OpeningOfBids"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns list of Opening of bids",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/OpeningOfBids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"OpeningOfBids"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Adds a new Opening of Bids to the database.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"arrivingDate\": \"1956-08-11T21:09:29.338Z\",\n  \"arrivingHour\": \"1980-08-13T05:43:02.606Z\",\n  \"biddingId\": \"9dfef73b-dc9f-d845-61e7-eb4ca58f51f3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7021/OpeningOfBids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"OpeningOfBids"
+							]
+						},
+						"description": "Sample request:\r\n\\\r\nPOST api/OpeningOfBids\r\n{\r\n\r\n\"ArrivingDate\": \"2023-02-16\",\r\n\"ArrivingHour\": \"14:30\",\r\n\"BiddingId\": \"4fd4a7c9-aed5-4ce5-b2f8-462c09d91bf5\"\r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"arrivingDate\": \"1956-08-11T21:09:29.338Z\",\n  \"arrivingHour\": \"1980-08-13T05:43:02.606Z\",\n  \"biddingId\": \"9dfef73b-dc9f-d845-61e7-eb4ca58f51f3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/OpeningOfBids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"OpeningOfBids"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Returns newly created Opening of bids",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"arrivingDate\": \"1956-08-11T21:09:29.338Z\",\n  \"arrivingHour\": \"1980-08-13T05:43:02.606Z\",\n  \"biddingId\": \"9dfef73b-dc9f-d845-61e7-eb4ca58f51f3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/OpeningOfBids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"OpeningOfBids"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PublicBidding",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieves a specific Public Bidding from the database based on its ID.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/PublicBidding/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"PublicBidding",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the Public Bidding to retrieve."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns Public Bidding  DTO with the given id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/PublicBidding/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"PublicBidding",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Public Bidding to retrieve."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "There is no Public Bidding with this id.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/PublicBidding/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"PublicBidding",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Public Bidding to retrieve."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates a Public Bidding in the database, changing all attributes except for the primary key.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"priceStep\": 93844083,\n  \"biddingId\": \"urn:uuid:b1ee46b7-f25a-aa5d-6dfb-96f27c867525\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7021/PublicBidding/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"PublicBidding",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the Public Bidding to update."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns updated Public Bidding as a BiddingConditionsDTO",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"priceStep\": 93844083,\n  \"biddingId\": \"urn:uuid:b1ee46b7-f25a-aa5d-6dfb-96f27c867525\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/PublicBidding/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"PublicBidding",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Public Bidding to update."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no Public Bidding with the given ID are found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"priceStep\": 93844083,\n  \"biddingId\": \"urn:uuid:b1ee46b7-f25a-aa5d-6dfb-96f27c867525\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/PublicBidding/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"PublicBidding",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Public Bidding to update."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Deletes a specific Public Bidding from the database.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7021/PublicBidding/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7021",
+									"path": [
+										"PublicBidding",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+											"description": "(Required) The ID of the Public Bidding to delete."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns deleted Public Bidding",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/PublicBidding/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"PublicBidding",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Public Bidding to delete."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Returns NotFound error if no Public Bidding with the given ID are found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/PublicBidding/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"PublicBidding",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eb8c1d0b-88fc-2d53-9105-6dccf4a40fcd",
+													"description": "(Required) The ID of the Public Bidding to delete."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieves all Public Biddings from the database and returns them as a list of PublicBiddingDTOs.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7021/PublicBidding",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"PublicBidding"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns list of Public Biddings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/PublicBidding",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"PublicBidding"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Adds a new Public Bidding to the database.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"priceStep\": 93844083,\n  \"biddingId\": \"urn:uuid:b1ee46b7-f25a-aa5d-6dfb-96f27c867525\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7021/PublicBidding",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7021",
+							"path": [
+								"PublicBidding"
+							]
+						},
+						"description": "Sample request:\r\n\\\r\nPOST api/PublicBidding\r\n{\r\n\r\n\"PriceStep\": 100,\r\n\"BiddingId\": \"4fd4a7c9-aed5-4ce5-b2f8-462c09d91bf5\"\r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"priceStep\": 93844083,\n  \"biddingId\": \"urn:uuid:b1ee46b7-f25a-aa5d-6dfb-96f27c867525\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/PublicBidding",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"PublicBidding"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Returns newly created Public Bidding",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"priceStep\": 93844083,\n  \"biddingId\": \"urn:uuid:b1ee46b7-f25a-aa5d-6dfb-96f27c867525\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/PublicBidding",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"PublicBidding"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Weather Forecast",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/WeatherForecast",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/WeatherForecast",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"date\": \"2001-08-06T19:26:50.410Z\",\n    \"temperatureC\": -46789453,\n    \"temperatureF\": -9006272,\n    \"summary\": \"veniam officia velit\"\n  },\n  {\n    \"date\": \"1972-01-03T02:36:08.164Z\",\n    \"temperatureC\": 62911015,\n    \"temperatureF\": 72764240,\n    \"summary\": \"voluptate\"\n  }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

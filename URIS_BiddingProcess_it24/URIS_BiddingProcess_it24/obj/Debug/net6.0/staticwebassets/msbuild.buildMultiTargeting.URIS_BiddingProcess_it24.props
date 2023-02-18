@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\URIS_BiddingProcess_it24.props" />
+</Project>
