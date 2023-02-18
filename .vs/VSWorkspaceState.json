@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Korisnik_projekat\\Korisnik_projekat",
+    "\\Korisnik_projekat\\Korisnik_projekat\\Controllers",
+    "\\Registration_projekat",
+    "\\Registration_projekat\\Registration_projekat"
   ],
-  "SelectedNode": "\\C:\\Users\\Acer\\Source\\Repos\\Tim-3---All-women-house---NewDevProject",
+  "SelectedNode": "\\Registration_projekat\\Registration_projekat\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

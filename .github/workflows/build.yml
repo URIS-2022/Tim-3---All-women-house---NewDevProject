@@ -16,7 +16,7 @@ jobs:
           java-version: 1.11
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
       - name: Cache SonarCloud packages
         uses: actions/cache@v1
         with:
@@ -38,7 +38,7 @@ jobs:
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
       - name: Build and analyze
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
@@ -46,5 +46,19 @@ jobs:
           dotnet publish Township/Township.sln -c Debug -o out
           dotnet publish Land/Land.sln -c Debug -o out
           dotnet publish Complaint/Complaint.sln -c Debug -o out
+          dotnet publish Korisnik_projekat/Korisnik_projekat.sln -c Debug -o out
+          dotnet publish Registration_projekat/Registration_projekat.sln -c Debug -o out
+          dotnet publish URIS_BiddingProcess_it24/URIS_BiddingProcess_it24.sln -c Debug -o out
+          dotnet publish URIS_Stages_it24/URIS_Stages_it24.sln -c Debug -o out
+          dotnet publish IT64-2019_URIS_CustomerRegistration/IT64-2019_URIS_CustomerRegistration.sln -c Debug -o out
+          dotnet publish IT64-2019_URIS_ExpertCommission/IT64-2019_URIS_ExpertCommission.sln -c Debug -o out
+          dotnet publish AuctioneerRegistration/AuctioneerRegistration.sln -c Debug -o out
+          dotnet publish URIS_DEOPARCELE_IT72/URIS_DEOPARCELE_IT72.sln -c Debug -o out
+          dotnet publish URIS_DOKUMENTACIJA_IT72/URIS_DOKUMENTACIJA_IT72.sln -c Debug -o out
+          dotnet publish URIS_OGLAS_IT72/URIS_OGLAS_IT72.sln -c Debug -o out
+          dotnet publish URIS_Licitacion_IT67-2019/URIS_Licitacion_IT67-2019.sln -c Debug -o out
+          dotnet publish URIS_Ministry_IT67-2019/URIS_Ministry_IT67-2019.sln -c Debug -o out
+          dotnet publish URIS_Contract_IT67-2019/URIS_Contract_IT67-2019.sln -c Debug -o out
+          dotnet publish URIS_ProtectedZone_IT67-2019/URIS_ProtectedZone_IT67-2019.sln -c Debug -o out
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

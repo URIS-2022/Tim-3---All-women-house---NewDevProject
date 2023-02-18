@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WFZDtIzxGDTqWMuFbUlOsgwGw136HNjyC4v7yeBaUG3QrnvfA6ktjfS2OJdYTXtJMQbIQgZRHTnJ34uIyXnW9Q==",
+  "dgSpecHash": "1XMVbyE06lmbEszCzvw8fCDmEQbE3aKjQIv91eZ/Fxvr9vJ3logbMjNiMlUlH+RLjTjcYlWFSBXEDBPUQv4pXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Korisnik\\source\\repos\\Registration_projekat\\Registration_projekat\\Registration_projekat.csproj",
+  "projectFilePath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\Registration_projekat\\Registration_projekat\\Registration_projekat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
