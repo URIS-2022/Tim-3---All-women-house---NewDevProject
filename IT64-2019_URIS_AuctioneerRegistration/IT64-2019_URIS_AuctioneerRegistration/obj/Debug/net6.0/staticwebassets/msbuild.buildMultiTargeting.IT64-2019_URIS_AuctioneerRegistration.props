@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\IT64-2019_URIS_AuctioneerRegistration.props" />
-</Project>
