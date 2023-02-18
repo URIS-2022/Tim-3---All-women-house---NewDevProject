@@ -13,7 +13,7 @@
         /// <summary>
         /// Lokacija prijave
         /// </summary>
-        public string Location { get; set; }
+        public string? Location { get; set; }
 
         /// <summary>
         /// Strani kljuc, odnosno primarni kljuc u formularu prijave

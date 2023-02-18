@@ -32,7 +32,6 @@ namespace Registration_projekat.Controllers
             var registrationForms = await registrationFormRepository.GetAllAsync();
 
             //return DTO registrationForms
-            //var registrationFormsDTO = new List<Models.DTO.RegistrationForm>();
             //registrationForms.ToList().ForEach(registrationForm =>
             //{
             //    var registrationFormDTO = new Models.DTO.RegistrationForm()

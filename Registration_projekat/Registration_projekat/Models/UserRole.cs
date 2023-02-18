@@ -1,6 +1,6 @@
 ﻿namespace Registration_projekat.Models
 {
-    public class User_Role
+    public class UserRole
     {
         public Guid User_RoleId { get; set; }
 

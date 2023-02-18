@@ -7,7 +7,6 @@ namespace Registration_projekat.Repositories
         private List<User> Users = new List<User>()
         {
             //new User()
-            //{
             //    Name = "Milan", Surname = "Nikolic", Email = "milannikolic@gmail.com",
             //    UserId = Guid.NewGuid(), Username = "MilanNikolic", Password = "milannikolic123",
             //    Roles = new List<string> {"operater"}

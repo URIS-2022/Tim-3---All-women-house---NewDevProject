@@ -14,12 +14,12 @@ namespace Registration_projekat.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User_Role>()
+            modelBuilder.Entity<UserRole>()
                  .HasOne(x => x.Role)
                  .WithMany(y => y.UserRoles)
                  .HasForeignKey(x => x.RoleId);
 
-            modelBuilder.Entity<User_Role>()
+            modelBuilder.Entity<UserRole>()
                 .HasOne(x => x.User)
                 .WithMany(y => y.UserRoles)
                 .HasForeignKey(x => x.UserId);
@@ -35,7 +35,7 @@ namespace Registration_projekat.Data
 
         public DbSet<Role> Roles { get; set; }
 
-        public DbSet<User_Role> Users_Roles { get; set; }
+        public DbSet<UserRole> Users_Roles { get; set; }
 
     }
 }

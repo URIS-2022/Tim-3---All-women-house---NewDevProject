@@ -4,9 +4,9 @@
     {
         public Guid RoleId { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        public List<User_Role> UserRoles { get; set; }
+        public List<UserRole> UserRoles { get; set; }
 
     }
 }

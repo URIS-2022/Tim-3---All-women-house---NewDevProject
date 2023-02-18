@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "458491b8-3098-4c46-9682-469085dbc128",
+		"name": "RegistrationForm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllRegistrationForms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7122/RegistrationForms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7122",
+					"path": [
+						"RegistrationForms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRegistrationForm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7122/RegistrationForms/514f550d-a4a9-4ea8-bfaf-5f01858aa1e8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7122",
+					"path": [
+						"RegistrationForms",
+						"514f550d-a4a9-4ea8-bfaf-5f01858aa1e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddRegistrationForm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Milica\",\r\n  \"surname\": \"Jovic\",\r\n  \"address\": \"Heroja Pinkija 25 Novi Sad\",\r\n  \"jmbg\": \"1510199145785\",\r\n  \"email\": \"milicajovic@gmail.com\",\r\n  \"username\": \"milicajovic\",\r\n  \"password\": \"milicajovic15\",\r\n  \"country\": \"Serbia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7122/RegistrationForms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7122",
+					"path": [
+						"RegistrationForms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Milos\",\r\n  \"surname\": \"Markovic\",\r\n  \"address\": \"Nikole Tesle 15 Subotica\",\r\n  \"jmbg\": \"2310198547815\",\r\n  \"email\": \"milosmarkovic@gmail.com\",\r\n  \"username\": \"milosmarkovic\",\r\n  \"password\": \"milosmarkovic23\",\r\n  \"country\": \"Serbia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7122/RegistrationForms/17b4f064-5281-4adc-ac9e-41b97774e20e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7122",
+					"path": [
+						"RegistrationForms",
+						"17b4f064-5281-4adc-ac9e-41b97774e20e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7122/RegistrationForms/17b4f064-5281-4adc-ac9e-41b97774e20e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7122",
+					"path": [
+						"RegistrationForms",
+						"17b4f064-5281-4adc-ac9e-41b97774e20e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -12,27 +12,27 @@ namespace Registration_projekat.Models
         /// <summary>
         /// Ime korisnika
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// Prezime korisnika
         /// </summary>
-        public string Surname { get; set; }
+        public string? Surname { get; set; }
 
         /// <summary>
         /// Email korisnika
         /// </summary>
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         /// <summary>
         /// UserName korisnika
         /// </summary>
-        public string Username { get; set; }
+        public string? Username { get; set; }
 
         /// <summary>
         /// Lozinka korisnika
         /// </summary>
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         [NotMapped]
         public List<string> Roles { get; set; }
@@ -40,6 +40,6 @@ namespace Registration_projekat.Models
        /// <summary>
        /// Navigation property
        /// </summary>
-        public List<User_Role> UserRoles { get; set; }
+        public List<UserRole> UserRoles { get; set; }
     }
 }

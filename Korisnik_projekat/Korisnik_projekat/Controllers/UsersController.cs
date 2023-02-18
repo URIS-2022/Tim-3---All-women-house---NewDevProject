@@ -32,7 +32,6 @@ namespace Korisnik_projekat.Controllers
             var users = await userRepository.GetAllAsync();
 
             // return DTO users
-            //var usersDTO = new List<Models.DTO.User>();
             //users.ToList().ForEach(user =>
             //{
             //    var userDTO = new Models.DTO.User()
