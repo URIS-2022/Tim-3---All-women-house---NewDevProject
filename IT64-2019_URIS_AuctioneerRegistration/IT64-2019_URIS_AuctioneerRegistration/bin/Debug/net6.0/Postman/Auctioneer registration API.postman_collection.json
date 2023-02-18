@@ -1,0 +1,623 @@
+{
+	"info": {
+		"_postman_id": "09fa48c3-f4b0-45fc-bf2c-7fadcab9a812",
+		"name": "Auctioneer registration API",
+		"description": "Aplikacija za registraciju licitera.\n\nContact Support:\n Name: Andreja Vukovic\n Email: vukovic.andreja.pd@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16996688"
+	},
+	"item": [
+		{
+			"name": "Auctioneer",
+			"item": [
+				{
+					"name": "{auctioneerId}",
+					"item": [
+						{
+							"name": "Vraca jednog licitera na osnovu ID-ja kupca.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7216/Auctioneer/:auctioneerId",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7216",
+									"path": [
+										"Auctioneer",
+										":auctioneerId"
+									],
+									"variable": [
+										{
+											"key": "auctioneerId",
+											"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+											"description": "(Required) ID licitera"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca trazenog licitera.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjen ni jedan liciter.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vrsi brisanje jednog licitera na osnovu njegovog ID-a.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7216/Auctioneer/:auctioneerId",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7216",
+									"path": [
+										"Auctioneer",
+										":auctioneerId"
+									],
+									"variable": [
+										{
+											"key": "auctioneerId",
+											"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+											"description": "(Required) ID licitera"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjen liciter za brisanje.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja licitera.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Azurira jednog licitera.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7216/Auctioneer/:auctioneerId",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7216",
+									"path": [
+										"Auctioneer",
+										":auctioneerId"
+									],
+									"variable": [
+										{
+											"key": "auctioneerId",
+											"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+											"description": "(Required) ID licitera"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca azuriranog licitera.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Liciter koji se azurira nije pronadjen.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom azuriranja licitera.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Auctioneer/:auctioneerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Auctioneer",
+												":auctioneerId"
+											],
+											"variable": [
+												{
+													"key": "auctioneerId",
+													"value": "367c0c33-8838-a867-337f-d54dd62bc411",
+													"description": "(Required) ID licitera"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Vraca listu svih evidentiranih licitera.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7216/Auctioneer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7216",
+							"path": [
+								"Auctioneer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vraca listu licitera.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Auctioneer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Auctioneer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Kreriranje licitera.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7216/Auctioneer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7216",
+							"path": [
+								"Auctioneer"
+							]
+						},
+						"description": "Primjer zahtjeva za kreiranje licitera: \r\n \\\r\nPOST api/Auctioneer\r\n \\\r\n {\r\n \r\n     \"firstName\": \"Marko\",\r\n     \"lastName\": \"Markovic\",\r\n     \"jmbg\": \"1234567890123\",\r\n     \"street\": \"Dunavska 1\",\r\n     \"city\": \"Novi Sad\",\r\n     \"state\": \"Srbija\",\r\n     \"passportNum\": \"12345678\"\r\n }"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Auctioneer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Auctioneer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Vraca kreiranog licitera.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Auctioneer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Auctioneer"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Doslo je do greske na serveru prilikom unosa podataka o liciteru.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"labore non\",\n  \"lastName\": \"Duis\",\n  \"jmbg\": \"sint\",\n  \"street\": \"do nostrud incididunt officia\",\n  \"city\": \"nisi laboris adipisicing minim\",\n  \"state\": \"nulla et\",\n  \"passportNum\": \"deserunt irure magna enim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Auctioneer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Auctioneer"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

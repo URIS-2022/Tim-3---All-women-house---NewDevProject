@@ -1,0 +1,723 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IT64-2019_URIS_CustomerRegistration</name>
+    </assembly>
+    <members>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.CustomerController.GetCustomers">
+            <summary>
+            Vraca listu svih evidentiranih kupaca (lica).
+            </summary>
+            <returns>Lista evidentiranih kupaca</returns>
+            <response code="200">Vraca listu kupaca (lica).</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.CustomerController.GetCustomerAsync(System.Guid)">
+            <summary>
+            Vraca jednog kupaca (lica) na osnovu ID-ja kupca.
+            </summary>
+            <param name="customerId">ID kupca</param>
+            <response code="200">Vraca trazenog kupca (lice).</response>
+            <response code="404">Nije pronadjen ni jedan kupac (lice).</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.CustomerController.AddCustomerAsync(IT64_2019_URIS_CustomerRegistration.Models.CustomerAddDto)">
+             <summary>
+             Kreriranje kupca (lica).
+             </summary>
+             <param name="customerAdd">Model za kreiranje kupca (lica)</param>
+             <returns>Potvrda o kreiranju kupca (lica).</returns>
+            <remarks>
+            Primjer zahtjeva za kreiranje kupca (lica): 
+             \
+            POST api/Customer
+              \
+             {  
+             
+                 "person": "Pravno lice", 
+                 "realizedArea": 10000, 
+                 "authorizedPerson": "Marko Markovic", 
+                 "payments": 200000, 
+                 "priority": 1, 
+                 "guarantor": "Jamstvo" 
+             }
+             </remarks>
+             <response code="201">Vraca kreiranog kupca (lice).</response>
+             <response code="500">Doslo je do greske na serveru prilikom unosa podataka o kupcu (licu).</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.CustomerController.DeleteCustomerAsync(System.Guid)">
+            <summary>
+            Vrsi brisanje jednog kupcana osnovu njegovog ID-a.
+            </summary>
+            <param name="customerId">ID kupca</param>
+            <response code="404">Nije pronadjen kupac (lice) za brisanje.</response>
+            <response code="500">Doslo je do greske na serveru prilikom brisanja kupca (lica).</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.CustomerController.UpdateCustomerAsync(System.Guid,IT64_2019_URIS_CustomerRegistration.Models.CustomerUpdateDto)">
+            <summary>
+            Azurira jednog kupca.
+            </summary>
+            <param name="customerId">ID kupca</param>
+            <param name="customerUpdate">Model kupca koji se azurira.</param>
+            <returns>Potvrdu o modifikovanom kupcu (licu).</returns>
+            <response code="200">Vraca azuriranog kupca (lica).</response>
+            <response code="404">Kupac (lice) koje se azurira nije pronadjeno.</response>
+            <response code="500">Doslo je do greske na serveru prilikom azuriranja kupca (lica).</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.LegalPersonController.GetAllLegalPersonAsync">
+            <summary>
+            Vraca listu evidentiranih pravnih lica.
+            </summary>
+            <returns>Lista pravnih lica</returns>
+            <response code="200">Vraca listu pravnih lica.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.LegalPersonController.GetLegalPerson(System.Guid)">
+            <summary>
+            Vraca jedno pravo lice na osnovu njegovog ID-ja
+            </summary>
+            <param name="legalPersonId"></param>
+            <returns></returns>
+            <response code="200">Vraca trazeno pravno lice.</response>
+            <response code="404">Nije pronadjeno ni jedno pravno lice.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.LegalPersonController.AddLegalPersonAsync(IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto)">
+            <summary>
+            Kreriranje pravnog lica.
+            </summary>
+            <param name="legalPersonAdd">Model za kreiranje pravnog lica</param>
+            <returns>Potvrda o kreiranju pravnog lica.</returns>
+            <remarks>
+            Primjer zahtjeva za kreiranje pravnog lica: 
+            \
+            POST api/LegalPerson 
+            { 
+            
+                "nameLP": "Preduzece doo", 
+                "identificationNumLP": "12345678",
+                "streetLP": "Dunavska 1", 
+                "cityLP": "Novi Sad", 
+                "stateLP": "Srbija", 
+                "contactPerson": "Marko Markovic", 
+                "positions": "Direktor", 
+                "phone": "065625556666", 
+                "emailLP": "marko@gmail.com", 
+                "fax": "1234567", 
+                "accountNumLP": 123456778, 
+                "customerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6" 
+            }
+            </remarks>
+            <response code="201">Vraca kreirano pravno lice.</response>
+            <response code="500">Doslo je do greske na serveru prilikom unosa podataka o pravnom licu.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.LegalPersonController.DeleteLegalPersonAsync(System.Guid)">
+            <summary>
+            Vrsi brisanje jednog pravnog lica osnovu njegovog ID-a.
+            </summary>
+            <param name="legalPersonId">ID pravnog lica</param>
+            <response code="404">Nije pronadjeno pravno lice za brisanje.</response>
+            <response code="500">Doslo je do greske na serveru prilikom brisanja pravnog lica.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.LegalPersonController.UpdateLegalPersonAsync(System.Guid,IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto)">
+            <summary>
+            Azurira jednog pravnog lica.
+            </summary>
+            <param name="legalPersonId">ID pravnog lica</param>
+            <param name="legalPersonUpdate">Model pravnog lica koji se azurira.</param>
+            <returns>Potvrdu o modifikovanom pravnom licu.</returns>
+            <response code="200">Vraca azurirano pravno lice.</response>
+            <response code="404">Pravno lice koje se azurira nije pronadjeno.</response>
+            <response code="500">Doslo je do greske na serveru prilikom azuriranja pravnog lica.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.NaturalPersonController.GetAllNaturalPersonsAsync">
+            <summary>
+            Vraca listu evidentiranih fizickih lica.
+            </summary>
+            <returns>Lista fizickih lica</returns>
+            <response code="200">Vraca listu fizickih lica.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.NaturalPersonController.GetNaturalPerson(System.Guid)">
+            <summary>
+            Vraca jedno fizicko lice na osnovu njegovog ID-ja
+            </summary>
+            <param name="naturalPersonId">ID fizickog lica</param>
+            <response code="200">Vraca trazeno fizicko lice.</response>
+            <response code="404">Nije pronadjeno ni jedno fizicko lice.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.NaturalPersonController.AddNaturalPersonAsync(IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto)">
+            <summary>
+            Kreriranje fizickog lica.
+            </summary>
+            <param name="naturalPersonAdd">Model za kreiranje fizickog lica</param>
+            <returns>Potvrda o kreiranju fizickog lica.</returns>
+            <remarks>
+            Primjer zahtjeva za kreiranje fizickog lica: 
+            \
+            POST api/NaturalPeron
+            \
+            { 
+            
+                "firstName": "Petar",
+                "lastName": "Petrovic",
+                "jmbg": "1234567890123",
+                "streetNP": "Nikole Pasica 1",
+                "cityNP": "Novi Sad",
+                "stateNP": "Srbija",
+                "zipNP": "10000",
+                "tel1": "0612227373",
+                "tel2": "0662882822",
+                "emailNP": "petar@gmail.com",
+                "accountNumNP": 12020203,
+                "customerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            }
+            </remarks>
+            <response code="201">Vraca kreirano fizicko lice.</response>
+            <response code="500">Doslo je do greske na serveru prilikom unosa podataka o fizickom licu.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.NaturalPersonController.DeleteNaturalPersonAsync(System.Guid)">
+            <summary>
+            Vrsi brisanje jednog fizickog lica osnovu njegovog ID-a.
+            </summary>
+            <param name="naturalPersonId">ID fizickog lica</param>
+            <response code="204">Fizicko lice uspjesno obrisano.</response>
+            <response code="404">Nije pronadjeno fizicko lice za brisanje.</response>
+            <response code="500">Doslo je do greske na serveru prilikom brisanja fizickog lica.</response>
+        </member>
+        <member name="M:IT64_2019_URIS_CustomerRegistration.Controllers.NaturalPersonController.UpdateNaturalPerson(System.Guid,IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto)">
+            <summary>
+            Azurira jednog fizickog lica.
+            </summary>
+            <param name="naturalPersonId">ID fizickog lica</param>
+            <param name="naturalPersonUpdate">Model fizickog lica koji se azurira.</param>
+            <returns>Potvrdu o modifikovanom fizickom licu.</returns>
+            <response code="200">Vraca azurirano fizicko lice.</response>
+            <response code="404">Fizicko lice koje se azurira nije pronadjeno.</response>
+            <response code="500">Doslo je do greske na serveru prilikom azuriranja fizickog lica.</response>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerAddDto.Person">
+            <summary>
+            Lice je polje u koje je potrebno unijeti da li je lice fizicko ili pravno.
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerAddDto.RealizedArea">
+            <summary>
+            Ostvarena povrsina koju je kupac zakupio u toku nadmetanja.
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerAddDto.AuthorizedPerson">
+            <summary>
+            Ovlascena osoba
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerAddDto.Payments">
+            <summary>
+            Uplata
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerAddDto.Priority">
+            <summary>
+            Prioritet moze da bude:
+            1. Vlasnik sistema za navodnjavanje.
+            2. Vlasnik zemljista koje se granici sa zemljistem koje se daje u zakup.
+            3. Poljoprivrednik koji je upisan u Registar.
+            4. Vlasnik zemljista koje je najblize zemljistu koje se daje u zakup.
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerAddDto.Guarantor">
+            <summary>
+            Tip garancije moze biti:
+            1. Jamstvo
+            2. Bankarska Garancija
+            3. Zirantska
+            4. Uplata gotovinom
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerDto.CustomerId">
+            <summary>
+            ID kupca (lica)
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerDto.Person">
+            <summary>
+            Lice
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerDto.RealizedArea">
+            <summary>
+            Ostvarena povrsina koju je kupac zakupio.
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerDto.AuthorizedPerson">
+            <summary>
+            Ovlasceno lice
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerDto.Payments">
+            <summary>
+            Uplata
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerDto.Priority">
+            <summary>
+            Prioritet
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerDto.Guarantor">
+            <summary>
+            Garant placanja
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerUpdateDto.Person">
+            <summary>
+            Lice je polje u koje je potrebno unijeti da li je lice fizicko ili pravno.
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerUpdateDto.RealizedArea">
+            <summary>
+            Ostvarena povrsina koju je kupac zakupio u toku nadmetanja.
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerUpdateDto.AuthorizedPerson">
+            <summary>
+            Ovlascena osoba
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerUpdateDto.Payments">
+            <summary>
+            Uplata
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerUpdateDto.Priority">
+            <summary>
+            Prioritet moze da bude:
+            1. Vlasnik sistema za navodnjavanje.
+            2. Vlasnik zemljista koje se granici sa zemljistem koje se daje u zakup.
+            3. Poljoprivrednik koji je upisan u Registar.
+            4. Vlasnik zemljista koje je najblize zemljistu koje se daje u zakup.
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.CustomerUpdateDto.Guarantor">
+            <summary>
+            Tip garancije moze biti:
+            1. Jamstvo
+            2. Bankarska Garancija
+            3. Zirantska
+            4. Uplata gotovinom
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.NameLP">
+            <summary>
+            Naziv pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.IdentificationNumLP">
+            <summary>
+            Maticni broj pravnog lica (sadrzi 8 cifara)
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.StreetLP">
+            <summary>
+            Ulica i broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.CityLP">
+            <summary>
+            Grad
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.StateLP">
+            <summary>
+            Drzava
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.ContactPerson">
+            <summary>
+            Kontakt osoba
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.Positions">
+            <summary>
+            Pozicija pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.Phone">
+            <summary>
+            Broj telefona
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.EmailLP">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.Fax">
+            <summary>
+            Fax
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.AccountNumLP">
+            <summary>
+            Broj racuna
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonAddDto.CustomerId">
+            <summary>
+            ID kupca
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.LegalPersonId">
+            <summary>
+            ID pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.NameLP">
+            <summary>
+            Naziv pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.IdentificationNumLP">
+            <summary>
+            Maticni broj pravnog lica (sadrzi 8 cifara).
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.StreetLP">
+            <summary>
+            Ulica i broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.CityLP">
+            <summary>
+            Grad
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.StateLP">
+            <summary>
+            Drzava
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.ContactPerson">
+            <summary>
+            Kontakt osoba
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.Positions">
+            <summary>
+            Pozicija pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.Phone">
+            <summary>
+            Broj telefon pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.EmailLP">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.Fax">
+            <summary>
+            Fax
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.AccountNumLP">
+            <summary>
+            Broj racuna pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonDto.CustomerId">
+            <summary>
+            ID kupca
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.NameLP">
+            <summary>
+            Naziv pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.IdentificationNumLP">
+            <summary>
+            Maticni broj pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.StreetLP">
+            <summary>
+            Ulica i broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.CityLP">
+            <summary>
+            Grad
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.StateLP">
+            <summary>
+            Drzava
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.ContactPerson">
+            <summary>
+            Kontakt osoba
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.Positions">
+            <summary>
+            Pozicija pravnog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.Phone">
+            <summary>
+            Broj telefona
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.EmailLP">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.Fax">
+            <summary>
+            Fax
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.AccountNumLP">
+            <summary>
+            Broj racuna
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.LegalPersonUpdateDto.CustomerId">
+            <summary>
+            ID kupca
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.FirstName">
+            <summary>
+            Ime fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.LastName">
+            <summary>
+            Prezime fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.JMBG">
+            <summary>
+            Jedinstveni maticni broj fizickog lica
+            (sadrzi 13 cifara)
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.StreetNP">
+            <summary>
+            Ulica i broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.CityNP">
+            <summary>
+            Grad
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.StateNP">
+            <summary>
+            Drzava
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.ZipNP">
+            <summary>
+            Postanski broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.Tel1">
+            <summary>
+            Broj telefona 1
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.Tel2">
+            <summary>
+            Broj telefona 2
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.EmailNP">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.AccountNumNP">
+            <summary>
+            Broj racuna fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonAddDto.CustomerId">
+            <summary>
+            ID kupca
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.NaturalPersonId">
+            <summary>
+            ID fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.FirstName">
+            <summary>
+            Ime fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.LastName">
+            <summary>
+            Prezime fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.JMBG">
+            <summary>
+            Jedinstveni maticni broj fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.StreetNP">
+            <summary>
+            Ulica i broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.CityNP">
+            <summary>
+            Grad
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.StateNP">
+            <summary>
+            Drzava
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.ZipNP">
+            <summary>
+            Postanski broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.Tel1">
+            <summary>
+            Broj telefona 1
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.Tel2">
+            <summary>
+            Broj telefona 2
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.EmailNP">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.AccountNumNP">
+            <summary>
+            Broj racuna fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonDto.CustomerId">
+            <summary>
+            ID kupca
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.FirstName">
+            <summary>
+            Ime fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.LastName">
+            <summary>
+            Prezime fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.JMBG">
+            <summary>
+            Jedinstveni maticni broj fizickog lica
+            (sadrzi 13 cifara)
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.StreetNP">
+            <summary>
+            Ulica i broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.CityNP">
+            <summary>
+            Grad
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.StateNP">
+            <summary>
+            Drzava
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.ZipNP">
+            <summary>
+            Postanski broj
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.Tel1">
+            <summary>
+            Broj telefona 1
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.Tel2">
+            <summary>
+            Broj telefona 2
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.EmailNP">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.AccountNumNP">
+            <summary>
+            Broj racuna fizickog lica
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.NaturalPersonUpdateDto.CustomerId">
+            <summary>
+            ID kupca
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.RegistrationFormId">
+            <summary>
+            ID formulara prijave
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.Name">
+            <summary>
+            Ime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.Surname">
+            <summary>
+            Prezime lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.Address">
+            <summary>
+            Adresa lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.JMBG">
+            <summary>
+            JMBG lica(kupca) koji popunjava formular
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.Email">
+            <summary>
+            Email lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.Username">
+            <summary>
+            Username lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.Password">
+            <summary>
+            Lozinka lica(kupca) koji popunjava projekat
+            </summary>
+        </member>
+        <member name="P:IT64_2019_URIS_CustomerRegistration.Models.RegistrationFormDto.Country">
+            <summary>
+            Drzava u kojoj zivi lice(kupac) 
+            </summary>
+        </member>
+    </members>
+</doc>

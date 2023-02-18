@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\IT64-2019_URIS_CustomerRegistration.props" />
+</Project>

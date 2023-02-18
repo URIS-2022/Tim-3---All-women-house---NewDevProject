@@ -1,0 +1,1226 @@
+{
+	"info": {
+		"_postman_id": "f44fad7b-c3dc-496e-b83e-27bb22e2b304",
+		"name": "Expert commission API",
+		"description": "Aplikacija za registraciju strucne komsije.\n\nContact Support:\n Name: Andreja Vukovic\n Email: vukovic.andreja.pd@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16996688"
+	},
+	"item": [
+		{
+			"name": "ExpertCommission",
+			"item": [
+				{
+					"name": "{expertCommissionId}",
+					"item": [
+						{
+							"name": "Vraca jednu strucnu komisiju na osnovu njenog ID-ja",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7262/ExpertCommission/:expertCommissionId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7262",
+									"path": [
+										"ExpertCommission",
+										":expertCommissionId"
+									],
+									"variable": [
+										{
+											"key": "expertCommissionId",
+											"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+											"description": "(Required) ID strucne komisije"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca trazenu strucnu komisiju.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjeno ni jedna strucna komisija.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vrsi brisanje jedne strucne komisije osnovu njegovog ID-a.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7262/ExpertCommission/:expertCommissionId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7262",
+									"path": [
+										"ExpertCommission",
+										":expertCommissionId"
+									],
+									"variable": [
+										{
+											"key": "expertCommissionId",
+											"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+											"description": "(Required) ID strucne komisije"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Strucna komisija uspjesno obrisana.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjena strucna komisija za brisanje.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja strucne komisije.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Azurira jedne strucne komisije.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7262/ExpertCommission/:expertCommissionId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7262",
+									"path": [
+										"ExpertCommission",
+										":expertCommissionId"
+									],
+									"variable": [
+										{
+											"key": "expertCommissionId",
+											"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+											"description": "(Required) ID strucne komisije"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca azuriranu strucnu komisiju.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Strucna komisija koje se azurira nije pronadjena.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom azuriranja strucne komisije.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ExpertCommission/:expertCommissionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ExpertCommission",
+												":expertCommissionId"
+											],
+											"variable": [
+												{
+													"key": "expertCommissionId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Vraca listu evidentirane strucne komisije.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7262/ExpertCommission",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7262",
+							"path": [
+								"ExpertCommission"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vraca listu strucne komisije.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ExpertCommission",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ExpertCommission"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Kreriranje strucne komisije.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7262/ExpertCommission",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7262",
+							"path": [
+								"ExpertCommission"
+							]
+						},
+						"description": "Primjer zahtjeva za kreiranje strucne komisije:\r\n\\\r\nPOST api/ExpertCommission\r\n\\\r\n{\r\n\r\n    \"expertCommissionName\": \"Komisija 1\",\r\n    \"presidentName\": \"Marko Markovic\",\r\n    \"numberOfMembers\": 2\r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ExpertCommission",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ExpertCommission"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Vraca kreiranu strucnu komisiju.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ExpertCommission",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ExpertCommission"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Doslo je do greske na serveru prilikom unosa podataka o strucnoj komisiji.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"expertCommissionName\": \"esse amet\",\n  \"presidentName\": \"in voluptate\",\n  \"numberOfMembers\": 28609344\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ExpertCommission",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ExpertCommission"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "{memberId}",
+					"item": [
+						{
+							"name": "Vraca jedng clana strucne komisije na osnovu njegovog ID-ja",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7262/Member/:memberId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7262",
+									"path": [
+										"Member",
+										":memberId"
+									],
+									"variable": [
+										{
+											"key": "memberId",
+											"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+											"description": "(Required) ID clana strucne komisije"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca trazenog clana strucne komisije.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjen ni jedan clan strucne komisije.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vrsi brisanje jednog clana strucne komisije osnovu njegovog ID-a.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7262/Member/:memberId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7262",
+									"path": [
+										"Member",
+										":memberId"
+									],
+									"variable": [
+										{
+											"key": "memberId",
+											"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+											"description": "(Required) ID clana strucne komisije"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Clan strucne komisije uspjesno obrisan.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjen clan strucna komisija za brisanje.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja clana strucne komisije.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Azurira jednog clana strucne komisije.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Lorem consectetur exercitation\",\n  \"lastName\": \"commodo enim quis sunt\",\n  \"phone\": \"veniam sint ut anim\",\n  \"email\": \"id commodo laboris\",\n  \"expertCommissionId\": \"c3d24aff-455e-0815-b13d-1e985cd6ba4c\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7262/Member/:memberId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7262",
+									"path": [
+										"Member",
+										":memberId"
+									],
+									"variable": [
+										{
+											"key": "memberId",
+											"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+											"description": "(Required) ID clana strucne komisije"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca azuriranu strucnu komisiju.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Lorem consectetur exercitation\",\n  \"lastName\": \"commodo enim quis sunt\",\n  \"phone\": \"veniam sint ut anim\",\n  \"email\": \"id commodo laboris\",\n  \"expertCommissionId\": \"c3d24aff-455e-0815-b13d-1e985cd6ba4c\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Clan strucne komisije koje se azurira nije pronadjen.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Lorem consectetur exercitation\",\n  \"lastName\": \"commodo enim quis sunt\",\n  \"phone\": \"veniam sint ut anim\",\n  \"email\": \"id commodo laboris\",\n  \"expertCommissionId\": \"c3d24aff-455e-0815-b13d-1e985cd6ba4c\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom azuriranja clana strucne komisije.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Lorem consectetur exercitation\",\n  \"lastName\": \"commodo enim quis sunt\",\n  \"phone\": \"veniam sint ut anim\",\n  \"email\": \"id commodo laboris\",\n  \"expertCommissionId\": \"c3d24aff-455e-0815-b13d-1e985cd6ba4c\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Member/:memberId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Member",
+												":memberId"
+											],
+											"variable": [
+												{
+													"key": "memberId",
+													"value": "urn:uuid:24bbebf7-c86f-2330-c545-5fa70aee976c",
+													"description": "(Required) ID clana strucne komisije"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Vraca listu evidentiranog clana strucne komisije.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7262/Member",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7262",
+							"path": [
+								"Member"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vraca listu clanova strucne komisije.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Member",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Member"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Kreriranje clana strucne komisije.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Lorem consectetur exercitation\",\n  \"lastName\": \"commodo enim quis sunt\",\n  \"phone\": \"veniam sint ut anim\",\n  \"email\": \"id commodo laboris\",\n  \"expertCommissionId\": \"c3d24aff-455e-0815-b13d-1e985cd6ba4c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7262/Member",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7262",
+							"path": [
+								"Member"
+							]
+						},
+						"description": "Primjer zahtjeva za kreiranje clana strucne komisije:\r\n\\\r\nPOST api/Member\r\n \\\r\n{\r\n\r\n    \"firstName\": \"Petar\",\r\n    \"lastName\": \"Petrovic\",\r\n    \"phone\": \"0455677990\",\r\n    \"email\": \"petar@gmail.com\",\r\n    \"expertCommissionId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n }"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Lorem consectetur exercitation\",\n  \"lastName\": \"commodo enim quis sunt\",\n  \"phone\": \"veniam sint ut anim\",\n  \"email\": \"id commodo laboris\",\n  \"expertCommissionId\": \"c3d24aff-455e-0815-b13d-1e985cd6ba4c\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Member",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Member"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,1868 @@
+{
+	"info": {
+		"_postman_id": "fca2c3d1-ed0e-430e-86f6-c7a05e5aabf6",
+		"name": "Customer registration API",
+		"description": "Aplikacija za registraciju kupaca (lica).\n\nContact Support:\n Name: Andreja Vukovic\n Email: vukovic.andreja.pd@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16996688"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "{customerId}",
+					"item": [
+						{
+							"name": "Vraca jednog kupaca (lica) na osnovu ID-ja kupca.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7029/Customer/:customerId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"Customer",
+										":customerId"
+									],
+									"variable": [
+										{
+											"key": "customerId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID kupca"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca trazenog kupca (lice).",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjen ni jedan kupac (lice).",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vrsi brisanje jednog kupcana osnovu njegovog ID-a.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7029/Customer/:customerId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"Customer",
+										":customerId"
+									],
+									"variable": [
+										{
+											"key": "customerId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID kupca"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjen kupac (lice) za brisanje.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja kupca (lica).",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Azurira jednog kupca.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7029/Customer/:customerId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"Customer",
+										":customerId"
+									],
+									"variable": [
+										{
+											"key": "customerId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID kupca"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca azuriranog kupca (lica).",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Kupac (lice) koje se azurira nije pronadjeno.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom azuriranja kupca (lica).",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Customer/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID kupca"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Vraca listu svih evidentiranih kupaca (lica).",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7029/Customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"Customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vraca listu kupaca (lica).",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Customer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Customer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Kreriranje kupca (lica).",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7029/Customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"Customer"
+							]
+						},
+						"description": "Primjer zahtjeva za kreiranje kupca (lica): \r\n \\\r\nPOST api/Customer\r\n  \\\r\n {  \r\n \r\n     \"person\": \"Pravno lice\", \r\n     \"realizedArea\": 10000, \r\n     \"authorizedPerson\": \"Marko Markovic\", \r\n     \"payments\": 200000, \r\n     \"priority\": 1, \r\n     \"guarantor\": \"Jamstvo\" \r\n }"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Customer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Customer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Vraca kreiranog kupca (lice).",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Customer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Customer"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Doslo je do greske na serveru prilikom unosa podataka o kupcu (licu).",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"person\": \"velit cillum sed\",\n  \"realizedArea\": -42676959,\n  \"authorizedPerson\": \"Excepteur dolore\",\n  \"payments\": -48923343.625734985,\n  \"priority\": 94704728,\n  \"guarantor\": \"sit in\",\n  \"registrationFormId\": \"urn:uuid:5a36d616-86a0-2870-a09e-d23b5f2112f9\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Customer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Customer"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "LegalPerson",
+			"item": [
+				{
+					"name": "{legalPersonId}",
+					"item": [
+						{
+							"name": "Vraca jedno pravo lice na osnovu njegovog ID-ja",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7029/LegalPerson/:legalPersonId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"LegalPerson",
+										":legalPersonId"
+									],
+									"variable": [
+										{
+											"key": "legalPersonId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca trazeno pravno lice.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjeno ni jedno pravno lice.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vrsi brisanje jednog pravnog lica osnovu njegovog ID-a.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7029/LegalPerson/:legalPersonId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"LegalPerson",
+										":legalPersonId"
+									],
+									"variable": [
+										{
+											"key": "legalPersonId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID pravnog lica"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID pravnog lica"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjeno pravno lice za brisanje.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID pravnog lica"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja pravnog lica.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID pravnog lica"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Azurira jednog pravnog lica.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nameLP\": \"velit ut esse\",\n  \"identificationNumLP\": \"labore \",\n  \"streetLP\": \"laborum in esse consequat\",\n  \"cityLP\": \"dolor in cupidatat id ea\",\n  \"stateLP\": \"deserunt volu\",\n  \"contactPerson\": \"dolore eiusmod fugiat cillum do\",\n  \"positions\": \"aliqua eiusmod e\",\n  \"phone\": \"laboris reprehenderit amet irure consequat\",\n  \"emailLP\": \"dolore magna\",\n  \"fax\": \"velit dolore minim\",\n  \"accountNumLP\": 24942901,\n  \"customerId\": \"urn:uuid:a91602de-5622-df50-7379-002ef3b49eca\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7029/LegalPerson/:legalPersonId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"LegalPerson",
+										":legalPersonId"
+									],
+									"variable": [
+										{
+											"key": "legalPersonId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID pravnog lica"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca azurirano pravno lice.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nameLP\": \"velit ut esse\",\n  \"identificationNumLP\": \"labore \",\n  \"streetLP\": \"laborum in esse consequat\",\n  \"cityLP\": \"dolor in cupidatat id ea\",\n  \"stateLP\": \"deserunt volu\",\n  \"contactPerson\": \"dolore eiusmod fugiat cillum do\",\n  \"positions\": \"aliqua eiusmod e\",\n  \"phone\": \"laboris reprehenderit amet irure consequat\",\n  \"emailLP\": \"dolore magna\",\n  \"fax\": \"velit dolore minim\",\n  \"accountNumLP\": 24942901,\n  \"customerId\": \"urn:uuid:a91602de-5622-df50-7379-002ef3b49eca\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID pravnog lica"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Pravno lice koje se azurira nije pronadjeno.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nameLP\": \"velit ut esse\",\n  \"identificationNumLP\": \"labore \",\n  \"streetLP\": \"laborum in esse consequat\",\n  \"cityLP\": \"dolor in cupidatat id ea\",\n  \"stateLP\": \"deserunt volu\",\n  \"contactPerson\": \"dolore eiusmod fugiat cillum do\",\n  \"positions\": \"aliqua eiusmod e\",\n  \"phone\": \"laboris reprehenderit amet irure consequat\",\n  \"emailLP\": \"dolore magna\",\n  \"fax\": \"velit dolore minim\",\n  \"accountNumLP\": 24942901,\n  \"customerId\": \"urn:uuid:a91602de-5622-df50-7379-002ef3b49eca\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID pravnog lica"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom azuriranja pravnog lica.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nameLP\": \"velit ut esse\",\n  \"identificationNumLP\": \"labore \",\n  \"streetLP\": \"laborum in esse consequat\",\n  \"cityLP\": \"dolor in cupidatat id ea\",\n  \"stateLP\": \"deserunt volu\",\n  \"contactPerson\": \"dolore eiusmod fugiat cillum do\",\n  \"positions\": \"aliqua eiusmod e\",\n  \"phone\": \"laboris reprehenderit amet irure consequat\",\n  \"emailLP\": \"dolore magna\",\n  \"fax\": \"velit dolore minim\",\n  \"accountNumLP\": 24942901,\n  \"customerId\": \"urn:uuid:a91602de-5622-df50-7379-002ef3b49eca\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/LegalPerson/:legalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"LegalPerson",
+												":legalPersonId"
+											],
+											"variable": [
+												{
+													"key": "legalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID pravnog lica"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Vraca listu evidentiranih pravnih lica.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7029/LegalPerson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"LegalPerson"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vraca listu pravnih lica.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/LegalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"LegalPerson"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Kreriranje pravnog lica.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nameLP\": \"dolore ea officia veniam\",\n  \"identificationNumLP\": \"ali\",\n  \"streetLP\": \"voluptate dolor\",\n  \"cityLP\": \"fugiat reprehenderit incididunt nulla\",\n  \"stateLP\": \"fugiat Ut in\",\n  \"contactPerson\": \"ut ad in officia\",\n  \"positions\": \"sint est\",\n  \"phone\": \"est exerci\",\n  \"emailLP\": \"consectetur ut occaecat\",\n  \"fax\": \"in ir\",\n  \"accountNumLP\": -30616973,\n  \"customerId\": \"urn:uuid:77fb4aab-c6d0-e03c-0c62-7704e54ceda5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7029/LegalPerson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"LegalPerson"
+							]
+						},
+						"description": "Primjer zahtjeva za kreiranje pravnog lica: \r\n\\\r\nPOST api/LegalPerson \r\n{ \r\n\r\n    \"nameLP\": \"Preduzece doo\", \r\n    \"identificationNumLP\": \"12345678\",\r\n    \"streetLP\": \"Dunavska 1\", \r\n    \"cityLP\": \"Novi Sad\", \r\n    \"stateLP\": \"Srbija\", \r\n    \"contactPerson\": \"Marko Markovic\", \r\n    \"positions\": \"Direktor\", \r\n    \"phone\": \"065625556666\", \r\n    \"emailLP\": \"marko@gmail.com\", \r\n    \"fax\": \"1234567\", \r\n    \"accountNumLP\": 123456778, \r\n    \"customerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\" \r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nameLP\": \"dolore ea officia veniam\",\n  \"identificationNumLP\": \"ali\",\n  \"streetLP\": \"voluptate dolor\",\n  \"cityLP\": \"fugiat reprehenderit incididunt nulla\",\n  \"stateLP\": \"fugiat Ut in\",\n  \"contactPerson\": \"ut ad in officia\",\n  \"positions\": \"sint est\",\n  \"phone\": \"est exerci\",\n  \"emailLP\": \"consectetur ut occaecat\",\n  \"fax\": \"in ir\",\n  \"accountNumLP\": -30616973,\n  \"customerId\": \"urn:uuid:77fb4aab-c6d0-e03c-0c62-7704e54ceda5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/LegalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"LegalPerson"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Vraca kreirano pravno lice.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nameLP\": \"dolore ea officia veniam\",\n  \"identificationNumLP\": \"ali\",\n  \"streetLP\": \"voluptate dolor\",\n  \"cityLP\": \"fugiat reprehenderit incididunt nulla\",\n  \"stateLP\": \"fugiat Ut in\",\n  \"contactPerson\": \"ut ad in officia\",\n  \"positions\": \"sint est\",\n  \"phone\": \"est exerci\",\n  \"emailLP\": \"consectetur ut occaecat\",\n  \"fax\": \"in ir\",\n  \"accountNumLP\": -30616973,\n  \"customerId\": \"urn:uuid:77fb4aab-c6d0-e03c-0c62-7704e54ceda5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/LegalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"LegalPerson"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Doslo je do greske na serveru prilikom unosa podataka o pravnom licu.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nameLP\": \"dolore ea officia veniam\",\n  \"identificationNumLP\": \"ali\",\n  \"streetLP\": \"voluptate dolor\",\n  \"cityLP\": \"fugiat reprehenderit incididunt nulla\",\n  \"stateLP\": \"fugiat Ut in\",\n  \"contactPerson\": \"ut ad in officia\",\n  \"positions\": \"sint est\",\n  \"phone\": \"est exerci\",\n  \"emailLP\": \"consectetur ut occaecat\",\n  \"fax\": \"in ir\",\n  \"accountNumLP\": -30616973,\n  \"customerId\": \"urn:uuid:77fb4aab-c6d0-e03c-0c62-7704e54ceda5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/LegalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"LegalPerson"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "NaturalPerson",
+			"item": [
+				{
+					"name": "{naturalPersonId}",
+					"item": [
+						{
+							"name": "Vraca jedno fizicko lice na osnovu njegovog ID-ja",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7029/NaturalPerson/:naturalPersonId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"NaturalPerson",
+										":naturalPersonId"
+									],
+									"variable": [
+										{
+											"key": "naturalPersonId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID fizickog lica"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca trazeno fizicko lice.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjeno ni jedno fizicko lice.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vrsi brisanje jednog fizickog lica osnovu njegovog ID-a.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7029/NaturalPerson/:naturalPersonId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"NaturalPerson",
+										":naturalPersonId"
+									],
+									"variable": [
+										{
+											"key": "naturalPersonId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID fizickog lica"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Fizicko lice uspjesno obrisano.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Nije pronadjeno fizicko lice za brisanje.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja fizickog lica.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Azurira jednog fizickog lica.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7029/NaturalPerson/:naturalPersonId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"NaturalPerson",
+										":naturalPersonId"
+									],
+									"variable": [
+										{
+											"key": "naturalPersonId",
+											"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+											"description": "(Required) ID fizickog lica"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca azurirano fizicko lice.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Fizicko lice koje se azurira nije pronadjeno.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom azuriranja fizickog lica.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/NaturalPerson/:naturalPersonId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"NaturalPerson",
+												":naturalPersonId"
+											],
+											"variable": [
+												{
+													"key": "naturalPersonId",
+													"value": "32535452-7bd6-4e43-34ec-bc2a981e7578",
+													"description": "(Required) ID fizickog lica"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Vraca listu evidentiranih fizickih lica.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7029/NaturalPerson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"NaturalPerson"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vraca listu fizickih lica.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/NaturalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"NaturalPerson"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Kreriranje fizickog lica.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7029/NaturalPerson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"NaturalPerson"
+							]
+						},
+						"description": "Primjer zahtjeva za kreiranje fizickog lica: \r\n\\\r\nPOST api/NaturalPeron\r\n\\\r\n{ \r\n\r\n    \"firstName\": \"Petar\",\r\n    \"lastName\": \"Petrovic\",\r\n    \"jmbg\": \"1234567890123\",\r\n    \"streetNP\": \"Nikole Pasica 1\",\r\n    \"cityNP\": \"Novi Sad\",\r\n    \"stateNP\": \"Srbija\",\r\n    \"zipNP\": \"10000\",\r\n    \"tel1\": \"0612227373\",\r\n    \"tel2\": \"0662882822\",\r\n    \"emailNP\": \"petar@gmail.com\",\r\n    \"accountNumNP\": 12020203,\r\n    \"customerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/NaturalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"NaturalPerson"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Vraca kreirano fizicko lice.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/NaturalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"NaturalPerson"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Doslo je do greske na serveru prilikom unosa podataka o fizickom licu.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"consequat est et mollit\",\n  \"lastName\": \"in cillum non\",\n  \"jmbg\": \"nulla do nos\",\n  \"streetNP\": \"do Ut consectetur Lorem fugiat\",\n  \"cityNP\": \"dolore consequat sunt cillum\",\n  \"stateNP\": \"adipisic\",\n  \"zipNP\": \"dolore sed Lorem aliqua\",\n  \"tel1\": \"cupidatat\",\n  \"tel2\": \"qui co\",\n  \"emailNP\": \"quis ad incididunt\",\n  \"accountNumNP\": 54612181,\n  \"customerId\": \"urn:uuid:744e73df-e4e1-e7a3-8bbb-69d50366f24d\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/NaturalPerson",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"NaturalPerson"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
