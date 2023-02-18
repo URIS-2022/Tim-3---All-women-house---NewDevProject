@@ -8,16 +8,16 @@
         /// <summary>
         /// Naziv ministarstva
         /// </summary>
-        public string MinistryName { get; set; }
+        public string? MinistryName { get; set; }
 
         /// <summary>
         /// Naziv ministra
         /// </summary>
-        public string Minister { get; set; }
+        public string? Minister { get; set; }
 
         /// <summary>
         /// Saglasnost
         /// </summary>
-        public string Consent { get; set; }
+        public string? Consent { get; set; }
     }
 }

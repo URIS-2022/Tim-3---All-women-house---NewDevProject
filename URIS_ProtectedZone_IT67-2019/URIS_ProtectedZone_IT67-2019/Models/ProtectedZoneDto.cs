@@ -18,6 +18,6 @@
         /// <summary>
         /// Dozvoljeni radovi
         /// </summary>
-        public string PermittedWorks { get; set; }
+        public string? PermittedWorks { get; set; }
     }
 }

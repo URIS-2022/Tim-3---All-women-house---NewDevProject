@@ -30,7 +30,7 @@ namespace URIS_ProtectedZone_IT67_2019.Models
         /// <summary>
         /// Dozvoljeni radovi
         /// </summary>
-        public string PermitedWorks { get; set; }
+        public string? PermitedWorks { get; set; }
 
         /// <summary>
         /// Strani kljuc zasticene zone

@@ -30,7 +30,7 @@ namespace URIS_Contract_IT67_2019.Repositories
                 return null;
             }
             contractDbContext.Contracts.Remove(existingContract);
-            contractDbContext.SaveChangesAsync();
+            await contractDbContext.SaveChangesAsync();
             return existingContract;
             
         }

@@ -29,7 +29,7 @@ namespace URIS_ProtectedZone_IT67_2019.Repositories
                 return null;
             }
             protectedZoneDbContext.ProtectedZones.Remove(existingProtectedZone);
-            protectedZoneDbContext.SaveChangesAsync();
+            await protectedZoneDbContext.SaveChangesAsync();
             return existingProtectedZone;
         }
 

@@ -58,7 +58,6 @@ namespace URIS_Licitacion_IT67_2019.Repositories
             existingLicitation.ListOfLegalEntity = licitation.ListOfLegalEntity;
             existingLicitation.DeadlineForSubmission = licitation.DeadlineForSubmission;
             existingLicitation.DecisionId = licitation.DecisionId;
-            //existingLicitation.rescript = licitation.rescript;
             existingLicitation.secondRound = licitation.secondRound;
 
             await licitationDbContext.SaveChangesAsync();

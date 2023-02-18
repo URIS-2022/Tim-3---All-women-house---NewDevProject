@@ -13,7 +13,7 @@
         /// <summary>
         /// Godina izvrsavanja
         /// </summary>
-        public string Year { get; set; }
+        public string? Year { get; set; }
 
         /// <summary>
         /// Datum objavljivanja
@@ -28,12 +28,12 @@
         /// <summary>
         /// Lista dokumenata fizickih lica
         /// </summary>
-        public string ListOfIndividuals { get; set; }
+        public string? ListOfIndividuals { get; set; }
 
         /// <summary>
         /// Lista dokumenata pravnih lica
         /// </summary>
-        public string ListOfLegalEntity { get; set; }
+        public string? ListOfLegalEntity { get; set; }
 
         /// <summary>
         /// Strani kljuc resenje

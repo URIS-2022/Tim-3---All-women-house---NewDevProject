@@ -113,7 +113,7 @@ namespace URIS_ProtectedZone_IT67_2019.Controllers
         /// <summary>
         /// Vrši brisanje jedne zasticene zone na osnovu njenog ID-ja.
         /// </summary>
-        /// <param name="DocumentProtectedZoneId">ID zasticene zone</param>
+        /// <param name="ProtectedZoneId">ID zasticene zone</param>
         /// <response code="200">Uspesno obrisana zona</response>
         /// <response code="404">Nije pronadjena zona</response>
         [HttpDelete]

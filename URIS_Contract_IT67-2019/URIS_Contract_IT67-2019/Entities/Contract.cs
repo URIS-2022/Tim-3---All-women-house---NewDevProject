@@ -13,12 +13,12 @@
         /// <summary>
         /// Garant placanja
         /// </summary>
-        public string PaymentGuarantor { get; set; }
+        public string? PaymentGuarantor { get; set; }
 
         /// <summary>
         /// Naziv ugovora
         /// </summary>
-        public string ContractName { get; set; }
+        public string? ContractName { get; set; }
 
         /// <summary>
         /// Zavodni broj
@@ -33,7 +33,7 @@
         /// <summary>
         /// Mesto potpisivanja
         /// </summary>
-        public string PlaceOfSigning { get; set; }
+        public string? PlaceOfSigning { get; set; }
 
         /// <summary>
         /// Datum potpisivanja

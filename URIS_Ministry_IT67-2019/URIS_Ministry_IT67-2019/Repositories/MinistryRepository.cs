@@ -29,7 +29,7 @@ namespace URIS_Ministry_IT67_2019.Repositories
                 return null;
             }   
             ministryDbContext.Ministries.Remove(existingMinistry);
-            ministryDbContext.SaveChangesAsync();
+            await ministryDbContext.SaveChangesAsync();
             return existingMinistry;
         }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kzdLa5W79sxcWyxOwq6OMkH9aCdRXf8eKJnYVEf83KyovQxy7tcNx5G3ZBObq78yxr4QAW93b7c+AAL0jksKEg==",
+  "dgSpecHash": "bQcp5BLx7C+CM0YwXB7Ug7dGvESVAi5BC+EikDQRYRtUwEvwqFM8JMQEmzhMuohbmg+UMCBBEqV1py1giSSWSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\source\\repos\\URIS_Contract_IT67-2019\\URIS_Contract_IT67-2019\\URIS_Contract_IT67-2019.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\URIS_Contract_IT67-2019\\URIS_Contract_IT67-2019\\URIS_Contract_IT67-2019.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

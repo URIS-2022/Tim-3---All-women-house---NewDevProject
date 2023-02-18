@@ -23,7 +23,7 @@
         /// <summary>
         /// Dozvoljeni radovi
         /// </summary>
-        public string PermitedWorks { get; set; }
+        public string? PermitedWorks { get; set; }
 
         /// <summary>
         /// Strani kljuc zasticene zone

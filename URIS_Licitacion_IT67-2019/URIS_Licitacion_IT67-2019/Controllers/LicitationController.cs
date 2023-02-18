@@ -40,7 +40,6 @@ namespace URIS_Licitacion_IT67_2019.Controllers
 
             
             var licitationDto = new List<LicitationDto>();
-            //var url = configuration["Services:Decisions"];
             Uri url = new Uri($"{configuration["Services:Decisions"]}/api/Decisions");
             foreach (var lic in licitacions)
             {
@@ -118,7 +117,6 @@ namespace URIS_Licitacion_IT67_2019.Controllers
                 ListOfLegalEntity = addLicitationDto.ListOfLegalEntity,
                 DeadlineForSubmission = addLicitationDto.DeadlineForSubmission,
                 DecisionId = addLicitationDto.DecisionId,
-                //rescript = addLicitationDto.rescript,
                 secondRound = addLicitationDto.secondRound
             };
 
@@ -172,7 +170,6 @@ namespace URIS_Licitacion_IT67_2019.Controllers
                 ListOfLegalEntity = updateLicitationDto.ListOfLegalEntity,
                 DeadlineForSubmission = updateLicitationDto.DeadlineForSubmission,
                 DecisionId = updateLicitationDto.DecisionId,
-                //rescript = updateLicitationDto.rescript,
                 secondRound = updateLicitationDto.secondRound
             };
 
