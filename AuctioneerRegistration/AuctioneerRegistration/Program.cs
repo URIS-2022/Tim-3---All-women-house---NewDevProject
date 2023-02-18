@@ -39,7 +39,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 //konekcija sa bazom
-builder.Services.AddDbContext<AuctioneerAPIDbContext>(options =>
+builder.Services.AddDbContext<AuctioneerApiDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AuctioneerConnectionString")));
 
 builder.Services.AddScoped<IAuctioneerRepository, AuctioneerRepository>();

@@ -5,7 +5,7 @@ namespace AuctioneerRegistration.Entities
     public class Auctioneer
     {
         public Guid AuctioneerId { get; set; }
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
         public string LastName { get; set; }
 
         [MaxLength(13)]

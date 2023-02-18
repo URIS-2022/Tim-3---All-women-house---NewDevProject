@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AuctioneerRegistration.Migrations
 {
-    [DbContext(typeof(AuctioneerAPIDbContext))]
+    [DbContext(typeof(AuctioneerApiDbContext))]
     partial class AuctioneerAPIDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

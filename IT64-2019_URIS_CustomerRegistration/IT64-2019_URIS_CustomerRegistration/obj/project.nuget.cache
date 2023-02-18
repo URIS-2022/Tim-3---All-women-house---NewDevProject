@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kN+L0d0157UHfy4rwmR9ONz93aWUMUZDfcjQ0IouXdx/KuyA4gILSArvrP6SpTajPGcde+W++CcKW8l6Vm7CSw==",
+  "dgSpecHash": "95/r0LLItKbyrt4GPSQ+7uKrBUWJhRsf90BoRrVhyCnwxPHIje7MghF1EBdgzf1I7uuLEbeFun9wNOc1jSew9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Korisnik\\Desktop\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration.csproj",
+  "projectFilePath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

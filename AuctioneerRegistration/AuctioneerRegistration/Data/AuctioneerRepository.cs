@@ -5,8 +5,8 @@ namespace AuctioneerRegistration.Data
 {
     public class AuctioneerRepository : IAuctioneerRepository
     {
-        private readonly AuctioneerAPIDbContext dbContext;
-        public AuctioneerRepository(AuctioneerAPIDbContext dbContext)
+        private readonly AuctioneerApiDbContext dbContext;
+        public AuctioneerRepository(AuctioneerApiDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

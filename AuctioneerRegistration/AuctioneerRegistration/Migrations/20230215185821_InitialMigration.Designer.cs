@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AuctioneerRegistration.Migrations
 {
-    [DbContext(typeof(AuctioneerAPIDbContext))]
+    [DbContext(typeof(AuctioneerApiDbContext))]
     [Migration("20230215185821_InitialMigration")]
     partial class InitialMigration
     {

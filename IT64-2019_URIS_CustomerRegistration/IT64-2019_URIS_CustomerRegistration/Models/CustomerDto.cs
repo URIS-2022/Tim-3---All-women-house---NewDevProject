@@ -10,7 +10,7 @@
         /// <summary>
         /// Lice
         /// </summary>
-        public string Person { get; set; }
+        public string? Person { get; set; }
 
         /// <summary>
         /// Ostvarena povrsina koju je kupac zakupio.
@@ -20,7 +20,7 @@
         /// <summary>
         /// Ovlasceno lice
         /// </summary>
-        public string AuthorizedPerson { get; set; }
+        public string? AuthorizedPerson { get; set; }
 
         /// <summary>
         /// Uplata
@@ -35,7 +35,7 @@
         /// <summary>
         /// Garant placanja
         /// </summary>
-        public string Guarantor { get; set; }
+        public string? Guarantor { get; set; }
         public Guid RegistrationFormId { get; set; }
 
         public RegistrationFormDto RegistrationForm { get; set; }

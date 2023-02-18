@@ -6,8 +6,8 @@ namespace IT64_2019_URIS_CustomerRegistration.Data
 {
     public class CustomerRepository : ICustomerRepository
     {
-        private readonly CustomerRegistrationAPIDbContext dbContext;
-        public CustomerRepository(CustomerRegistrationAPIDbContext dbContext) 
+        private readonly CustomerRegistrationApiDbContext dbContext;
+        public CustomerRepository(CustomerRegistrationApiDbContext dbContext) 
         {
             this.dbContext = dbContext;
         }

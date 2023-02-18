@@ -53,7 +53,7 @@ namespace IT64_2019_URIS_CustomerRegistration.Controllers
                 customerDTO.Add(custDto);
             }
 
-            //var customersDTO = mapper.Map<List<Models.CustomerDto>>(customers);
+           
             return Ok(customerDTO);
 
 

@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IT64_2019_URIS_CustomerRegistration.Data
 {
-    public class CustomerRegistrationAPIDbContext : DbContext
+    public class CustomerRegistrationApiDbContext : DbContext
     {
-        public CustomerRegistrationAPIDbContext(DbContextOptions<CustomerRegistrationAPIDbContext> options) : base(options)
+        public CustomerRegistrationApiDbContext(DbContextOptions<CustomerRegistrationApiDbContext> options) : base(options)
         {
 
         }

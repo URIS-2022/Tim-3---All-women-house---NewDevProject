@@ -5,9 +5,9 @@ namespace IT64_2019_URIS_CustomerRegistration.Data
 {
     public class NaturalPersonRepository : INaturalPersonRepository
     {
-        private readonly CustomerRegistrationAPIDbContext dbContext;
+        private readonly CustomerRegistrationApiDbContext dbContext;
 
-        public NaturalPersonRepository(CustomerRegistrationAPIDbContext dbContext)
+        public NaturalPersonRepository(CustomerRegistrationApiDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

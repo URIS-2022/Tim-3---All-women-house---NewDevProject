@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bmA+z2kg6sx01/GVG5iRdSU2EggptDjZLI/a00ZtOADfrCmMT/QJJKmzeOqMrc54iAYnZiAmeI3056YSYbpeQA==",
+  "dgSpecHash": "yFaEwOO6kF+ON08MbKc/r0cE0mnXGDLuZ2lxTwEXeqQvXE7JckjVWJMVcS3IKA7LKh2LF02Sief+jyNaxNSM7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Korisnik\\Desktop\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj",
+  "projectFilePath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Korisnik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

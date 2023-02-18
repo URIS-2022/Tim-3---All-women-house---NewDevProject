@@ -3,12 +3,12 @@
     public class Customer
     {
         public Guid CustomerId { get; set; }
-        public string Person { get; set; }
+        public string? Person { get; set; }
         public int RealizedArea { get; set; }
-        public string AuthorizedPerson { get; set; }
+        public string? AuthorizedPerson { get; set; }
         public double Payments { get; set; }
         public int Priority { get; set; }
-        public string Guarantor { get; set; }
+        public string? Guarantor { get; set; }
         public Guid RegistrationFormId { get; set; }
 
 

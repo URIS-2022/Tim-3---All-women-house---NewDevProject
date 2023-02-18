@@ -5466,11 +5466,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration.csproj",
+      "projectUniqueName": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration.csproj",
       "projectName": "IT64-2019_URIS_CustomerRegistration",
-      "projectPath": "C:\\Users\\Korisnik\\Desktop\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration.csproj",
+      "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration.csproj",
       "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Korisnik\\Desktop\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\obj\\",
+      "outputPath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\IT64-2019_URIS_CustomerRegistration\\IT64-2019_URIS_CustomerRegistration\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5565,7 +5565,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

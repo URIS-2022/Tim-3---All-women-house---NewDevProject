@@ -5,7 +5,7 @@
         /// <summary>
         /// Lice je polje u koje je potrebno unijeti da li je lice fizicko ili pravno.
         /// </summary>
-        public string Person { get; set; }
+        public string? Person { get; set; }
 
         /// <summary>
         /// Ostvarena povrsina koju je kupac zakupio u toku nadmetanja.
@@ -15,7 +15,7 @@
         /// <summary>
         /// Ovlascena osoba
         /// </summary>
-        public string AuthorizedPerson { get; set; }
+        public string? AuthorizedPerson { get; set; }
 
         /// <summary>
         /// Uplata
@@ -37,7 +37,7 @@
         /// 3. Zirantska
         /// 4. Uplata gotovinom
         /// </summary>
-        public string Guarantor { get; set; }
+        public string? Guarantor { get; set; }
 
         public Guid RegistrationFormId { get; set; }
 

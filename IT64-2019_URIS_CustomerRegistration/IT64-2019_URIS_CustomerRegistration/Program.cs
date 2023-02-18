@@ -43,7 +43,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 //konekcija sa bazom
-builder.Services.AddDbContext<CustomerRegistrationAPIDbContext>(options => 
+builder.Services.AddDbContext<CustomerRegistrationApiDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("CustomerRegistrationConnectionString")));
 
 //dependency injection

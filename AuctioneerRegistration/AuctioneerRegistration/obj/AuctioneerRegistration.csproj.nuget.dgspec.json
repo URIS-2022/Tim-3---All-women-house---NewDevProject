@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Korisnik\\Desktop\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj": {}
+    "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Korisnik\\Desktop\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj": {
+    "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj",
         "projectName": "AuctioneerRegistration",
-        "projectPath": "C:\\Users\\Korisnik\\Desktop\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj",
+        "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\AuctioneerRegistration\\AuctioneerRegistration\\AuctioneerRegistration.csproj",
         "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Korisnik\\Desktop\\AuctioneerRegistration\\AuctioneerRegistration\\obj\\",
+        "outputPath": "C:\\Users\\Korisnik\\Source\\Repos\\Tim-3---All-women-house---NewDevProject\\AuctioneerRegistration\\AuctioneerRegistration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",

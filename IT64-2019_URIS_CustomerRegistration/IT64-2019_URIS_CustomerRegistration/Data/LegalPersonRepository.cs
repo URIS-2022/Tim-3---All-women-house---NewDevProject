@@ -6,9 +6,9 @@ namespace IT64_2019_URIS_CustomerRegistration.Data
 {
     public class LegalPersonRepository : ILegalPersonRepository
     {
-        private readonly CustomerRegistrationAPIDbContext dbContext;
+        private readonly CustomerRegistrationApiDbContext dbContext;
 
-        public LegalPersonRepository(CustomerRegistrationAPIDbContext dbContext) 
+        public LegalPersonRepository(CustomerRegistrationApiDbContext dbContext) 
         {
             this.dbContext = dbContext;
         }

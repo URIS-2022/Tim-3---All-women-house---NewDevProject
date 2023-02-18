@@ -14,8 +14,8 @@ namespace IT64_2019_URIS_CustomerRegistration.Controllers
 
     public class LegalPersonController : Controller
     {
-        private ILegalPersonRepository legalPersonRepository;
-        private IMapper mapper;
+        private readonly ILegalPersonRepository legalPersonRepository;
+        private readonly IMapper mapper;
         public LegalPersonController(ILegalPersonRepository legalPersonRepository, IMapper mapper)
         {
             this.legalPersonRepository = legalPersonRepository;

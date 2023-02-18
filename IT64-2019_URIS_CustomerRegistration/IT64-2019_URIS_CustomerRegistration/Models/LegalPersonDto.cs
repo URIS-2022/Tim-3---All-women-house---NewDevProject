@@ -13,52 +13,52 @@ namespace IT64_2019_URIS_CustomerRegistration.Models
         /// <summary>
         /// Naziv pravnog lica
         /// </summary>
-        public string NameLP { get; set; }
+        public string? NameLP { get; set; }
 
         /// <summary>
         /// Maticni broj pravnog lica (sadrzi 8 cifara).
         /// </summary>
 
         [MaxLength(8)]
-        public string IdentificationNumLP { get; set; }
+        public string? IdentificationNumLP { get; set; }
 
         /// <summary>
         /// Ulica i broj
         /// </summary>
-        public string StreetLP { get; set; }
+        public string? StreetLP { get; set; }
         /// <summary>
         /// Grad
         /// </summary>
-        public string CityLP { get; set; }
+        public string? CityLP { get; set; }
 
         /// <summary>
         /// Drzava
         /// </summary>
-        public string StateLP { get; set; }
+        public string? StateLP { get; set; }
 
         /// <summary>
         /// Kontakt osoba
         /// </summary>
-        public string ContactPerson { get; set; }
+        public string? ContactPerson { get; set; }
 
         /// <summary>
         /// Pozicija pravnog lica
         /// </summary>
-        public string Positions { get; set; }
+        public string? Positions { get; set; }
 
         /// <summary>
         /// Broj telefon pravnog lica
         /// </summary>
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
 
         /// <summary>
         /// Email
         /// </summary>
-        public string EmailLP { get; set; }
+        public string? EmailLP { get; set; }
         /// <summary>
         /// Fax
         /// </summary>
-        public string Fax { get; set; }
+        public string? Fax { get; set; }
 
         /// <summary>
         /// Broj racuna pravnog lica

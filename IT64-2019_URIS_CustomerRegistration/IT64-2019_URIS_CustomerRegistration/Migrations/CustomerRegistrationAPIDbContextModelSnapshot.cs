@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IT64_2019_URIS_CustomerRegistration.Migrations
 {
-    [DbContext(typeof(CustomerRegistrationAPIDbContext))]
+    [DbContext(typeof(CustomerRegistrationApiDbContext))]
     partial class CustomerRegistrationAPIDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
